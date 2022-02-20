@@ -1,0 +1,73 @@
+/* pages/shopmall/shopmall.wxss */
+
+.toubu {
+  width: 750rpx;
+  height: 300rpx;
+  /* opacity: 0.5167; */
+}
+
+.sz {
+  width: 286rpx;
+  height: 72rpx;
+  background: white;
+  border-radius: 36rpx;
+}
+
+.lingjifen{
+    width: 184rpx;
+  height: 72rpx;
+}
+
+.margin-left-66 {
+  margin-left: 66rpx;
+}
+
+.margin-left-46 {
+  margin-left: 46rpx;
+}
+.margin-top-6 {
+  margin-top: 6rpx;
+}
+.margin-top-32 {
+  margin-top: 32rpx;
+}
+
+.szmx-icon {
+  width: 28rpx;
+  height: 22rpx;
+}
+
+.zjf-icon {
+  width: 28rpx;
+  height: 26rpx;
+}
+
+.jf-icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.f60 {
+  font-size: 60rpx;
+}
+
+.margin-top-36 {
+  margin-top: 36rpx;
+}
+
+.hezi {
+  margin-top: 24rpx;
+  margin-left: 24rpx;
+  border-radius: 8rpx;
+  background-color: white;
+  box-shadow:0rpx 4rpx 8rpx 0rpx rgba(0,0,0,0.1);
+}
+
+.img {
+  width: 340rpx;
+  height: 340rpx;
+  border-radius: 8rpx;
+}
+.padding{
+  padding: 0rpx 20rpx 20rpx 20rpx;
+}

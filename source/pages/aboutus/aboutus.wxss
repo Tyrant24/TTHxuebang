@@ -1,0 +1,9 @@
+/* pages/aboutus/aboutus.wxss */
+.nostyle view,navigator,input,text,textarea{
+color:unset;
+font-size:unset;
+word-break: normal;
+}
+.nostyle image{
+  width:100vw !important;
+}

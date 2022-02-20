@@ -1,0 +1,75 @@
+<!--pages/messageinfo/messageinfo.wxml-->
+<view class='height-20' style='border-top:2rpx solid #E5E5E5'>
+
+</view>
+
+<view class='' style='border-bottom:2rpx solid #E5E5E5' bindtap='todetails'>
+  <navigator class='margin-top-20 padding-left-20 bg-white bor_bot' style=''>
+    <view class='padding-20 bor_bot' style=''>
+
+      <view class='flex-row flex-center'>
+        <view class='flex-1  txt-black ' style=''>交易消息</view>
+        <view class='h6 ' style='color:#AAAAAA'>2019-03-11 09:36</view>
+      </view>
+
+      <view class='h5 margin-top-10' style='color:#AAAAAA'>
+        你已成功购买童彩飞扬的课程，付款金额9.9元。联系学榜客服预约上课。
+      </view>
+
+    </view>
+
+
+
+    <view class='flex-row  padding-20 bor_bot' style=''>
+
+      <image class='icon radius-10' src='{{uploadpath}}curriculum/{{info.course_kc_img}}'></image>
+
+      <view class='flex-1  column margin-left-20'>
+
+        <view class='flex-row flex-center'>
+          <view class='flex-1 txt-black'>{{info.course_id_name}}</view>
+          <view class='txt-black'>￥{{info.amount}}</view>
+        </view>
+
+        <view class='flex-row flex-center margin-top-5'>
+          <view class='flex-1 txt-gray h5'>{{courseinfo.JG_jigou}}</view>
+        </view>
+
+        <view class='flex-row flex-center flex-1 margin-top-5' style=''>
+
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.age_icon}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{info.course_age}}岁</view>
+          </view>
+
+          <view style='width:20rpx;'></view>
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.keshi}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{info.course_class_hours}}节课</view>
+          </view>
+
+          <view style='width:20rpx;'></view>
+
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.time}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{info.course_duration}}分钟/节</view>
+          </view>
+
+
+        </view>
+
+
+      </view>
+
+    </view>
+
+    <view class='flex-row flex-center padding-20' style=''>
+      <view class='flex-1'></view>
+      <view class='txt-black txt-bold margin-left-20'>实付金额：￥{{info.amount}}</view>
+    </view>
+
+  </navigator>
+</view>

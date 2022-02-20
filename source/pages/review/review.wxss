@@ -1,0 +1,14 @@
+.center{
+  margin-left:80rpx;
+  margin-right: 80rpx;
+  text-align: center;
+  margin-top:20rpx;
+}
+.btn{
+  margin-top:80rpx;
+  padding:20rpx 60rpx 20rpx 60rpx;
+  background: rgba(255, 102, 0, 1);
+  color:rgba(255, 255, 255, 1);
+  font-size: 30rpx;
+  border-radius: 60rpx;
+}

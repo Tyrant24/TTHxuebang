@@ -1,0 +1,149 @@
+/* pages/pingceindex/pingceindex.wxss */
+
+.top-img {
+  width: 100vw;
+  height: 260rpx;
+}
+
+.padding-24 {
+  padding: 24rpx;
+}
+
+.margin-24 {
+  margin: 24rpx;
+}
+.margin-left-12{
+  margin-left: 6rpx;
+}
+.mid-block {
+  margin: 12rpx 24rpx 24rpx 24rpx;
+}
+
+.bottom-block {
+  margin: 12rpx 24rpx 0rpx 24rpx;
+}
+
+.huangtiao {
+  width: 8rpx;
+  height: 28rpx;
+  background: rgba(255, 194, 0, 1);
+}
+
+.margin-left-16 {
+  margin-left: 16rpx;
+}
+
+.margin-top-24 {
+  margin-top: 24rpx;
+}
+
+.margin-top-14 {
+  margin-top: 14rpx;
+}
+
+.txt-6 {
+  color: #666;
+}
+
+.quan {
+  width: 110rpx;
+  height: 110rpx;
+  border: 12rpx solid;
+  border-image: linear-gradient(180deg, rgba(192, 208, 255, 1), rgba(95, 82, 160, 1)) 6 6;
+}
+
+.margin-top-30 {
+  margin-top: 30rpx;
+}
+
+.ceshi {
+  width: 600rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  background: rgba(255, 102, 0, 1);
+  border-radius: 42rpx;
+}
+
+.height-126 {
+  height: 126rpx;
+}
+
+.height-52 {
+  height: 52rpx;
+}
+
+.animation-box {
+  position: fixed;
+  left: 30vw;
+  width: 176px;
+  height: 176px;
+  background: green;
+}
+
+.time-crl-path {
+  position: fixed;
+  left: 30vw;
+  width: 50px;
+  height: 9px;
+  bottom: 50%;
+  background: red;
+}
+
+.crl-dot {
+  position: fixed;
+  left: 30vw;
+  width: 50px;
+  height: 9px;
+  bottom: 50%;
+  background: red;
+}
+
+.UD {
+  position: fixed;
+  width: 100vw;
+  z-index: 5;
+  bottom: 0;
+  top: 0;
+  background: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progress_box {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  /* 这里的宽高是必须大于等于canvas圆环的直径 否则绘制到盒子外面就看不见了
+  一开始设置 width:440rpx; height:440rpx; 发现 在360X640分辨率的设备，下绘制的圆环跑盒子外去了
+  小程序使用rpx单位适配 ，但是canvas绘制的是px单位的。所以只能用px单位绘制的圆环在盒子内显示 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #eee; */
+}
+
+.progress_bg {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+}
+
+.progress_canvas {
+  width: 90px;
+  height: 90px;
+}
+
+.progress_text {
+  position: absolute; 
+}
+ 

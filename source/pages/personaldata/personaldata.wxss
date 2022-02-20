@@ -1,0 +1,22 @@
+/* pages/personaldata/personaldata.wxss */
+Page{
+  background: #f5f5f5;
+}
+.font-30{
+  font-size: 30rpx;
+}
+.btn_bg{
+  background: #FF5252;
+}
+.bg_hov{
+  background: rgb(248, 130, 130);
+}
+.txt-gray{
+  color: #C8C8C8;
+}
+.dis{
+  background: #b9b9b9;
+}
+.dis_hov{
+  background: #b9b8b8;
+}

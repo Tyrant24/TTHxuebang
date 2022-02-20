@@ -1,0 +1,72 @@
+/* pages/jifenorderinfo/jifenorderinfo.wxss */
+
+.top_block {
+  height: 202rpx;
+  background: linear-gradient(110deg, rgba(255, 190, 49, 1) 0%, rgba(255, 139, 15, 1) 100%);
+}
+
+.icon-huowu {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.mid_block {
+  height: 168rpx;
+  background: rgba(255, 255, 255, 1);
+}
+
+
+.icon-zuobiao {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.shangpin {
+  height: 308rpx;
+  padding: 28rpx 28rpx 28rpx 0rpx;
+  background: rgba(255, 255, 255, 1);
+}
+
+.margin-left-28 {
+  margin-left: 28rpx;
+}
+.margin-right-28 {
+  margin-right: 28rpx;
+}
+.icon-img {
+  width: 168rpx;
+  height: 168rpx;
+  border-radius: 8rpx;
+}
+.icon-right{
+  width:14rpx;
+height:24rpx;
+}
+.width-56{
+  width: 112rpx;
+}
+.bottom_block {
+  height: 202rpx;
+  padding: 28rpx 28rpx 28rpx 0rpx;
+  background: rgba(255, 255, 255, 1);
+}
+.margin-left-52{
+    margin-left: 52rpx;
+}
+
+.btn {
+  width: 148rpx;
+  height: 52rpx;
+  font-size:22rpx;
+  line-height: 52rpx; 
+  border-radius: 30rpx;
+  border: 1px solid rgba(204, 204, 204, 1);
+}
+
+.bottom{
+  position: fixed;
+  width: 100vw;
+  height: 100rpx;
+  bottom: 0;
+  background: white;
+}

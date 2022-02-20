@@ -1,0 +1,31 @@
+/* pages/baoma/baoma.wxss */
+
+Page {
+  background: #f5f5f5;
+}
+
+.block {
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 15rpx;
+  margin-top:20rpx;
+}
+
+.img {
+  height: 300rpx;
+  width: 710rpx;
+}
+
+title_font{
+  font-size: 30rpx;
+}
+.jiaoyu{
+  border:2rpx solid red;
+  height: 26rpx;
+  line-height: 26rpx;
+  min-width: 56rpx;
+  padding:4rpx;
+  border-radius:10rpx;
+  font-size: 21rpx;
+}

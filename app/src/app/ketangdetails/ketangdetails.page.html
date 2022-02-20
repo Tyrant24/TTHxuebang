@@ -1,0 +1,276 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot="start">
+      <ion-button (click)='back()'>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{InstInfo.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <video [class.hide]="danqianzhanjie==null" (ended)="bfjs($event)" (play)="ksbf($event)" (pause)='jsbf($event)'
+      (timeupdate)="jindu($event)" class='Top-img w400' style='width:100vw; '
+      poster='{{uploadpath}}onlineclassroomdirectory/{{danqianzhanjie.cover}}' controls='true'
+      object-fit="fill" id='v_1' loop='{{false}}'
+      src='{{uploadpath}}onlineclassroomdirectory/{{danqianzhanjie.video}}' play-btn-position="center" 
+      preload   
+      webkit-playsinline="true" 
+      playsinline="true"  
+      x-webkit-airplay="allow" 
+      x5-video-player-type="h5"  
+      x5-video-player-fullscreen="true" 
+      x5-video-orientation="portraint" 
+      >
+
+    </video>
+    
+  <div >
+    <div *ngIf="!liebiao&&!quanbu">
+      <div class='margin-30 border-bottom-2' >
+
+        <div class='flex-row ' >
+          <div class='flex-1'>{{danqianzhanjie.name}}</div>
+          <div class='kd  flex-row flex-column  bg-white' *ngIf="isfav=='N'" (click)='fav("Y")'>
+            <img mode='widthFix' class='icon' src='{{uploadpath}}resource/{{res.unfav}}' />
+            <!-- <div class='h6'>收藏</div> -->
+          </div>
+
+          <div class='kd  flex-row flex-column  bg-white' *ngIf="isfav=='Y'" (click)='fav("N")'>
+            <img mode='widthFix' class='icon' src='{{uploadpath}}resource/{{res.fav}}' />
+            <!-- <div class='h6'>已收藏</div> -->
+          </div>
+        </div>
+
+
+        <div class='jieshao'>
+          {{kecheninfo.class_introduce}}
+        </div>
+
+        <div class='flex-row flex-center  margin-top-12'>
+
+          <!-- <div class='flex-1 margin-bottom-10'>4654</div> -->
+
+          <div class='flex-row flex-center flex-1  margin-bottom-10'>
+            <div class='flex-row flex-center'>
+              <img src='{{uploadpath}}resource/{{res.nianlin}}' class='icon-13 ' />
+              <div class=' h6 margin-left-10'>{{kecheninfo.age_name}}</div>
+            </div>
+
+            <div class='flex-row flex-center margin-left-26'>
+              <img src='{{uploadpath}}resource/{{res.zhanjie}}' class='icon-13 ' />
+              <div class=' h6 margin-left-10'>共{{kecheninfo.chapter_num}}章</div>
+            </div>
+
+            <div class='flex-row flex-center margin-left-26'>
+              <img src='{{uploadpath}}resource/{{res.bofan}}' class='icon-13 ' />
+              <div class=' h6 margin-left-10'>{{kecheninfo.learning_num}}人学过</div>
+            </div>
+
+
+          </div>
+
+
+          <!-- <button *ngIf="fenxiaoinfo!=undefined&&fenxiaoinfo[0].status=='S'"
+            class="clear-button zhaunfa flex-row flex-center margin-bottom-10" open-type='share'>
+
+            <div class='flex-1'></div>
+            <img src='{{uploadpath}}resource/{{res.zhuanfa}}' class='zhuanfa-icon' />
+            <div class='h6 margin-left-10'>转发好友</div>
+            <div class='flex-1'></div>
+
+          </button> -->
+        </div>
+
+
+      </div>
+
+      <div class="padding-301 flex-row flex-center">
+        <div class="flex-1">目录</div>
+        <div class="jieshao1" (click)='chakanliebiao()'>查看列表</div>
+        <img src='{{uploadpath}}resource/{{res.spmulu}}' (click)='chakanliebiao()' class='icon-15 margin-left-10' />
+      </div>
+      <!-- style="width:{{zhanjie.length*250}}rpx" -->
+      <div class='margin-left-20'>
+        <div  style=" " class='ss1 scroll-x' >
+          <div class="flex-row flex-center "  [ngStyle]="{'width.px': zhanjie.length*125*rad }">
+            <div *ngFor="let item of zhanjie;let idx=index;" (click)='qiehuanzhanjie(idx)' class='ceshi '>
+
+              <div class="{{item.dq==true?'bk':''}}">
+
+                <img class='mulu1' src='{{uploadpath}}onlineclassroomdirectory/{{item.cover}}' />
+                <div class="chaochu2 kuan1">{{item.name}}</div>
+
+                <div *ngIf="kecheninfo.isfree_value=='N'||kecheninfo.idd!=''">
+
+                  <div *ngIf="item.isproved_value=='N'&&kecheninfo.idd==''" class="h7 fufei1">付费</div>
+                  <div *ngIf="item.isproved_value=='Y'&&kecheninfo.idd==''" class="h7 mianfei1">试看</div>
+                  <div *ngIf="kecheninfo.idd!=''" class="h7 mianfei1">已购</div>
+
+                </div>
+                <img *ngIf="danqianzhanjie.id==item.id&&spbf" src='{{uploadpath}}resource/{{res.spzantin}}'
+                  class='zt1' />
+                <img *ngIf="!(danqianzhanjie.id==item.id&&spbf)" src='{{uploadpath}}resource/{{res.spbofan}}'
+                  class='zt1' />
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="cuxian"></div>
+      <div (click)='chakanquanbu()' class="padding-302 flex-row flex-center">
+        <div class="flex-1 f13 txt-bold" style='color:#222222'>留言 {{ketanpinlunlist.length}}</div>
+        <div class="jieshao1 ">去评论</div>
+        <img src='{{uploadpath}}resource/{{res.sppinlun}}' class='icon-15 margin-top-3 margin-left-10' />
+      </div>
+      <div *ngFor="let item of ketanpinlunlist;let idx=index;" class="margin-20">
+
+        <div class="flex-row flex-center " *ngIf="idx<2">
+          <img src='{{item.member_avatarUrl}}' class='icon-40 radius-50' />
+          <div class="flex-1 margin-left-10">
+            <div class="h5">{{item.member_id_name}}</div>
+            <div class="h5" style='color:#999999'>{{item.pinlun_shijian_dateformat}}</div>
+          </div>
+          <div class="h5 margin-right-20" style='color:#999999'>{{item.dianzanrenshu}}</div>
+          <img (click)="dianzan(idx,item.id)" *ngIf="item.isfav=='N'" src='{{uploadpath}}resource/{{res.nodianzan}}'
+            class='icon' />
+          <img (click)="dianzan(idx,item.id)" *ngIf="item.isfav=='Y'" src='{{uploadpath}}resource/{{res.dianzan}}'
+            class='icon' />
+        </div>
+
+        <div class="h5 margin-top-10 margin-left-20  {{idx==0?'cxk':''}}">
+          {{item.neiron}}
+        </div>
+
+      </div>
+      <div class="cuxian"></div>
+      <img mode='widthFix' style='width:100vw' src='{{uploadpath}}onlineclassroom/{{kecheninfo.haibao}}' />
+      <div *ngIf="kecheninfo.isfree_value=='N'&&kecheninfo.idd==''" class="height-160"></div>
+
+      <div *ngIf="kecheninfo.isfree_value=='N'">
+        <div *ngIf="kecheninfo.idd==''" class='tishi-block flex-row flex-center'>
+          <div class='flex-1'></div>
+          <div class='txt-zong h6'>共{{kecheninfo.chapter_num}}章，每章仅需{{pinjunjia}}元</div>
+          <div class='txt-zong h6' hidden='{{true}}'>您已购买此栏目</div>
+          <div class='flex-1'></div>
+        </div>
+
+
+        <div *ngIf="kecheninfo.idd==''" class='bottom-block flex-row flex-center'>
+          <div (click)='shikan()' class='flex-1 text-center watch_block'>试看</div>
+          <div (click)='goumai()' class='buy_block flex-row flex-center'>
+            <div class='flex-1'></div>
+            <div class='txt-white margin-top-6'>￥</div>
+            <div class='f40 txt-white txt-bold'>{{kecheninfo.price}}</div>
+            <div class='h5 txt-white margin-top-6 margin-left-12 txt-bold'>立即抢购</div>
+            <div class='flex-1'></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='tishi' *ngIf='tishi==1'>
+        <img src='{{uploadpath}}resource/{{res.chengong}}' class='ts_icon' />
+      </div>
+
+      <div class='tishi' *ngIf='tishi==2'>
+        <img src='{{uploadpath}}resource/{{res.shibai}}' class='ts_icon' />
+      </div>
+
+    </div>
+    <div *ngIf="liebiao">
+
+      <div class="padding-20 flex-row flex-center">
+        <div class="flex-1">{{danqianzhanjie.classroom_id_name}}</div>
+        <div (click)="guanbiliebiao()" class="cs wh120" >
+
+        </div>
+        <img (click)="guanbiliebiao()" src='{{uploadpath}}resource/{{res.gengduo}}' class='icon-15' />
+      </div>
+      <div  class="gd scroll-y">
+        <div class=" padding-10 flex-row flex-center flex-wrap">
+
+          <div *ngFor="let item of zhanjie;let idx=index;" (click)='qiehuanzhanjie(idx)'
+            class='kecheng-block flex-row flex-column'>
+            <div class="{{item.dq==true?'bk':''}}">
+              <img class='mulu1' src='{{uploadpath}}onlineclassroomdirectory/{{item.cover}}' />
+              <div class="chaochu2 kuan1">{{item.name}}</div>
+              <div *ngIf="kecheninfo.isfree_value=='N'||kecheninfo.idd!=''">
+
+                <div *ngIf="item.isproved_value=='N'&&kecheninfo.idd==''" class="h7 fufei1">付费</div>
+                <div *ngIf="item.isproved_value=='Y'&&kecheninfo.idd==''" class="h7 mianfei1">试看</div>
+                <div *ngIf="kecheninfo.idd!=''" class="h7 mianfei1">已购</div>
+
+              </div>
+              <img *ngIf="danqianzhanjie.id==item.id&&spbf" src='{{uploadpath}}resource/{{res.spzantin}}' class='zt1' />
+              <img *ngIf="!(danqianzhanjie.id==item.id&&spbf)" src='{{uploadpath}}resource/{{res.spbofan}}'
+                class='zt1' />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf="quanbu">
+
+      <div class="padding-20 flex-row flex-center">
+        <div class="flex-1">精彩评论</div>
+        <div (click)="guanbiquanbu()" class="cs wh120" >
+
+        </div>
+        <img (click)="guanbiquanbu()" src='{{uploadpath}}resource/{{res.gengduo}}' class='icon-15' />
+      </div>
+      <div  class="gd scroll-y">
+        <div *ngFor="let item of ketanpinlunlist;let idx=index;" class="padding-20">
+          <div class="flex-row flex-center ">
+            <img src='{{item.member_avatarUrl}}' class='icon-40 radius-50' />
+            <div class="flex-1 margin-left-10">
+              <div class="h5">{{item.member_id_name}}</div>
+              <div class="h5" style='color:#999999'>{{item.pinlun_shijian_dateformat}}</div>
+            </div>
+            <div class="h5 margin-right-20" style='color:#999999'>{{item.dianzanrenshu}}</div>
+            <img (click)="dianzan(idx,item.id)" *ngIf="item.isfav=='N'" src='{{uploadpath}}resource/{{res.nodianzan}}'
+              class='icon-15' />
+            <img (click)="dianzan(idx,item.id)" *ngIf="item.isfav=='Y'" src='{{uploadpath}}resource/{{res.dianzan}}'
+              class='icon-15' />
+
+          </div>
+
+          <div class="h5 margin-top-10 margin-left-20 ">
+            {{item.neiron}}
+          </div>
+          <div *ngIf="item.status=='H'">
+            <div class="margin-top-20 margin-left-20 flex-row flex-center">
+              <div class="hs"></div>
+              <div class="h6" style="color:#999999">官方回复</div>
+              <div class="flex-1"></div>
+              <div class="h5 margin-right-20" style='color:#999999'>{{item.huifudianzanrenshu}}</div>
+
+              <img (click)="huifudianzan(idx,item.id)" *ngIf="item.huifuisfav=='N'"
+                src='{{uploadpath}}resource/{{res.nodianzan}}' class='icon-15' />
+              <img (click)="huifudianzan(idx,item.id)" *ngIf="item.huifuisfav=='Y'" src='{{uploadpath}}resource/{{res.dianzan}}'
+                class='icon-15' />
+
+
+            </div>
+            <div class="h5 margin-top-10  margin-left-30 ">{{item.huifu}}</div>
+          </div>
+        </div>
+        <div class="h120"></div>
+
+
+
+      </div>
+      <div class="padding-10 db flex-row flex-center">
+
+        <ion-input [(ngModel)]="pinlun" placeholder="发表一下你的评论吧！" placeholder-style="color:#C8C8C8"
+          class="flex-1 margin-left-20 shuruk" ></ion-input>
+        <div (click)='fabiao()' class="fabiao">发表</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

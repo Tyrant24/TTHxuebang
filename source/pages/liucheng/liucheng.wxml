@@ -1,0 +1,48 @@
+<!--pages/liucheng/liucheng.wxml-->
+<view class='flex-row column margin-30 bg-white radius-10 shadow'>
+
+  <view class='bg flex-row flex-center padding-40'>
+    <image src='{{uploadpath}}resource/{{res.fukuanzhanghu	}}' class='' style='width:40rpx;height:30rpx;'></image>
+    <view class='txt-black txt-bold margin-left-20 txt'>付款账户</view>
+  </view>
+
+  <view class=' flex-row flex-center padding-40'>
+    <view class='txt-black  txt'>付款账户:</view>
+    <view class='  margin-left-20 txt-hui txt'>{{liuchen.account}}</view>
+  </view>
+
+  <view style='width:93%;height:2rpx;background:#e5e5e5' class='margin-left-20'></view>
+
+  <view class=' flex-row flex-center padding-40'>
+    <view class='txt-black  txt'>开户行:</view>
+    <view class='  margin-left-20 txt-hui txt'>{{liuchen.bank}}</view>
+  </view>
+
+  <view style='width:93%;height:2rpx;background:#e5e5e5' class='margin-left-20'></view>
+
+  <view class=' flex-row flex-center padding-40'>
+    <view class='txt-black  txt'>账号:</view>
+    <view class='  margin-left-20 txt-hui txt'>{{liuchen.accountnumber}}</view>
+  </view>
+
+</view>
+
+
+
+<view style='border-radius:50rpx;'  id="{{instinfo.intotel}}" bindtap='phoneCall' class='bg flex-row flex-column padding-30 margin-30'>
+  <view class='flex-row flex-center'>
+    <image src='{{uploadpath}}resource/{{res.kefudianhua}}' class='icon'></image>
+    <view class='txt-black  margin-left-20' style='font-size:36rpx;'>客服电话</view>
+  </view>
+</view>
+
+
+
+<view class='flex-row flex-column'>
+<view class='txt txt-bold'>付款步骤 </view>
+
+
+
+<view class='h5 margin-top-10'>付款前，请先拨打客服电话，由客服人员引导您付费</view>
+</view>
+

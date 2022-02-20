@@ -1,0 +1,45 @@
+<!--pages/searchword/searchword.wxml-->
+<view class='Top padding-20 flex-row flex-center bg-white'>
+  <view class='search flex-row flex-center padding-5 '>
+    <view style='width:20rpx;'></view>
+    <image class='search_icon' src='{{uploadpath}}resource/{{res.search_icon}}'></image>
+    <input class='h6 flex-1 txt-black padding-left-5'  focus='true' placeholder='搜索您要找的机构、课程、老师' bindinput='search'></input>
+
+    <view class='padding-left-20 padding-right-10' bindtap=''><image class='prohibit_icon ' src='{{uploadpath}}resource/{{res.prohibit}}'></image></view>
+  </view>
+  <view class='padding-left-10 h5 ' style='color:#000000' bindtap='tosearch' id='{{item.name}}'>搜索</view>
+</view>
+
+<!-- <view class='flex-row flex-column' hidden='{{show==0}}' wx:if='{{result==null||result.length==0}}'>
+  <view class='margin-top-20'><image class='icon-75' src='{{uploadpath}}resource/{{res.book_null}}'></image></view>
+  <view class='margin-top-10'>抱歉，我们已经很努力在寻找了</view>
+</view> -->
+
+
+<view  bindtap='todetails' class='h5 padding-20 margin-left-40 flex-row flex-center' id='{{item.name}}' wx:for="{{result}}" wx:key="k" wx:for-index='idx'>
+  <view >{{item.name}}</view>
+  <view class='h6 txt-red margin-left-20'></view>
+</view>
+
+  <view style='height:95rpx;'></view>
+  <block wx:if="{{result.length==0}}">
+    <block wx:if="{{history.length>0}}">
+      <view class='flex-row flex-center'>
+      <view class='keywordtitle flex-1'>历史搜索</view>
+      <image src='{{uploadpath}}resource/{{res.clear}}' class='icon' bindtap='clearrecord'></image>
+      <view style='width:40rpx;'></view>
+<!-- 
+      <view class='txt-gray h6 margin-right-10 flex-1 text-right' bindtap='clearrecord'>清空</view> -->
+
+      </view>
+      <view class='flex-row' style='flex-wrap: wrap;padding-left:30rpx;'>
+        <view wx:for="{{history}}" wx:key="k" class='keyword' id="{{item.keyword}}" bindtap='todetails'>{{item.keyword}}</view>
+      </view>
+    </block>
+    <block wx:if="{{hotest.length>0}}">
+      <view class='keywordtitle' style='margin-top:40rpx;'>热门搜索</view>
+      <view class='flex-row' style='flex-wrap: wrap;padding-left:30rpx;'>
+        <view wx:for="{{hotest}}" wx:key="k" class='keyword' id="{{item.keyword}}" bindtap='todetails'>{{item.keyword}}</view>
+      </view>
+    </block>
+  </block>

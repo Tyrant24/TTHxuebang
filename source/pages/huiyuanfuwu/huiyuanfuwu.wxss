@@ -1,0 +1,149 @@
+/* pages/huiyuanfuwu/huiyuanfuwu.wxss */
+
+Page {
+  background: #F5F6F8;
+}
+
+.top-block {
+  width: 100vw;
+  height: 344rpx;
+  background: #ffc200;
+}
+
+.padding-top {
+  padding-left: 58rpx;
+  padding-top: 86rpx;
+}
+
+.margin-left-58 {
+  margin-left: 58rpx;
+}
+
+.margin-top-86 {
+  margin-top: 86rpx;
+}
+
+.h20 {
+  font-size: 40rpx;
+}
+
+.h13 {
+  font-size: 26rpx;
+}
+
+.h15 {
+  font-size: 30rpx;
+}
+
+.margin-left-6 {
+  margin-left: 6rpx;
+}
+
+.margin-top-4 {
+  margin-top: 4rpx;
+}
+
+.firstblock {
+  width: 340rpx;
+  height: 600rpx;
+  margin-left: 24rpx;
+  margin-right: 12rpx;
+  margin-bottom: 10rpx;
+  border-radius: 8rpx;
+  display: inline-block;
+  box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(0, 0, 0, 0.1);
+}
+
+.block {
+  width: 340rpx;
+  height: 600rpx;
+  margin-left: 12rpx;
+  margin-right: 12rpx;
+   margin-bottom: 10rpx;
+  border-radius: 8rpx;
+  display: inline-block;
+  box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(0, 0, 0, 0.1);
+}
+
+.ss {
+  height: 610rpx;
+  white-space: nowrap;
+}
+
+.jiage {
+  position: relative;
+  padding: 34rpx 60rpx 24rpx 60rpx;
+  /* height: 168rpx; */
+  background: linear-gradient(315deg, rgba(255, 150, 144, 1) 0%, rgba(255, 93, 87, 1) 100%);
+}
+
+.quanyi {
+  height: 250rpx; 
+  padding: 24rpx 40rpx 0rpx 40rpx;
+}
+
+.icon-20 {
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.margin-left-20 {
+  margin-left: 20rpx;
+}
+
+.margin-top-20 {
+  margin-top: 16rpx;
+}
+
+.margin-top-24 {
+  margin-top: 24rpx;
+}
+
+.margin-top-30 {
+  margin-top: 30rpx;
+}
+
+.margin-top-10 {
+  margin-top: 10rpx;
+}
+
+.margin-top-12 {
+  margin-top: 12rpx;
+}
+
+.tuijian {
+  position: absolute;
+  height: 86rpx;
+  width: 86rpx;
+  right: 0;
+  top: 0;
+}
+
+.lianxikefu {
+  width: 264rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  background: rgba(34, 34, 34, 1);
+  border-radius: 34rpx;
+  color: #ffdc98;
+}
+
+.duibi {
+  width: 690rpx;
+  height: 332rpx;
+  margin: 30rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8rpx;
+}
+.title{
+  height:84rpx;
+  background: #FFC200;
+}
+.white-content{
+  height:80rpx;
+  background: white;
+}
+.border-top-bottom{
+  border-bottom: 2rpx solid #F5F5F5;
+  border-top: 2rpx solid #F5F5F5;
+}

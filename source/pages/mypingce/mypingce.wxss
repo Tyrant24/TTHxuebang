@@ -1,0 +1,14 @@
+/* pages/mypingce/mypingce.wxss */
+.ceshi {
+  width: 680rpx;
+  height: 206rpx;
+  margin: 34rpx;
+  border-radius: 8rpx;
+  /* background: #5db982; */
+}
+.opa{
+  opacity: 0.5;
+}
+.margin-left-12 {
+  margin-left: 12rpx;
+}

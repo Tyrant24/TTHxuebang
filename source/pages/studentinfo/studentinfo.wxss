@@ -1,0 +1,35 @@
+
+.pc {
+  color: #c8c8c8;
+   text-align: right;
+ 
+}
+.qq{
+  background: #FFFFFF;
+}
+.nannv{
+  width: 150rpx;
+  height: 40rpx;
+}
+.tuan_btn{
+   position: fixed;
+width: 85%;
+padding-top:20rpx;
+padding-bottom:20rpx;
+background-color: #FF6600;
+color: white;
+border-radius: 40rpx;
+bottom:30rpx;
+left:8vw;
+
+}
+.ipt{
+
+  text-align: right
+}
+.ipt1
+{
+  text-align: right;
+  width:350rpx;
+
+}

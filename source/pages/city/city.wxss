@@ -1,0 +1,31 @@
+/* pages/city/city.wxss */
+.top{
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* .block{
+  border:1px solid #e5e5e5;
+  padding-top: 10rpx;
+  padding-left: 55rpx;
+  padding-right: 55rpx;
+  padding-bottom: 10rpx;
+  margin-top:28rpx;
+} */
+.mid{
+  /* margin-top: 30rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx; */
+  /* padding-bottom: 10rpx; */
+}
+
+.block{
+  border:1px solid #e5e5e5;
+  width: 196rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 20rpx;
+  /* margin-top:28rpx; */
+}

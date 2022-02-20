@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>
+      {{InstInfo.name}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div class='orangeblock'>
+
+
+    <div class='flex-row flex-center'>
+
+      <div class='flex-row column flex-1'>
+        <div class='f48 txt-bold txt-white'>{{MemberInfo.nickName}}</div>
+        <div class='f26 txt-bold txt-white margin-top-10'> </div>
+      </div>
+
+      <img class='tx radius-50  ' style='border:2px solid #CECFCE' src='{{MemberInfo.avatarUrl}}' />
+
+    </div>
+  </div>
+
+  <div class='bg-white margin-20 radius-8'>
+
+    <div data-name='wt' (click)='navigate("ketan")' class='flex-row flex-center margin-30   pd'>
+      <img class='icon-24' src='{{uploadpath}}resource/{{res.problem}}' />
+      <div class='margin-left-20  txt-black  flex-1 h'>已购课程</div>
+      <img class='icon-15' src='{{uploadpath}}resource/{{res.to}}' />
+    </div>
+
+    <div  (click)='todetails("wt")' class='flex-row flex-center margin-30   pd'>
+      <img class='icon-24' src='{{uploadpath}}resource/{{res.problem}}' />
+      <div class='margin-left-20  txt-black  flex-1 h'>常见问题</div>
+      <img class='icon-15' src='{{uploadpath}}resource/{{res.to}}' />
+    </div>
+
+
+    <div class=' margin-30   pd'>
+      <a href="tel:{{InstInfo.tel}}" class='clear-button' hover-class='bg_gray'  style='border-radius:0;border:0;'>
+        <div class='flex-row flex-center'>
+          <img class='icon-24' src='{{uploadpath}}resource/{{res.customer}}' />
+          <div class='margin-left-20  txt-black h '>联系客服</div>
+          <div class='margin-left-40  txt-gray h6 flex-1 '>工作日 {{InstInfo.openning}}</div>
+          <img class='icon-15' src='{{uploadpath}}resource/{{res.to}}' />
+        </div>
+      </a>
+    </div>
+
+
+    <div  (click)='todetails("wm")' class='flex-row flex-center margin-30   pd'>
+      <img class='icon-24' src='{{uploadpath}}resource/{{res.aboutus}}' />
+      <div class='margin-left-20  txt-black  flex-1 h'>关于我们</div>
+      <img class='icon-15' src='{{uploadpath}}resource/{{res.to}}' />
+    </div>
+
+
+
+  </div>
+
+  <div class='height-60'></div>
+
+
+</ion-content>

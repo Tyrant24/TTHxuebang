@@ -1,0 +1,54 @@
+/* pages/myorder/myorder.wxss */
+
+Page {
+  background: #f5f5f5;
+}
+.top{
+  position: fixed;
+  width: 100vw;
+}
+
+.txt {
+  color: #ffc200;
+}
+
+.block {
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.quxiao{
+  color: #FF5733;
+}
+
+.icon {
+  height: 168rpx;
+  width: 168rpx;
+}
+
+.bor_bot {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.fbtn {
+  width: 140rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 40rpx;
+}
+.waitpay{
+  background: #FD4963;
+  font-size: 32rpx;
+  color:white;
+  border-radius: 50%;
+  min-width: 40rpx;
+
+  min-height: 40rpx;line-height: 40rpx;
+  text-align: center;
+}
+.xiaoxi{
+  position: absolute;
+  top: 1.5vh;
+  right: 5.5vw;
+  
+}

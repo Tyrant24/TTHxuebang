@@ -1,0 +1,52 @@
+<view class="height-150">
+</view>
+<view class="height-150"></view>
+
+<block wx:if="{{shenhe[0].status=='F'}}">
+  <view class="flex-row  ">
+    <view class="flex-1"></view>
+
+    <image class="icon-150" mode='widthFix' src='{{uploadpath}}resource/{{res.nofound}}'></image>
+
+    <view class="flex-1"></view>
+  </view>
+  <view class="h4 text-center margin-top" style='color:rgba(255, 194, 0, 1)'>很抱歉,审核未通过</view>
+  <view class="h4-5 center" style='color:rgba(153, 153, 153, 1);'>拒绝原因：您暂时不符合推广员的要求， 谢谢您的关注</view>
+  <view class="flex-row ">
+    <view class="flex-1"></view>
+    <view bindtap='chonxintijiao' class="btn">重新提交申请</view>
+    <view class="flex-1"></view>
+  </view>
+</block>
+<block wx:if="{{shenhe[0].status=='A'}}">
+  <view class="flex-row  ">
+    <view class="flex-1"></view>
+
+    <image class="icon-150" mode='widthFix' src='{{uploadpath}}resource/{{res.nofound}}'></image>
+
+    <view class="flex-1"></view>
+  </view>
+  <view class="h4 text-center margin-top" style='color:rgba(255, 194, 0, 1)'>正在火速处理中</view>
+  <view class="h4-5 center" style='color:rgba(153, 153, 153, 1);'>学榜需要审核您的申请，再此期间你可以把课程分享给好友但无法获得邀请佣金。</view>
+  <view class="flex-row ">
+    <view class="flex-1"></view>
+    <view bindtap='tuiguan' class="btn">前往推广中心</view>
+    <view class="flex-1"></view>
+  </view>
+</block>
+<block wx:if="{{shenhe[0].status=='S'}}">
+  <view class="flex-row  ">
+    <view class="flex-1"></view>
+
+    <image class="icon-150" mode='widthFix' src='{{uploadpath}}resource/{{res.nofound}}'></image>
+
+    <view class="flex-1"></view>
+  </view>
+  <view class="h4 text-center margin-top" style='color:rgba(255, 194, 0, 1)'>恭喜您成为推广员</view>
+  <view class="h4-5 center" style='color:rgba(153, 153, 153, 1);'>现在邀请好友，即可赚取佣金</view>
+  <view class="flex-row ">
+    <view class="flex-1"></view>
+    <view bindtap='tuiguan' class="btn">前往推广中心</view>
+    <view class="flex-1"></view>
+  </view>
+</block>

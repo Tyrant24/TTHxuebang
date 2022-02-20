@@ -1,0 +1,12 @@
+/* pages/problem/problem.wxss */
+Page{
+  background: #f5f5f5;
+}
+.icon{
+  width: 24rpx;
+  height: 14rpx;
+}
+.icon2{
+  width: 14rpx;
+  height: 24rpx;
+}

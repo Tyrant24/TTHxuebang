@@ -1,0 +1,87 @@
+/* pages/xuanzedizhi/xuanzedizhi.wxss */
+.page{
+  /* background: white; */
+}
+.margin-left-14 {
+  margin-left: 14rpx;
+}
+
+.margin-left-34 {
+  margin-left: 34rpx;
+}
+
+.hezi {
+  margin-top: 20rpx;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  background-color: white;
+  border-radius: 8rpx;
+}
+
+.but {
+  position: fixed;
+  left: 76rpx;
+  bottom: 54rpx;
+  width: 80vw;
+  border-radius: 42rpx;
+  background-color: #f60;
+}
+
+.icon-12 {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.icon-15 {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.icon-32 {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.add {
+  height: 140rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8rpx;
+}
+
+.block_black {
+  background: black;
+  opacity: 0.6;
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+}
+
+.white_black {
+  background: white;
+  position: fixed;
+  z-index: 100;
+  left: 104rpx;
+  right: 104rpx;
+  width: 540rpx;
+  height: 600rpx;
+  bottom: 388rpx;
+  border-radius: 8rpx;
+}
+
+.margin-top-34 {
+  margin-top: 34rpx;
+}
+.margin-top-8 {
+  margin-top: 8rpx;
+}
+.shu {
+  width: 2rpx;
+  height: 56rpx;
+  margin-left: 84rpx;
+  margin-right: 84rpx;
+  background: #f5f6f8;
+}

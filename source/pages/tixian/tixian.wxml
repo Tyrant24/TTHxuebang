@@ -1,0 +1,57 @@
+<view wx:if="{{tishi1}}" class="padding-20 flex-row flex-center jingao">
+  <view class="flex-1"></view>
+  <image src="{{uploadpath}}resource/{{res.cuowu}}" class="icon-15  "></image>
+  <view class="h6 margin-left-10">提现最低金额为10元，不能超过可提现金额 5000元</view>
+  <view class="flex-1"></view>
+</view>
+
+<view wx:if="{{tishi2}}" class="padding-20 flex-row flex-center jingao">
+  <view class="flex-1"></view>
+  <image src="{{uploadpath}}resource/{{res.cuowu}}" class="icon-15  "></image>
+  <view class="h6 margin-left-10">提现金额不能为空</view>
+  <view class="flex-1"></view>
+</view>
+
+<view wx:if="{{tishi3}}" class="padding-20 flex-row flex-center jingao">
+  <view class="flex-1"></view>
+  <image src="{{uploadpath}}resource/{{res.cuowu}}" class="icon-15  "></image>
+  <view class="h6 margin-left-10">提现金额不能大于余额</view>
+  <view class="flex-1"></view>
+</view>
+
+
+<view class="padding-30 h5" style='color:rgba(34, 34, 34, 1)'>提现金额 (元) 到微信钱包</view>
+<view class='padding-20' style="padding-top:0rpx">
+  <view class="bg">
+    <view class="flex-row flex-center  margin-20 xhx">
+      <view class="h2">￥</view>
+      <input bindinput="shuru" class="flex-1 margin-left-20 h2 shuru" value="{{jiner}}" type='digit' confirm-type='done' placeholder-class="tsk" placeholder="最低提现10元"></input>
+      <view bindtap="quanbu" class="h6" style="color:#589DE9">全部提现</view>
+    </view>
+    <view class="flex-row flex-center  padding-30 ">
+      <view class="" style="color:#222222">全部可提现金额:</view>
+      <view class="" style="color:#D43030">￥{{memberinfo.tuiguanshouyi}}</view>
+    </view>
+  </view>
+
+</view>
+ <!-- <input   value="{{name}}"  bindinput="shuru1" placeholder="必须输入真实姓名" ></input> -->
+<view class="flex-row ">
+  <view class="flex-1"></view>
+  <view bindtap='tixian' class="btn">立即提现</view>
+  <view class="flex-1"></view>
+</view>
+<view class="flex-row flex-center margin-top-10">
+  <view class="flex-1"></view>
+  <view bindtap='mingxi' class="h6" style='color:rgba(88, 157, 233, 1)'>收支明细</view>
+  <image style='width:10rpx;heigth:10rpx' class=" margin-left-10" mode='widthFix' src='{{uploadpath}}resource/{{res.right_icon}}'></image>
+  <view class="flex-1"></view>
+</view>
+
+
+<view class="padding-40">
+  <view class="h6" style="color:#999999;line-height:42rpx">提现说明:</view>
+  <view wx:for="{{problemlist}}" wx:key='k' class="h6" style="color:#999999;line-height:42rpx">{{item.seq}}.{{item.content}}</view>
+
+
+</view>

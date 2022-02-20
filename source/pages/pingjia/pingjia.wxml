@@ -1,0 +1,167 @@
+<!--pages/pingjia/pingjia.wxml-->
+
+<form bindsubmit="submit" bindreset="formReset" report-submit="{{true}}">
+  <view class='bg-white'>
+    <view class='kecheng flex-row  bor_bot  '>
+
+      <image src='{{uploadpath}}resource/{{res.chengong}}' class='icon-img'></image>
+
+      <view class='flex-row column  '>
+        <view class='margin-left-40 txt-black h5'>课程评分</view>
+        <view class='flex-row flex-center margin-top-24 margin-left-30 '>
+
+          <view wx:if='{{pingfen==0}}'>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='1'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='2'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='3'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='4'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='5'></image>
+          </view>
+
+          <view wx:if='{{pingfen==1}}'>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='1'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='2'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='3'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='4'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='5'></image>
+          </view>
+
+          <view wx:if='{{pingfen==2}}'>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='1'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='2'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='3'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='4'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='5'></image>
+          </view>
+
+          <view wx:if='{{pingfen==3}}'>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='1'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='2'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='3'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='4'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='5'></image>
+          </view>
+
+          <view wx:if='{{pingfen==4}}'>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='1'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='2'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='3'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='4'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindkcpingfen' id='5'></image>
+          </view>
+
+          <view wx:if='{{pingfen==5}}'>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='1'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='2'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='3'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='4'></image>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindkcpingfen' id='5'></image>
+          </view>
+
+        </view>
+
+
+
+      </view>
+
+    </view>
+
+    <view class='mid  '>
+      <textarea class='write h5 txt-black' name='text' contenteditable="{{true}}" auto-height="{{true}}" placeholder='分享您的上课心得，让其他宝妈更好了解哟' style='width:92vw' placeholder-style='color:#CCCCCC' maxlength='-1'></textarea>
+
+      <view class='height-150'></view>
+
+      <view class='flex-row flex-center flex-wrap img'>
+
+        <view class=' ' wx:for="{{images}}" wx:key="k" wx:for-index="idx">
+          <image src='{{uploadpath}}pingjia/{{item}}' class='imgbg' bindtap='minusImg' id="{{idx}}"></image>
+        </view>
+
+        <view class='addimg' bindtap='uploadimg'>
+          <image src='{{uploadpath}}resource/{{res.addimg}}' class='icon56'></image>
+        </view>
+        
+      </view>
+
+    </view>
+
+    <view class='height-20 bg-gray'></view>
+
+    <view class='jigou'>
+      <view class='flex-row flex-center'>
+        <image src='{{uploadpath}}resource/{{res.addimg}}' class='icon22'></image>
+        <view class='margin-left-20 txt-black h5'>机构评分</view>
+      </view>
+      <view class='flex-row flex-center margin-top-40'>
+        <view class=' txt-black flex-1 h5'>综合评分</view>
+
+
+        <view wx:if='{{jgpingfen==0}}'>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='1'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='2'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='3'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='4'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='5'></image>
+        </view>
+
+        <view wx:if='{{jgpingfen==1}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='1'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='2'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='3'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='4'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='5'></image>
+        </view>
+
+        <view wx:if='{{jgpingfen==2}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='1'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='2'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='3'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='4'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='5'></image>
+        </view>
+
+        <view wx:if='{{jgpingfen==3}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='1'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='2'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='3'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='4'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='5'></image>
+        </view>
+
+        <view wx:if='{{jgpingfen==4}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='1'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='2'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='3'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='4'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon margin-10' bindtap='bindjgpingfen' id='5'></image>
+        </view>
+
+        <view wx:if='{{jgpingfen==5}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='1'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='2'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='3'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='4'></image>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon margin-10' bindtap='bindjgpingfen' id='5'></image>
+        </view>
+
+
+
+
+
+      </view>
+    </view>
+
+  </view>
+
+  <view class='submit flex-row bg-white'>
+    <view class='flex-row flex-center flex-1 margin-left-28' >
+      <image src='{{uploadpath}}resource/{{res.xuanzhong}}' class='icon' bindtap='check' data-ck='nm' wx:if='{{check==true}}'></image>
+      <image src='{{uploadpath}}resource/{{res.weixuan}}' class='icon' bindtap='check' data-ck='bnm' wx:if='{{check==false}}'></image>
+      <view    class='txt-black h6 margin-left-10' bindtap='check' data-ck='nm' wx:if='{{check==true}}'>匿名评价</view>
+       <view    class='txt-black h6 margin-left-10' bindtap='check'  data-ck='bnm' wx:if='{{check==false}}'>匿名评价</view>
+    </view>
+
+    <button style=' ' form-type='submit' class='subbtn txt-white text-center' style='border-radius:0;border:0'>提交评价</button>
+  </view>
+
+</form>

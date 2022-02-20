@@ -1,0 +1,16 @@
+/* pages/liucheng/liucheng.wxss */
+Page{
+  background: #f5f5f5;
+}
+.shadow{
+  box-shadow: 1px 1px 10px #e0dfdf;
+}
+.bg{
+  background: #ffc200;
+}
+.txt-hui{
+  color: #4C4C4C;
+}
+.txt{
+  font-size: 30rpx;
+}

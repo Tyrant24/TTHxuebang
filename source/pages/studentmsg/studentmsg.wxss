@@ -1,0 +1,35 @@
+Page{
+  background: #F5F6F8;
+}
+.qqq{
+  background: white;
+}
+.nande{
+color:#FFFFFF;
+background-color: #4FB5E6;
+padding: 5rpx 20rpx 5rpx 20rpx;
+border-radius: 20rpx;
+margin-left: 20rpx;
+font-size: 20rpx;
+}
+.nvde{
+color:#FFFFFF;
+background-color: #FF8686;
+padding: 5rpx 20rpx 5rpx 20rpx;
+border-radius: 20rpx;
+margin-left: 20rpx;
+font-size: 20rpx;
+
+}
+.tuan_btn{
+   position: fixed;
+width: 85%;
+padding-top:20rpx;
+padding-bottom:20rpx;
+background-color: #FF6600;
+color: white;
+border-radius: 40rpx;
+bottom:30rpx;
+left:8vw;
+
+}

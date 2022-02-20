@@ -1,0 +1,2 @@
+<!--pages/aboutus/aboutus.wxml-->
+<image src='{{uploadpath}}aboutus/{{aboutus.content}}'  mode='widthFix' style='width:100vw'></image>

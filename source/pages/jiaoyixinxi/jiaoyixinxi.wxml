@@ -1,0 +1,70 @@
+<view class="height-20"></view>
+<view class="bg-white">
+
+  <view class="padding-20" style="padding-right:0rpx">
+    <view class="flex-row flex-center margin-right-20 ">
+      <view class="txt-bold">交易信息</view>
+      <view class="flex-1"></view>
+      <view class="h6" style="color:#AAAAAA">{{xiaoxi.xiaoxi_date}}</view>
+
+    </view>
+    <view class="margin-top-20 h5   xian" style="color:#AAAAAA">
+      {{xiaoxi.content}}
+    </view>
+    <view class="flex-row margin-top-20 xian">
+
+      <image class='icon-120' mode='widthFix' src='{{uploadpath}}curriculum/{{xiaoxi.dindan.course_kc_img}}'></image>
+
+      <view class="margin-left-20  margin-right-20 flex-1 ">
+        <view class="flex-row flex-center ">
+          <view class="txt-bold">{{xiaoxi.dindan.course_name}}</view>
+          <view class="flex-1"></view>
+          <view> ￥{{xiaoxi.dindan.amount}}</view>
+        </view>
+
+        <view class="flex-row margin-top-5 flex-center ">
+          <view class="h6" style="color:#AAAAAA">{{xiaoxi.dindan.course_jigouname}}</view>
+          <view class="flex-1"></view>
+          <view class="h6" style="color:#AAAAAA">x1</view>
+        </view>
+
+        <view class='flex-row flex-center margin-top-5 ' style=''>
+
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.age_icon}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{xiaoxi.dindan.course_age_name}}</view>
+          </view>
+
+
+          <view class='flex-row flex-center  margin-left-20'>
+            <image src='{{uploadpath}}resource/{{res.keshi}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{xiaoxi.dindan.course_age_name}}节课</view>
+          </view>
+
+
+          <view class='flex-row flex-center margin-left-20 '>
+            <image src='{{uploadpath}}resource/{{res.time}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{xiaoxi.dindan.course_duration}}/节</view>
+          </view>
+
+
+        </view>
+
+
+
+      </view>
+
+
+
+    </view>
+    <view id="123132" class="flex-row  flex-center margin-20" style="margin-bottom:10rpx">
+
+      <view class="flex-1"></view>
+      <view class="h5 margin-right-20">共1共个课程</view>
+      <view class="txt-bold margin-right-20">实付金额￥{{xiaoxi.dindan.amount}}</view>
+    </view>
+
+  </view>
+
+</view>

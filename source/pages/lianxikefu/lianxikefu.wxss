@@ -1,0 +1,24 @@
+/* pages/lianxikefu/lianxikefu.wxss */
+Page{
+  background: #F5F6F8;
+}
+.weixin {
+  width: 702rpx;
+  height: 224rpx;
+  margin: 24rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8rpx;
+}
+.icon-42{
+  width: 98rpx;
+  height: 88rpx;
+}
+ .icon-50{
+  width: 94rpx;
+  height: 94rpx;
+}
+ 
+.icon-right{
+  width:12rpx;
+height:20rpx;
+}

@@ -1,0 +1,108 @@
+.member_icon {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 50%;
+}
+.aaa{
+
+  line-height: 56rpx;
+  overflow: hidden;
+  
+}
+.label {
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  color: #ff9834;
+  border: 1px solid #ff9834;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+}
+.jinbi{
+
+  width:60rpx;
+  height: 60rpx;
+}
+
+.content_bg {
+  width: 100%;
+  border-radius: 10rpx;
+  background: -webkit-linear-gradient(left, rgba(232, 180, 116, 1), rgba(247, 198, 136, 1), rgba(255, 218, 167, 1));
+}
+
+.tixian {
+  font-size: 26rpx;
+  padding: 6rpx 20rpx 6rpx 20rpx;
+  color: rgba(255, 255, 255, 1);
+  background: -webkit-linear-gradient(left, rgba(97, 97, 97, 1), rgba(57, 57, 57, 1));
+  border-radius: 26rpx;
+}
+.xian{
+  margin:0 20rpx 0 20rpx;
+  background: rgba(255, 218, 168, 1);
+ 
+  height: 2rpx;
+}
+.fenge{
+  width: 2rpx;
+  height: 104rpx;
+  background: rgba(255, 218, 168, 1);
+}
+.content_bottom{
+  padding :40rpx 0 40rpx 0;
+}
+.yaoqin_icon{
+  width: 80rpx;
+  height: 80rpx;
+}
+.h11{
+  font-size: 22rpx;
+}
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+.modal-dialog {
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  bottom:0;
+  height: 700rpx;
+  z-index: 9999;
+  background: #f9f9f9;
+
+
+}
+.jl{
+  width: 150rpx;
+}
+.ysl{
+  color: rgba(204, 204, 204, 1);
+}
+.yz_btm{
+  color:rgba(255, 255, 255, 1);
+  background: rgba(255, 102, 0, 1);
+  padding:10rpx 20rpx 10rpx 20rpx;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+}
+.tuan_btn{
+width: 85%;
+padding-top:20rpx;
+padding-bottom:20rpx;
+background-color: rgba(255, 102, 0, 1);
+color: white;
+border-radius: 40rpx;
+
+}

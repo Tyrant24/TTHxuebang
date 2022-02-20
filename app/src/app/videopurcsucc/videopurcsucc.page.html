@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot="start">
+      <ion-button (click)='back()'>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{InstInfo.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class='bg-top'>
+    <div class='height-50'></div>
+
+    <div class='flex-row flex-center '>
+      <div class="flex-1"></div>
+      <img src='{{uploadpath}}resource/{{res.goumaiwanchen}}' class='icon-80' />
+      <div class='flex-row column margin-left-28'>
+        <div class='txt-bold'>购买成功</div>
+
+      </div>
+      <div class="flex-1"></div>
+    </div>
+
+    <div class='height-50'></div>
+
+    <div class='flex-row flex-center'>
+      <div class='flex-1'></div>
+
+      <div class='flex-row flex-center btn ' (click)='tohome()'>
+        <div class='flex-1'></div>
+        <img src='{{uploadpath}}resource/{{res.kc_shouyebai}}' class='icon-34' />
+        <div class='txt-white h5 margin-left-18'>返回首页</div>
+        <div class='flex-1'></div>
+      </div>
+
+      <div style='width:24rpx'></div>
+
+      <div (click)='lijixuexi()' class='flex-row flex-center btn '>
+        <div class='flex-1'></div>
+        <img src='{{uploadpath}}resource/{{res.kc_lijixuexi}}' class='icon-34' />
+        <div class='txt-white h5 margin-left-18'>立即学习</div>
+        <div class='flex-1'></div>
+      </div>
+
+      <div class='flex-1'></div>
+
+    </div>
+
+    <div class='height-74'></div>
+
+  </div>
+
+
+
+  <div class='flex-row flex-column'>
+    <div class='height-78'></div>
+    <div class='txt9'>更多推荐</div>
+    <div class='flex-row flex-center flex-wrap padding-bottom-40'>
+
+      <div  class='kecheng-block ' *ngFor='let item of kechenlist'>
+        <div (click)='kechenxianqin(item.id)' >
+          <div style=''>
+            <img class='kecheng-img' src='{{uploadpath}}onlineclassroom/{{item.img}}' />
+          </div>
+
+          <div class='padding-12'>
+            <div class='h5'>{{item.name}}</div>
+            <div style=' height: 40rpx;' class='f-16 chaochu2 margin-top-8'>
+              {{item.class_introduce}}
+            </div>
+
+
+            <div class='flex-row flex-center margin-top-14'>
+              <div class='flex-row flex-center'>
+                <img src='{{uploadpath}}resource/{{res.jg_icon}}' class='icon-16 ' />
+                <div class=' f20 margin-left-10'>{{item.age_name}}</div>
+              </div>
+
+              <div class='flex-row flex-center margin-left-26'>
+                <img src='{{uploadpath}}resource/{{res.jg_icon}}' class='icon-16 ' />
+                <div class=' f20 margin-left-10'>共{{item.chapter_num}}章</div>
+              </div>
+            </div>
+
+
+          </div>
+          <div *ngIf="item.isfree_value!='Y'" class='margin-left-10 dd flex-row flex-center margin-top-12'>
+            <div class='margin-top-4 f20 txt-gray flex-1 '>{{item.learning_num}}人学过</div>
+            <div class='margin-top-4 f20 txt-gray ' style="text-decoration:line-through;">￥{{item.originalprice}}</div>
+            <div class='margin-top-4 h6 txt-red margin-left-6'>￥</div>
+            <div class=' txt-red xg' style=''>{{item.price}}</div>
+          </div>
+
+          <div *ngIf="item.isfree_value=='Y'" class='margin-left-10 flex-row flex-center margin-top-12'>
+            <div class='margin-top-4 f20 txt-gray  flex-1 '>{{item.learning_num}}人学过</div>
+            <div class="mianfei">免费课程</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</ion-content>

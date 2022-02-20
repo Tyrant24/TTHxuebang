@@ -1,0 +1,175 @@
+@function rpx($px) {
+  @return ($px * 100vw) / 750;
+}
+
+
+.menu-padding {
+  padding-left: rpx(32);
+  padding-top: rpx(28);
+  padding-right: rpx(32);
+
+}
+
+.margin-top-12 {
+  margin-top: rpx(12);
+}
+
+chaochu2 {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-line-clamp: 2;
+
+}
+
+.kecheng-block {
+  width: rpx(330);
+
+  background: rgba(255, 255, 255, 1);
+  box-shadow: rpx(0) rpx(4) rpx(12) rpx(0) rgba(0, 0, 0, 0.1);
+  border-radius: rpx(8);
+  margin-left: rpx(30);
+  margin-top: rpx(30);
+}
+
+.xhx {
+  text-decoration: line-through
+}
+
+.padding-bottom-40 {
+  padding-bottom: rpx(40);
+}
+
+.height-30 {
+  height: rpx(30);
+}
+
+.kecheng-img {
+  height: rpx(246);
+  width: 100%;
+  /* border: rpx(1) solid black; */
+  /* background: rgba(216, 216, 216, 1); */
+}
+
+.padding-12 {
+  padding: rpx(12);
+}
+
+.f-16 {
+  font-size: rpx(16);
+}
+
+.margin-top-8 {
+  margin-top: rpx(8);
+}
+
+.margin-top-14 {
+  margin-top: rpx(14);
+}
+
+.margin-top-12 {
+  margin-top: rpx(12);
+}
+
+.f20 {
+  font-size: rpx(20);
+}
+
+.xg {
+
+  padding-right: rpx(15);
+
+}
+
+.dd {
+  margin: rpx(15);
+}
+
+.txt-gray {
+  color: #999;
+}
+
+.icon-16 {
+  width: rpx(16);
+  height: rpx(16);
+}
+
+.margin-left-6 {
+  margin-left: rpx(6);
+}
+
+.margin-left-10 {
+  margin-left: rpx(10);
+}
+
+.margin-left-26 {
+  margin-left: rpx(26);
+}
+
+.txt-red {
+  color: #FF5252
+}
+
+.h11 {
+  font-size: rpx(22);
+}
+
+.margin-top-4 {
+  margin-top: rpx(4);
+}
+
+.henxian {
+
+  background-color: #FFC200;
+  height: 3px;
+  width: rpx(50);
+  margin-top: rpx(5);
+  margin-bottom: rpx(30);
+  border-radius: rpx(5);
+
+}
+
+.nohenxian {
+
+
+  height: 3px;
+  width: rpx(50);
+  margin-top: rpx(5);
+  margin-bottom: rpx(30);
+  border-radius: rpx(5);
+
+}
+
+.mianfei {
+  font-size: rpx(24);
+  color: white;
+  background-color: #FFC200;
+  padding: rpx(15);
+  border-top-left-radius: rpx(30);
+}
+
+.yigou {
+  font-size: rpx(24);
+  color: white;
+  background-color: #CCCCCC;
+
+  padding: rpx(15);
+  padding-left: rpx(20);
+  padding-right: rpx(20);
+  border-top-left-radius: rpx(30);
+}
+
+.lb {
+  width: 100vw;
+  height: rpx(200);
+}
+
+.h40 {
+  height: rpx(40);
+  ;
+}

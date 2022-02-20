@@ -1,0 +1,110 @@
+/* pages/pingjia/pingjia.wxss */
+
+Page {
+  background: #f5f6f8;
+}
+
+.kecheng {
+  margin-left: 28rpx;
+  margin-top: 26rpx;
+  padding-bottom: 26rpx;
+  /* margin-right: 28rpx; */
+}
+
+.icon-img {
+  width: 168rpx;
+  height: 168rpx;
+  border-radius: 8rpx;
+}
+
+.margin-top-24 {
+  margin-top: 14rpx;
+}
+
+.margin-left-30 {
+  margin-left: 30rpx;
+}
+
+.mid {
+  margin-left: 28rpx;
+  margin-top: 18rpx;
+  padding-bottom: 26rpx;
+  margin-right: 28rpx;
+}
+
+.write {
+  /* min-height: 248rpx; *//* vertical-align: middle; */
+  padding-bottom: 100rpx;
+}
+
+.addimg {
+  width: 56rpx;
+  height: 56rpx;
+  padding: 66rpx;
+  margin: 12rpx; 
+  border: 2rpx dashed #ccc;
+}
+
+.imgbg {
+  width: 192rpx;
+  height: 192rpx;
+  margin: 12rpx;
+  border: 0;
+  border-radius: 0rpx;
+}
+ 
+.img {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+
+.margin-left-10{
+  margin-left: 10rpx;
+}
+
+.icon56 {
+  width: 56rpx;
+  height: 48rpx;
+}
+
+.height-150 {
+  height: 150rpx;
+}
+
+.bg-gray {
+  background: #f5f6f8;
+}
+
+.jigou {
+  margin-left: 30rpx;
+  margin-top: 22rpx;
+  padding-bottom: 26rpx;
+  margin-right: 22rpx;
+}
+
+.icon22 {
+  height: 44rpx;
+  width: 44rpx;
+}
+
+.margin-top-40 {
+  margin-top: 40rpx;
+}
+
+.submit {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+}
+
+.subbtn {
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: rgba(255, 102, 0, 1);
+}
+
+.margin-left-28 {
+  margin-left: 28rpx;
+}

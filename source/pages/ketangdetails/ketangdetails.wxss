@@ -1,0 +1,450 @@
+/* pages/ketangdetails/ketangdetails.wxss */
+
+Page {
+  background: white;
+}
+.kcname{
+  font-size: 36rpx;
+ color: #222222;
+}
+
+.bianse{
+  color:#FF6600;
+}
+.zanwupl{
+  color:#6c6c6c;
+}
+.kd {
+  width: 100rpx;
+  height: 50rpx;
+  margin-top: 0rpx;
+  position: absolute;
+  margin-left: 620rpx;
+}
+
+.cs {
+  position: absolute;
+  margin-left: 640rpx;
+}
+
+.guanggao {
+  width: 100vw;
+  height: 128rpx;
+}
+
+.kecheng-block {
+  width: 30vw;
+  border-radius: 8rpx;
+  margin-left: 15rpx;
+  padding-top: 8rpx;
+}
+
+.margin-top-3 {
+  margin-top: 6rpx;
+}
+
+.cxk {
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 10rpx;
+}
+
+.xian {
+  height: 1rpx;
+  background-color: red;
+  width: 100%;
+}
+
+.cuxian {
+  height: 25rpx;
+  background-color: #f5f6f8;
+}
+
+.margin-left-30 {
+  margin-left: 35rpx;
+}
+
+.hs {
+  background-color: #ffc200;
+  width: 10rpx;
+  height: 25rpx;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+}
+
+.gd {
+  width: 100vw;
+  height: 60vh;
+}
+
+.margin-top-3 {
+  margin-top: 3rpx;
+}
+
+.zt1 {
+  margin-top: -170rpx;
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 85rpx;
+  position: absolute;
+}
+
+.db {
+  width: 100vw;
+  height: 100rpx;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  bottom: 0;
+}
+
+.shuruk {
+  background: #f5f5f5;
+  border-radius: 60rpx;
+  padding: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.fabiao {
+  padding: 20rpx;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  border-radius: 40rpx;
+  background-color: #f60;
+  color: white;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+
+.title {
+  text-decoration: underline;
+  margin-top: 150rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Top-img {
+  width: 100vw;
+  height: 400rpx;
+}
+
+.ts_icon {
+  width: 290rpx;
+  height: 240rpx;
+}
+
+.fufei {
+  display: flex;
+  border-radius: 0 10rpx 0 10rpx;
+  left: 130rpx;
+  top: -190rpx;
+  color: #fff;
+  background-color: #f44;
+  width: 70rpx;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.fufei1 {
+  display: flex;
+  border-radius: 0 10rpx 0 10rpx;
+  margin-top: -235rpx;
+  color: #fff;
+  margin-left: 150rpx;
+  background-color: #f44;
+  width: 50rpx;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.mianfei1 {
+  display: flex;
+  border-radius: 0 10rpx 0 10rpx;
+  margin-top: -235rpx;
+  color: #fff;
+  margin-left: 150rpx;
+  background-color: #ccc;
+  width: 50rpx;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.tishi {
+  position: fixed;
+  z-index: 100;
+  top: 35%;
+  right: 30%;
+}
+
+.padding-right-30 {
+  padding-right: 30rpx;
+}
+
+.margin-top-4 {
+  margin-top: 4rpx;
+}
+
+.jieshao {
+  margin-top: 20rpx;
+  width: 100%;
+  font-size: 20rpx;
+  color: rgba(153, 153, 153, 1);
+  line-height: 28rpx;
+}
+
+.jieshao1 {
+  font-size: 24rpx;
+  color: #222222;
+}
+
+.zhaunfa {
+  width: 168rpx;
+  height: 52rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(0, 0, 0, 0.1);
+  border-radius: 200rpx 0rpx 0rpx 200rpx;
+  opacity: 0.7968000000000001;
+  position: fixed;
+  left: 580rpx;
+  z-index: 9999;
+  margin-top: -300rpx;
+}
+
+.padding-30 {
+  padding: 30rpx 0rpx 20rpx 30rpx;
+}
+
+.padding-301 {
+  padding: 0rpx 30rpx 20rpx 30rpx;
+}
+
+.padding-302 {
+  padding-top:30rpx;
+  margin: 10rpx 30rpx 20rpx 30rpx;
+  border-top:1px solid #FFD2B4;
+}
+
+.border-bottom-2 {
+  padding-bottom: 20rpx;
+  
+}
+
+.margin-bottom {
+  margin-bottom: 10rpx;
+}
+
+.margin-top-12 {
+  margin-top: 20rpx;
+}
+
+.icon-13 {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.f20 {
+  font-size: 20rpx;
+}
+
+.margin-left-10 {
+  margin-left: 10rpx;
+}
+
+.margin-left-26 {
+  margin-left: 26rpx;
+}
+
+.zhuanfa-icon {
+  width: 26rpx;
+  height: 22rpx;
+}
+
+.youhui {
+  width: 82rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  background: rgba(255, 82, 82, 1);
+  border-radius: 8rpx;
+}
+
+.margin-left-8 {
+  margin-left: 8rpx;
+}
+
+.margin-left-18 {
+  margin-left: 18rpx;
+}
+
+.txt-red {
+  color: #ff5252;
+}
+
+.f40 {
+  font-size: 40rpx;
+}
+
+.margin-top-6 {
+  margin-top: 6rpx;
+}
+
+.margin-left-32 {
+  margin-left: 32rpx;
+}
+
+.margin-right-28 {
+  margin-right: 28rpx;
+}
+
+.height-160 {
+  height: 140rpx;
+}
+
+.tishi-block {
+  position: fixed;
+  bottom: 96rpx;
+  z-index: 100;
+  width: 100vw;
+  height: 60rpx;
+  background: rgba(249, 230, 199, 1);
+}
+
+.txt-zong {
+  color: #978250;
+}
+
+.height-28 {
+  height: 28rpx;
+}
+
+.menu {
+  height: 84rpx;
+}
+
+.dibutiao {
+  width: 128rpx;
+  height: 6rpx;
+  background: #ffc200;
+}
+
+.dibukontiao {
+  width: 128rpx;
+  height: 6rpx;
+}
+
+.txt-huang {
+  color: #ffc200;
+}
+
+.margin-top-18 {
+  margin-top: 18rpx;
+}
+
+.bottom_content {
+  margin-top: -10rpx;
+  width: 100vw;
+}
+
+.bottom-block {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 100vw;
+}
+
+.watch_block {
+  line-height: 96rpx;
+  height: 96rpx;
+  background: white;
+}
+
+.buy_block {
+  line-height: 96rpx;
+  height: 96rpx;
+  width: 440rpx;
+  background: rgba(255, 102, 0, 1);
+}
+
+.margin-left-12 {
+  margin-left: 12rpx;
+}
+
+.padding-34 {
+  padding: 34rpx;
+}
+
+.mulu {
+  margin-left: 34rpx;
+  padding-top: 34rpx;
+  padding-right: 34rpx;
+  padding-bottom: 34rpx;
+}
+
+.mulu_img {
+  width: 200rpx;
+  height: 150rpx;
+  background: rgba(216, 216, 216, 1);
+  border-radius: 8rpx;
+}
+
+.txt-gray {
+  color: #999;
+}
+
+.keshikang {
+  width: 74rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 4rpx;
+  border: 2rpx solid rgba(255, 194, 0, 1);
+}
+
+.shiping_icon {
+  width: 22rpx;
+  height: 22rpx;
+}
+
+.ss {
+  white-space: nowrap;
+}
+
+.ss1 {
+  width: 100vw;
+  height: 270rpx;
+}
+
+/* .bk{
+  border-radius: 10rpx;
+  border:1px solid #ffc200;
+} */
+
+.ceshi {
+  width: 30vw;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  padding-right: 10rpx;
+  border-radius: 20rpx;
+  display: inline-block;
+}
+
+.mulu1 {
+  width: 200rpx;
+  height: 150rpx;
+  border-radius: 15rpx;
+}
+
+.kuan1 {
+  width: 200rpx;
+  font-size: 24rpx;
+  height: 80rpx;
+  white-space: normal;
+}
+
+.kuan {
+  width: 200rpx;
+  font-size: 24rpx;
+}

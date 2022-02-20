@@ -1,0 +1,116 @@
+<view class="margin-20">
+
+  <view class="flex-row ">
+    <view class="flex-1"></view>
+    <view wx:if="{{niubi==1}}" bindtap="shanchu" class=" h15" style="color:#4FB5E6">删除</view>
+  </view>
+  <view class="flex-row ">
+    <view class="flex-1"></view>
+
+    <image wx:if="{{sex=='nv'}}" class="radius-50 icon-120" src="{{uploadpath}}resource/{{res.nvtou}}"></image>
+
+    <image wx:if="{{sex=='nan'}}" class="radius-50 icon-120" src="{{uploadpath}}resource/{{res.nantou}}"></image>
+
+    <view class="flex-1"></view>
+  </view>
+
+  <view class="margin-top-20 qq" >
+    <view class="padding-20 flex-row flex-center">
+
+      <view class="h15 " style="color:#FF5252;width:20rpx">*</view>
+      <view class="h15 margin-left-10" style="color:#222222">孩子姓名</view>
+      <view class="flex-1"></view>
+      <input class='ipt' bindinput="name" placeholder-class='pc' value='{{name}}' name='hangye' placeholder='点击输入'></input>
+
+    </view>
+
+    <view class="padding-20 flex-row flex-center">
+
+      <view class="h15" style="color:#FF5252;width:20rpx"></view>
+      <view class="h15 margin-left-10" style="color:#222222">性别 </view>
+      <view class="flex-1"></view>
+      <image bindtap="sex" data-id="nan" wx:if="{{sex=='nan'}}" src='{{uploadpath}}resource/{{res.xuannan}} ' class='nannv' mode='widthFix'></image>
+      <image bindtap="sex" data-id="nan" wx:if="{{sex=='nv'}}" src='{{uploadpath}}resource/{{res.weixuannan}} ' class='nannv' mode='widthFix'></image>
+      <image bindtap="sex" data-id="nv" wx:if="{{sex=='nv'}}" src='{{uploadpath}}resource/{{res.xuannv}} ' class=' margin-left-10 nannv' mode='widthFix'></image>
+      <image bindtap="sex" data-id="nv" wx:if="{{sex=='nan'}}" src='{{uploadpath}}resource/{{res.weixuannv}} ' class='margin-left-10 nannv ' mode='widthFix'></image>
+
+    </view>
+
+    <picker class="" mode="date" value="{{xssj}}" start="1970-1-1" end="{{jintian}}" bindchange="bindDateChange">
+    <view class="padding-20 flex-row flex-center">
+
+      <view class="h15" style="color:#FF5252;width:20rpx">*</view>
+      <view class="h15 margin-left-10" style="color:#222222">孩子生日</view>
+      <view class="flex-1"></view>
+
+
+      <view class="section__title">{{xssj}} </view>
+  
+<view wx:if="{{xssj==''}}" class="margin-right-10" style="color:#CCCCCC">请输入</view>
+        <image src="{{uploadpath}}resource/{{res.right_icon}}" mode="widthFix" class="icon-10"></image>
+
+
+
+    </view>
+    
+      </picker>
+    <view class="padding-20 flex-row flex-center">
+
+      <view class="h15 " style="color:#FF5252;width:20rpx"></view>
+      <view class="h15 margin-left-10" style="color:#222222">年级</view>
+      <view class="flex-1"></view>
+      <input class='  ipt' bindinput="nianji" placeholder-class='pc' value='{{nianji}}' name='hangye' placeholder='学员在读年级'></input>
+
+    </view>
+    <view class="padding-20 flex-row flex-center">
+
+      <view class="h15 " style="color:#FF5252;width:20rpx">*</view>
+      <view class="h15 margin-left-10" style="color:#222222">手机号码</view>
+      <view class="flex-1"></view>
+      <input class=' ipt ' maxlength="11" bindinput="shouji" placeholder-class='pc' value='{{shouji}}' name='hangye' placeholder='用于接受预约确认'></input>
+
+    </view>
+    <!-- <view class="padding-20 flex-row flex-center">
+      <view class="h15 " style="color:#FF5252;width:20rpx"></view>
+      <view class="h15 margin-left-10" style="color:#222222">微信号</view>
+      <view class="flex-1"></view>
+      <input class=' ipt ' bindinput="weixin" placeholder-class='pc' value='{{weixin}}' name='hangye' placeholder='xiaobaobao'></input>
+
+    </view> -->
+    <view class="padding-20 flex-row flex-center">
+
+      <view class="h15" style="color:#FF5252;width:20rpx"></view>
+      <view class="h15 margin-left-10" style="color:#222222">所在区域</view>
+      <view class="flex-1"></view>
+
+
+      <view class="section__title"> </view>
+      <picker class='flex-2' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker ipt" style='color:#C8C8C8' wx:if="{{region.length==0}}">请填写地址</view>
+        <view class="picker ipt" wx:if="{{region.length>0}}">{{region[0]}} {{region[1]}} {{region[2]}}</view>
+      </picker>
+
+
+    </view>
+    <!-- <view class="padding-20 flex-row flex-center">
+      <view class="h15 " style="color:#FF5252;width:20rpx"></view>
+      <view class="h15 margin-left-10" style="color:#222222">详细地址</view>
+      <view class="flex-1"></view>
+      <input style="width:500rpx;" class="ipt" bindinput="menpai" placeholder-class='pc' value='{{menpai}}' name='hangye' placeholder='如道路,门牌号,小区,楼栋号.单元室'></input>
+
+    </view> -->
+
+  </view>
+
+
+</view>
+
+<view bindtap="baocun" class="flex-row">
+  <view class="flex-1"></view>
+  <view class="tuan_btn  text-center  ">
+    保存
+
+  </view>
+
+  <view class="flex-1"></view>
+</view>

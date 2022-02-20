@@ -1,0 +1,45 @@
+/* pages/addressmanage/addressmanage.wxss */
+
+.hezi {
+  margin-top: 20rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background-color: white;
+  border-radius: 8rpx;
+}
+
+.margin-left-14 {
+  margin-left: 14rpx;
+}
+.margin-left-24 {
+  margin-left: 46rpx;
+}
+.margin-top-8 {
+  margin-top: 10rpx;
+}
+.margin-top-68 {
+  margin-top: 68rpx;
+}
+
+.but {
+  width: 600rpx;
+  height: 84rpx;
+  background: rgba(255, 102, 0, 1);
+  border-radius: 26px;
+}
+
+.margin-top-54 {
+  margin-top: 54rpx;
+}
+
+.delete {
+  width: 30px;
+  height: 21px;
+  font-size: 15px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(79, 181, 230, 1);
+  line-height: 21px;
+}

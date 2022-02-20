@@ -1,0 +1,79 @@
+<!--pages/mine/mine.wxml-->
+<view class=''>
+
+  <image src='{{uploadpath}}resource/{{res.ming_bg}}' class='bg_img'></image>
+
+  <view class='flex-row flex-center margin-top-30'>
+
+    <view class='flex-1'></view>
+    <navigator url='/pages/personaldata/personaldata' class=' h6 padding-10 text-center radius-10 txt-white margin-right-40' style='width:130rpx;background:#9f8626'>信息修改</navigator>
+  </view>
+
+
+  <view class=' flex-row flex-column   ' style='width:100%'>
+    <image class='icon-60 radius-50  ' style='border:4rpx solid #CECFCE' src='{{memberinfo.avatarUrl}}'></image>
+    <view class='txt-black  txt-bold '>{{memberinfo.nickName}}</view>
+  </view>
+
+  <view class='' style='height:20rpx'></view>
+
+</view>
+
+<view class='' style='height:50rpx'></view>
+
+<view data-name='dd' bindtap='todetails' class='flex-row flex-center margin-30  border_bottom pd' style=''>
+  <image class='icon' src='{{uploadpath}}resource/{{res.myorder}}'></image>
+  <view class='margin-left-20  txt-black   h'>我的订单</view>
+  <view class='margin-left-20'>
+    <view wx:if="{{reminderpay>0}}" class='waitpay '>{{reminderpay}}</view>
+  </view>
+  <view class='flex-1'></view>
+  <image class='icon-15' src='{{uploadpath}}resource/{{res.to}}'></image>
+</view>
+
+<view data-name='xx' bindtap='todetails' class='flex-row flex-center margin-30  border_bottom pd'>
+  <image class='icon' src='{{uploadpath}}resource/{{res.mymessage}}'></image>
+  <view class='margin-left-20  txt-black  flex-1 h'>我的消息</view>
+  <image class='icon-15' src='{{uploadpath}}resource/{{res.to}}'></image>
+</view>
+
+<view data-name='wt' bindtap='todetails' class='flex-row flex-center margin-30  border_bottom pd'>
+  <image class='icon' src='{{uploadpath}}resource/{{res.problem}}'></image>
+  <view class='margin-left-20  txt-black  flex-1 h'>常见问题</view>
+  <image class='icon-15' src='{{uploadpath}}resource/{{res.to}}'></image>
+</view>
+
+<view data-name='sc' bindtap='todetails' class='flex-row flex-center margin-30  border_bottom pd'>
+  <image class='icon' src='{{uploadpath}}resource/{{res.mine_fav}}'></image>
+  <view class='margin-left-20  txt-black  flex-1 h'>我的收藏</view>
+  <image class='icon-15' src='{{uploadpath}}resource/{{res.to}}'></image>
+</view>
+
+<view class=' margin-30  border_bottom pd'>
+  <button class=' clear-button' hover-class='bg_gray' open-type='contact' style='border-radius:0;border:0;'>
+    <view class='flex-row flex-center'>
+      <image class='icon' src='{{uploadpath}}resource/{{res.customer}}'></image>
+      <view class='margin-left-20  txt-black h '>联系客服</view>
+      <view class='margin-left-40  txt-gray h6 flex-1 '>工作日 {{instinfo.openning}}</view>
+      <image class='icon-15' src='{{uploadpath}}resource/{{res.to}}'></image>
+    </view>
+  </button>
+</view>
+
+<view data-name='wm' bindtap='todetails' class='flex-row flex-center margin-30  border_bottom pd'>
+  <image class='icon' src='{{uploadpath}}resource/{{res.aboutus}}'></image>
+  <view class='margin-left-20  txt-black  flex-1 h'>关于我们</view>
+  <image class='icon-15' src='{{uploadpath}}resource/{{res.to}}'></image>
+</view>
+
+
+<view data-name='jg' bindtap='todetails' class='flex-row flex-center margin-30   pd'>
+  <image class='icon' src='{{uploadpath}}resource/{{res.mechanism}}'></image>
+  <view class='margin-left-20  txt-black  flex-1 h'>机构入驻</view>
+  <image class='icon-15' src='{{uploadpath}}resource/{{res.to}}'></image>
+</view>
+
+
+<view class='margin-top padding' wx:if="{{memberinfo.canhexiao=='Y'}}">
+  <button bindtap='startscan'>核销</button>
+</view>

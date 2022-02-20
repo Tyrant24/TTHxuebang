@@ -1,0 +1,141 @@
+<!--pages/pingcejieguo/pingcejieguo.wxml-->
+
+<view class='top-block bg-white'>
+
+
+  <view class='flex-row flex-column '>
+
+    <view class='flex-row flex-column yuan radius-50' style='background-image:url({{uploadpath}}resource/{{res.wanchen_gif}});background-size:100% 100%;'>
+      <view class='flex-1 '></view>
+      <view class='txt-9 h6'>测试结果</view>
+
+      <view class=' text-center ' wx:for='{{pingcejieguo}}' wx:key='k' wx:if='{{item.options==typeA}}'>{{item.character}}</view>
+      <view class=' text-center ' wx:for='{{pingcejieguo}}' wx:key='k' wx:if='{{item.options==typeB}}'>{{item.character}}</view>
+      <view class=' text-center ' wx:for='{{pingcejieguo}}' wx:key='k' wx:if='{{item.options==typeC}}'>{{item.character}}</view>
+      <view class=' text-center ' wx:for='{{pingcejieguo}}' wx:key='k' wx:if='{{item.options==typeD}}'>{{item.character}}</view>
+
+      <view class='flex-1 '></view>
+      
+    </view>
+
+ 
+    <view class='height-40'></view>
+
+    <view class=' again text-center txt-9 ' bindtap='again'>重新测试</view>
+
+  </view>
+
+</view>
+
+
+<view wx:if='{{xianshilist.length>0}}'>
+<view class='margin-top-32 margin-left-24 flex-row flex-center'>
+  <view class='huangtiao'></view>
+  <view class='h5 txt-bold margin-left-16 flex-1'>推荐课程</view>
+  <view bindtap='bindhuan' class='flex-row flex-center'>
+    <image src='{{uploadpath}}resource/{{res.huanyihuan}}' class='icon-24'></image>
+    <view  class=' h6 margin-left-10 margin-right-24' style='color:#589DE9'>换一换</view>
+  </view>
+</view>
+
+<view class='bottom-block  radius-8 '    wx:for='{{xianshilist}}' wx:key='a' id='{{item.id}}' wx:for-index='idx' bindtap='tokcdetails'>
+
+  <view class=' margin-top-10 '>
+    <view class='padding-20 flex-row radius-10  mk' style='border:1rpx solid white '>
+      <image class='kc_icon radius-10 ' src='{{uploadpath}}curriculum/{{item.kc_img}}'></image>
+      <view class='flex-row column   margin-left-20 flex-1'>
+        <view class='txt-bold  flex-1 chaochu' style='color:#000000'>{{item.name}}</view>
+
+        <view class='flex-row flex-center'>
+
+
+          <view wx:if="{{item.scoring==5}}" class='flex-row flex-center '>
+            <image wx:for='{{5}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+          </view>
+
+          <view wx:if="{{item.scoring==4}}" class='flex-row flex-center '>
+            <image wx:for='{{4}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+            <image src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+          </view>
+
+          <view wx:if="{{item.scoring==3}}" class='flex-row flex-center '>
+            <image wx:for='{{3}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+            <image wx:for='{{2}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+          </view>
+
+          <view wx:if="{{item.scoring==2}}" class='flex-row flex-center '>
+            <image wx:for='{{2}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+            <image wx:for='{{3}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+          </view>
+
+          <view wx:if="{{item.scoring==1}}" class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+            <image wx:for='{{4}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+          </view>
+
+          <view class='h6 flex-1 margin-left-20 txt-primary'>{{item.people_num}}人购课</view>
+        </view>
+
+        <view class='flex-row flex-center flex-1' style=''>
+
+          <view class='flex-row flex-center flex-1'>
+            <image src='{{uploadpath}}resource/{{res.age_icon}}' class='icon-10'></image>
+            <view class='h6  margin-left-5 ' style='color:#000000'>{{item.age_name}}</view>
+          </view>
+
+          <view class='flex-row flex-center flex-1'>
+            <image src='{{uploadpath}}resource/{{res.keshi}}' class='icon-10'></image>
+            <view class='h6  margin-left-5' style='color:#000000'>{{item.class_hours}}节课</view>
+          </view>
+
+          <view class='flex-row flex-center flex-1'>
+            <image src='{{uploadpath}}resource/{{res.time}}' class='icon-10'></image>
+            <view class='h6  margin-left-5' style='color:#000000'>{{item.duration}}/节</view>
+          </view>
+
+        </view>
+
+        <view class='flex-row flex-center flex-1'>
+          <image class='icon-10  ' src='{{uploadpath}}resource/{{res.jg_icon}}'></image>
+          <view class='h6 flex-1 txt-white margin-left-5 chaochu' style='color:#AAAAAA'>{{item.JG_jigou}}</view>
+          <view class=' txt-red txt-bold'>￥{{item.price}}</view>
+        </view>
+
+        <view class='flex-row flex-center'>
+          <view class='h6  flex-1 chaochu' style='color:#AAAAAA'>{{item.JG_showaddress}}</view>
+          <view class='h6   ' style='color:#AAAAAA'>{{item.miletxt}}</view>
+        </view>
+
+      </view>
+
+
+    </view>
+  </view>
+
+</view>
+
+</view>
+
+
+<view class='bottom-block bg-white padding-20 radius-8'>
+
+  <view class='flex-row flex-center'>
+    <view class='huangtiao'></view>
+    <view class='h5 txt-bold margin-left-16'>综合结论</view>
+  </view>
+
+  <!-- <text class='margin-top-14 h6 txt-6' style=''>
+    {{item.jielun}}
+  </text> -->
+<view class='margin-top-14'>
+      <text class=' h6 txt-6' wx:for='{{pingcejieguo}}' wx:key='k' wx:if='{{item.options==typeA}}'>{{item.jielun}}</text>
+      <text class=' h6 txt-6' wx:for='{{pingcejieguo}}' wx:key='k' wx:if='{{item.options==typeB}}'>{{item.jielun}}</text>
+      <text class=' h6 txt-6' wx:for='{{pingcejieguo}}' wx:key='k' wx:if='{{item.options==typeC}}'>{{item.jielun}}</text>
+      <text class=' h6 txt-6' wx:for='{{pingcejieguo}}' wx:key='k' wx:if='{{item.options==typeD}}'>{{item.jielun}}</text>
+</view>
+
+
+</view>
+
+
+<view style="height:50rpx"></view>

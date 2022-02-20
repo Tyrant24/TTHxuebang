@@ -1,0 +1,25 @@
+/* pages/yiduihuang/yiduihuang.wxss */
+
+.icon {
+  height: 220rpx;
+  width: 240rpx;
+}
+
+.margin-top-54 {
+  margin-top: 54rpx;
+}
+
+.btn {
+  width: 320rpx;
+  height: 80rpx;
+  margin: 10rpx;
+  line-height: 80rpx;
+  background: rgba(255, 102, 0, 1);
+  border-radius: 8rpx;
+}
+.margin-top-54{
+  margin-top: 54rpx;
+}
+.margin-top-74{
+  margin-top: 74rpx;
+}

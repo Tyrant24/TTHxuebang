@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot="start">
+      <ion-button (click)='back()'>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{InstInfo.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf='alllist.length==0' class="flex-row flex-column">
+    <div class="h100"></div>
+    <img src="{{uploadpath}}resource/{{res.dindannull}}" class="icon-170 " />
+
+  </div>
+
+
+
+  <div class="margin-24 order" *ngFor="let item of alllist;">
+    <div class="padding-20 flex-row " (click)="kechenxianqin(item.id)" *ngIf="item.type=='SP'">
+
+      <img *ngIf="item.type!='SP'" class='icon radius-10' 
+        src='{{uploadpath}}curriculum/{{item.course_kc_img}}' />
+
+      <img *ngIf="item.type=='SP'" class='icon radius-10' 
+        src='{{uploadpath}}onlineclassroom/{{item.onlineclassroom_img}}' />
+
+      <div class="margin-left-20 flex-1">
+        <div class="flex-row flex-center ">
+          <div *ngIf="item.type!='SP'">{{item.course_name}}</div>
+          <div *ngIf="item.type=='SP'">{{item.onlineclassroom_name}}</div>
+
+          <div class="flex-1"></div>
+          <img *ngIf="item.pstatus=='P'||item.pstatus=='U'||item.pstatus=='R'" class='yiwanchen ' 
+            src='{{uploadpath}}resource/{{res.yiwanchen}}' />
+          <div class="h6 " style="color:#FF5252" *ngIf="item.pstatus=='W'||item.pstatus=='PT'||item.pstatus=='C'">
+            {{item.pstatus_name}}</div>
+        </div>
+
+        <div *ngIf="item.type!='SP'" class=' txt-gray f-22 margin-top-5  '>{{item.course_jigouname}}</div>
+        <div *ngIf="item.type=='SP'" class=' txt-gray f-22 margin-top-5 chaochu2  height-60 '>
+          {{item.onlineclassroom_class_introduce }}
+        </div>
+
+        <div *ngIf="item.type!='SP'" class='flex-row flex-center  margin-top-5' style=''>
+
+          <div class='flex-row flex-center '>
+            <img src='{{uploadpath}}resource/{{res.age_icon}}' class='icon-10' />
+            <div class='h6 txt-black margin-left-5'>{{item.course_age_name}}</div>
+          </div>
+
+          <div class="w20"></div>
+
+          <div class='flex-row flex-center '>
+            <img src='{{uploadpath}}resource/{{res.keshi}}' class='icon-10' />
+            <div class='h6 txt-black margin-left-5'>{{item.course_class_hours}}</div>
+          </div>
+
+          <div class="w20"></div>
+
+
+          <div class='flex-row flex-center '>
+            <img src='{{uploadpath}}resource/{{res.time}}' class='icon-10' />
+            <div class='h6 txt-black margin-left-5'>{{item.course_duration}}</div>
+          </div>
+
+
+        </div>
+        <div *ngIf="item.type=='SP'" class='flex-row flex-center  margin-top-20' style=''>
+
+          <div class='flex-row flex-center '>
+            <img src='{{uploadpath}}resource/{{res.nianlin}}' class='icon-10' />
+            <div class='h6 txt-black margin-left-5'>{{item.onlineclassroom_age_name}}</div>
+          </div>
+
+          <div class="w20"></div>
+
+          <div class='flex-row flex-center '>
+            <img src='{{uploadpath}}resource/{{res.zhanjie}}' class='icon-10' />
+            <div class='h6 txt-black margin-left-5'>{{item.onlineclassroom_chapter_num}}</div>
+          </div>
+
+          <div class="w20"></div>
+
+
+
+
+        </div>
+        <div class="hkg ">
+          <div class='flex-row margin-top-10 flex-center'>
+            <div *ngIf="item.type=='PT'" class='pt'>拼团</div>
+            <div class="flex-1"></div>
+          </div>
+        </div>
+        <div class="flex-row flex-center ">
+          <div class="flex-1"></div>
+          <div class="f-22">共1个课程 实付款:</div>
+          <div class="h5 txt-bold" style="color:#FF6600">￥{{item.amount}}</div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+</ion-content>

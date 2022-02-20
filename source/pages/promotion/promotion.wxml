@@ -1,0 +1,115 @@
+<view class="padding-30 padding-bottom-20 flex-row flex-center">
+  <image class='member_icon' src='{{memberinfo.avatarUrl}}'></image>
+  <view class='margin-left-10'>{{memberinfo.nickName}}</view>
+  <view wx:if="{{!showModal&&tuiguaninfo[0].status=='S'}}" class="label">学榜大使</view>
+  <view class="flex-1"></view>
+  <view class="h5" style='color:#666666' bindtap='tuiguanguize'>推广规则</view>
+</view>
+
+
+
+
+<view class="padding-30  padding-top-20">
+  <view class="content_bg ">
+    <view class="padding-40">
+      <view class="h5" style='color:rgba(161, 111, 47, 1)'>累计推广收益(元)</view>
+      <view style="height:70rpx" class="flex-row flex-bottom margin-top-20">
+     
+            
+            
+          <image class="icon-25  margin-right-10  " src='{{uploadpath}}resource/{{res.qiandai}}'></image>
+  
+        <view class=" h2" style="color:rgba(255, 255, 255, 1);">{{memberinfo.tuiguanshouyi}}</view>
+        <view class="flex-1"></view>
+        <view bindtap='lijitixian' class="tixian">立即提现</view>
+      </view>
+    </view>
+
+    <view class="xian"></view>
+    <view class="content_bottom flex-row flex-center">
+      <view bindtap='mykehu' class="flex-1 flex-row ">
+        <view class="flex-1"></view>
+        <view>
+          <view class="h5" style='color:rgba(161, 111, 47, 1)'>
+            大使馆
+          </view>
+          <view class="h4 margin-top-20" style='color:rgba(255, 255, 255, 1)'>
+            {{leijikehu}}
+          </view>
+        </view>
+        <view class="flex-1"></view>
+      </view>
+      <view class="fenge"></view>
+      <view bindtap='myinvite' class="flex-1 flex-row ">
+        <view class="flex-1"></view>
+        <view>
+          <view class="h5" style='color:rgba(161, 111, 47, 1)'>
+            推广大使
+          </view>
+          <view class="h4 margin-top-20" style='color:rgba(255, 255, 255, 1)'>
+            {{xiajituiguan}}
+          </view>
+        </view>
+        <view class="flex-1"></view>
+      </view>
+      <view class="fenge"></view>
+      <view bindtap='tuiguandindan' class="flex-1 flex-row ">
+        <view class="flex-1"></view>
+        <view>
+          <view class="h5" style='color:rgba(161, 111, 47, 1)'>
+            大使传单
+          </view>
+          <view class="h4 margin-top-20" style='color:rgba(255, 255, 255, 1)'>
+            {{tuiguandindan.length}}
+          </view>
+        </view>
+        <view class="flex-1"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<view bindtap="yaoqin" class="margin-30 margin-top-10 flex-row bg-white flex-center">
+
+  <image class="yaoqin_icon padding-40" src='{{uploadpath}}resource/{{res.yaoqinhaoyou}}'></image>
+  <view class="flex-1">
+    <view class="f15" style='color:rgba(34, 34, 34, 1)'>邀请好友</view>
+    <view class="h11 margin-top-10" style='color:rgba(153, 153, 153, 1)'>邀请好友一起赚钱</view>
+  </view>
+  <image class="icon-10 padding-40" mode='widthFix' src='{{uploadpath}}resource/{{res.yaoqin_you}}'></image>
+
+</view>
+
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}" catchtouchmove="preventTouchMove"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="padding-20 margin-left-20">填写信息申请成为推广员</view>
+
+  <view class="padding-20 flex-row flex-center">
+    <view style='color:rgba(255, 82, 82, 1)'>*</view>
+    <view class="margin-left-5 jl">姓名:</view>
+    <input value='{{name}}' bindinput='name' placeholder="请输入真实姓名" placeholder-class="ysl"></input>
+  </view>
+  <view class="padding-20 flex-row flex-center">
+    <view style='color:rgba(255, 82, 82, 1)'>*</view>
+    <view class="margin-left-5 jl">手机号:</view>
+    <input type="number" maxlength="11" value='{{photo}}' bindinput='photo' placeholder-class="ysl"></input>
+  </view>
+  <view class="padding-20 flex-row flex-center">
+    <view style='color:rgba(255, 82, 82, 1)'>*</view>
+    <view class="margin-left-5 jl">验证码:</view>
+    <input  style="width:300rpx" value='{{yanzhenma}}' bindinput='yanzhenma' placeholder="输入验证码" placeholder-class="ysl"></input>
+    <view class="yz_btm">获取验证码</view>
+  </view>
+  <view class="padding-20 flex-row flex-center">
+    <view style='color:rgba(255, 82, 82, 1)'>*</view>
+    <view class="margin-left-5 jl">地址:</view>
+    <input value='{{dizhi}}' bindinput='dizhi' placeholder="详细住址" placeholder-class="ysl"></input>
+  </view>
+  <view bindtap='queren' class="flex-row margin-top-60">
+    <view class="flex-1"></view>
+    <view class="tuan_btn  text-center  ">
+      确认
+    </view>
+
+    <view class="flex-1"></view>
+  </view>
+</view>

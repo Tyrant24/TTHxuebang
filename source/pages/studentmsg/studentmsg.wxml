@@ -1,0 +1,44 @@
+
+  <view wx:if='{{xueyuanlist.length==0}}' class="flex-row flex-column">
+    <view style="height:100rpx;"></view>
+    <image src="{{uploadpath}}resource/{{res.xueyuannull}}" class="icon-170 "></image>
+    <!-- <view class="txt-9 margin-top-10">您还没有添加地址哦</view>
+    <view class="h6 margin-top-8" style="color:#CCCCCC">点击下方添加吧~</view> -->
+  </view>
+
+<view wx:for="{{xueyuanlist}}" data-id="{{item.id}}" wx:key="k" class="margin-20 qqq" bindtap="studentinfo">
+  <view class="flex-row flex-center padding-40">
+
+
+    <image wx:if="{{item.sex=='nv'}}" class="radius-50 icon-60" src="{{uploadpath}}resource/{{res.nvtou}}"></image>
+
+    <image wx:if="{{item.sex=='nan'}}" class="radius-50 icon-60" src="{{uploadpath}}resource/{{res.nantou}}"></image>
+
+    <view class="margin-left-20">
+      <view class="flex-row flex-center">
+        <view class="f15 txt-bold">{{item.name}}</view>
+        <view wx:if="{{item.sex=='nan'}}" class="nande">{{item.sui}}岁</view>
+        <view wx:if="{{item.sex=='nv'}}" class="nvde">{{item.sui}}岁</view>
+      </view>
+      <view class="h6 margin-top-20" style="color:#999999">{{item.sj0}}  {{item.sj1}}  {{item.sj2}}</view>
+    </view>
+    <view class="flex-1"></view>
+    <image src="{{uploadpath}}resource/{{res.right_icon}}" mode="widthFix" class="icon-10"></image>
+
+  </view>
+
+
+</view>
+
+
+
+<view bindtap='tianjia' class="flex-row">
+  <view class="flex-1"></view>
+  
+  <view class="tuan_btn  text-center  ">
+    添加孩子
+  </view>
+  
+  <view class="flex-1"></view>
+  
+</view>

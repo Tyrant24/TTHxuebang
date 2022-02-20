@@ -1,0 +1,439 @@
+/* pages/ceshi/ceshi.wxss */
+
+.Top {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  width: 750rpx;
+}
+
+.search {
+  width: 100%;
+  border-radius: 30rpx;
+  background-color: white;
+}
+
+.img2 {
+  width: 175px;
+  height: 83px;
+  border-radius: 4px;
+}
+
+.img {
+  width: 175px;
+  height: 177px;
+  border-radius: 4px;
+}
+
+.dizhi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.to_top {
+  position: fixed;
+  top: 60%;
+  right: 0;
+  z-index: 100;
+}
+
+.midt {
+  position: absolute;
+  width: 100vw;
+  z-index: 10;
+  bottom: 0%;
+  /* opacity: 0.8; */
+  box-shadow: 1px 1px 5px #dfdfdf;
+}
+
+.mid {
+  width: 85.5vw;
+}
+
+.biaoqian {
+  min-width: 56rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.li {
+  width: 100%;
+  height: 312rpx;
+}
+
+.li1 {
+  width: 600rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  height: 300rpx;
+  transform: scale(0.9);
+}
+
+.selected {
+  transform: scale(1);
+}
+
+.search_icon {
+  width: 35rpx;
+  height: 30rpx;
+}
+
+.backmu {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 100;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.scv {
+  margin-left: 20rpx;
+}
+
+.ss {
+  height: 145rpx;
+  white-space: nowrap;
+}
+
+.ceshi {
+  width: 412rpx;
+  height: 105rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  padding-left: 26rpx;
+  padding-right: 26rpx;
+  margin-right: 20rpx;
+  border-radius: 8rpx;
+  display: inline-block;
+  /* background: #5db982; */
+}
+
+.height-30 {
+  height: 50rpx;
+}
+
+.lb {
+  border-radius: 8rpx;
+}
+
+.height-5 {
+  height: 10rpx;
+}
+
+.orange {
+  width: 5px;
+  height: 15px;
+  background: rgba(255, 194, 0, 1);
+  border-radius: 3px;
+}
+
+.txt9 {
+  color: #999;
+  font-size: 12px;
+}
+
+.margin-left-12 {
+  margin-left: 12rpx;
+}
+
+.opa {
+  opacity: 0.5;
+}
+
+.icon15 {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.daka {
+  width: 102rpx;
+  height: 102rpx;
+  line-height: 102rpx;
+  margin: 10rpx;
+  background: linear-gradient(139deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 85%, rgba(122, 122, 122, 1) 100%);
+  box-shadow: 0rpx 0rpx 8rpx 0rpx rgba(176, 176, 176, 1);
+}
+
+.touxiang {
+  width: 40rpx;
+  height: 40rpx;
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.touxiang2 {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: -20rpx;
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.margin-top-16 {
+  margin-top: 16rpx;
+}
+
+.margin-left-16 {
+  margin-left: 16rpx;
+}
+
+.shipin {
+  width: 256rpx;
+  height: 264rpx;
+  border-radius: 8rpx;
+  background: #ffc200;
+  padding: 18rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+}
+
+.sp {
+  height: 350rpx;
+  white-space: nowrap;
+}
+
+.f20 {
+  font-size: 20rpx;
+}
+
+.txthuang {
+  color: #ffc200;
+}
+
+.dakadian {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  margin-top: 14rpx;
+  margin-bottom: 14rpx;
+}
+
+.margin-left-21 {
+  margin-left: 38rpx;
+}
+
+.icon-12 {
+  width: 12rpx;
+  height: 12rpx;
+}
+
+.width-46 {
+  width: 46rpx;
+}
+
+.dakaxian {
+  margin-left: -18rpx;
+  margin-right: -18rpx;
+  height: 4rpx;
+  width: 84rpx;
+}
+.marginleft-10{
+  margin-left: -16rpx;
+}
+.dakaxian2 {
+  margin-left: -18rpx;
+  margin-right: -18rpx;
+  height: 4rpx;
+  width: 74rpx;
+}
+
+.bg9 {
+  background: #999;
+}
+
+.bgff {
+  background: #ffc200;
+}
+
+.margin-top-10 {
+  margin-top: 10rpx;
+}
+
+.icon8 {
+  width: 16rpx;
+  height: 16rpx;
+}
+
+.margin-top-4 {
+  margin-top: 12rpx;
+}
+
+.margin-left-29 {
+  margin-left: 40rpx;
+}
+
+.qiandao {
+  width: 706rpx;
+  height: 122rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(0, 0, 0, 0.06);
+  border-radius: 76rpx;
+}
+
+.daka {
+  width: 102rpx;
+  height: 102rpx;
+  line-height: 102rpx;
+  margin: 10rpx;
+  background: linear-gradient(139deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 85%, rgba(122, 122, 122, 1) 100%);
+  box-shadow: 0rpx 0rpx 8rpx 0rpx rgba(176, 176, 176, 1);
+}
+
+.yidaka {
+  width: 102rpx;
+  height: 102rpx;
+  line-height: 102rpx;
+  margin: 10rpx;
+  color: white;
+  background: #b0b0b0;
+  box-shadow: 0rpx 0rpx 8rpx 0rpx rgba(176, 176, 176, 1);
+}
+
+.icon-10 {
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.block_black {
+  background: black;
+  opacity: 0.6;
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+}
+
+.tangchuan {
+  position: fixed;
+  z-index: 100;
+  left: 82rpx;
+  right: 82rpx;
+  top: 5%;
+}
+
+.gz {
+  position: fixed;
+  z-index: 100;
+  left: 110rpx;
+  right: 110rpx;
+  bottom: 20%;
+  border-radius: 8rpx;
+}
+
+.guize {
+  width: 540rpx;
+  height: 600rpx;
+  border-radius: 8rpx;
+}
+
+.jilu {
+  /* background: rgb(252, 205, 151); */
+  border-radius: 8rpx;
+  width: 506rpx;
+  height: 912rpx;
+  padding: 44rpx 40rpx 0rpx 40rpx;
+}
+
+.margin-top {
+  margin-top: 50rpx;
+}
+
+.chengong {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  top: 10%;
+}
+
+.dakawc {
+  height: 812rpx;
+  width: 564rpx;
+}
+
+.txt_jifen {
+  font-size: 82rpx;
+}
+
+.close {
+  margin-top: 46rpx;
+}
+
+.icon-75 {
+  height: 150rpx;
+  width: 150rpx;
+}
+
+.f36 {
+  font-size: 36rpx;
+}
+
+.margin-left-26 {
+  margin-left: 26rpx;
+}
+
+.daka-btn {
+  width: 280rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  background: rgba(161, 96, 0, 1);
+  border-radius: 60rpx;
+}
+
+.daka-btn-wc {
+  width: 280rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  background: white;
+  color: #ffc200;
+  border-radius: 60rpx;
+}
+
+.yuan {
+  width: 18rpx;
+  height: 18rpx;
+  background: rgba(161, 96, 0, 1);
+}
+.checkyuan {
+  width: 18rpx;
+  height: 18rpx;
+  background: rgba(248, 232, 3, 0.993);
+}
+
+.tuhuang {
+  color: #a16000;
+}
+
+.bg-tuhuang {
+  background: #a16000;
+}
+
+.margin-left-15 {
+  margin-left: 30rpx;
+}
+
+.zhong {
+  padding: 36rpx;
+}
+
+.margin-top-46 {
+  margin-top: 80rpx;
+}
+
+.gun {
+  width: 2rpx;
+  height: 72rpx;
+  margin-top: -8rpx;
+  margin-bottom: -14rpx;
+  margin-left: 86rpx;
+}
+
+
+view {
+  font-size: 40rpx !important;
+  font-weight: 350 !important;
+  
+}

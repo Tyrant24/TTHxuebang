@@ -1,0 +1,73 @@
+@function rpx($px) {
+    @return ($px * 100vw) / 750;
+}
+
+
+.ion-content {
+    --background: white;
+}
+
+.txt {
+    color: #FFC200;
+}
+
+.block {
+    padding-left: rpx(20);
+    padding-top: rpx(20);
+    padding-bottom: rpx(20);
+}
+
+.tijiao {
+    background-color: #FF6600;
+    border-radius: rpx(50);
+    margin-right: rpx(20);
+    padding: rpx(20);
+}
+
+.icon {
+    width: 40vw;
+    height: 30vw;
+}
+
+.bor_bot {
+    border-bottom: 1px solid #e5e5e5
+}
+
+.bg_top {
+    background: white;
+}
+
+.xhx {
+    border-bottom: 1px solid #f5f5f5;
+
+}
+
+.nr {
+
+    padding-top: rpx(60);
+    padding-bottom: rpx(60);
+
+}
+
+.icon-80 {
+    width: rpx(80);
+    height: rpx(80);
+}
+
+.bor_top {
+    border-top: 1px solid #e5e5e5
+}
+
+.fixedbottom {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+}
+
+.phone_btn {
+    width: rpx(160);
+    background: red;
+    height: rpx(50);
+    line-height: rpx(50);
+}

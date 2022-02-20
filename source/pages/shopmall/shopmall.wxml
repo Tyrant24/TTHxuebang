@@ -1,0 +1,66 @@
+<!--pages/shopmall/shopmall.wxml-->
+<view>
+  <view class='toubu' style='background-image:url({{uploadpath}}resource/{{res.jifen_bg}});background-size:100% 100%;'>
+
+
+    <view class="flex-row flex-center">
+      <view class="flex-1"></view>
+      <image class='lingjifen ' src='{{uploadpath}}resource/{{res.lingjifen}}' bindtap="showtoset"></image>
+    </view>
+
+    <view class='flex-row '>
+      <view class='flex-1'></view>
+
+      <view class='flex-row'>
+        <image class='jf-icon margin-top-36' src='{{uploadpath}}resource/{{res.jf_icon}}'></image>
+        <view class='f60 txt-bold margin-left-10' style='color:#222222'>{{memberinfo.integral}}</view>
+      </view>
+
+      <view class='flex-1'></view>
+    </view>
+
+    <view class='flex-row margin-left-66 margin-top-32'>
+
+      <view class='sz flex-row _center' bindtap="toshouzhi">
+        <view class='flex-row'>
+          <view>
+            <image class='szmx-icon' src='{{uploadpath}}resource/{{res.szmx_icon}}'></image>
+          </view>
+          <view class='margin-left-10 h5' style=' '>收支明细</view>
+        </view>
+      </view>
+
+      <view class='sz flex-row _center margin-left-46' bindtap="toorder">
+        <view>
+          <image class='zjf-icon' src='{{uploadpath}}resource/{{res.zjf_icon}}'></image>
+        </view>
+        <view>
+          <view class='margin-left-10 h5' style=' '>我的兑换</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='flex-row flex-wrap'>
+    <view wx:for='{{list}}' wx:key='k'>
+      <view class='hezi' bindtap="todetails" id="{{item.id}}">
+        <image class='img' src='{{uploadpath}}shop/{{item.imgs}}'></image>
+
+        <view class="padding">
+          <view class='  txt-bold f13 chaochu' style="width:300rpx;max-height:85rpx;">{{item.name}}</view>
+          <view class='flex-row flex-center  margin-top-6'>
+            <image src="{{uploadpath}}resource/{{res.jf_minicon}}" class="icon-10 "></image>
+            <view class=" txt9 h5 margin-left-10">{{item.interral}}</view>
+            <view class="h6 margin-left-10" style="color:#999999;text-decoration:line-through;">{{item.old_price}}元</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>
+
+<view style="height:40rpx"></view>

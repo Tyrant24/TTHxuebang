@@ -1,0 +1,105 @@
+
+<!--pages/myorder/myorder.wxml-->
+<view class=' flex-row flex-center  bg-white bor_bot top'>
+
+ 
+  <view class='xiaoxi'>
+    <view wx:if="{{dflist.length>0}}" class='waitpay '>{{dflist.length}}</view>
+  </view>
+
+</view>
+
+
+<view wx:if='{{wclist.length==0}}' class="flex-row flex-column">
+    <view style="height:100rpx;"></view>
+    <image src="{{uploadpath}}resource/{{res.dindannull}}" class="icon-170 "></image>
+
+  </view>
+
+
+
+
+  <view bindtap="kechenxianqin" data-id="{{item.onlineclassroom_id}}"  class="margin-24 order" wx:for="{{wclist}}" wx:if="{{item.pstatus=='PT'}}" wx:key='k'>
+    <view class="padding-20 flex-row ">
+
+      <image wx:if="{{item.type!='SP'}}" class='icon radius-10' lazy-load='{{true}}' src='{{uploadpath}}curriculum/{{item.course_kc_img}}'></image>
+
+      <image wx:if="{{item.type=='SP'}}" class='icon radius-10' lazy-load='{{true}}' src='{{uploadpath}}onlineclassroom/{{item.onlineclassroom_img}}'></image>
+
+      <view class="margin-left-20 flex-1">
+        <view class="flex-row flex-center ">
+          <view wx:if="{{item.type!='SP'}}">{{item.course_name}}</view>
+          <view wx:if="{{item.type=='SP'}}">{{item.onlineclassroom_name}}</view>
+
+          <view class="flex-1"></view>
+          <image wx:if="{{item.pstatus=='P'||item.pstatus=='U'||item.pstatus=='R'}}" class='yiwanchen ' lazy-load='{{true}}' src='{{uploadpath}}resource/{{res.yiwanchen}}'></image>
+          <view class="h6 " style="color:#FF5252" wx:if="{{item.pstatus=='W'||item.pstatus=='PT'||item.pstatus=='C'}}">{{item.pstatus_name}}</view>
+        </view>
+
+        <view wx:if="{{item.type!='SP'}}" class=' txt-gray f-22 margin-top-5  '>{{item.course_jigouname}}</view>
+        <view wx:if="{{item.type=='SP'}}" class=' txt-gray f-22 margin-top-5  height-40 '>{{item.onlineclassroom_class_introduce }}</view>
+
+        <view wx:if="{{item.type!='SP'}}" class='flex-row flex-center  margin-top-5' style=''>
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.age_icon}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{item.course_age_name}}</view>
+          </view>
+
+          <view style='width:20rpx;'></view>
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.keshi}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{item.course_class_hours}}</view>
+          </view>
+
+          <view style='width:20rpx;'></view>
+
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.time}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{item.course_duration}}</view>
+          </view>
+
+
+        </view>
+        <view wx:if="{{item.type=='SP'}}" class='flex-row flex-center  margin-top-5' style=''>
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.nianlin}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{item.onlineclassroom_age_name}}</view>
+          </view>
+
+          <view style='width:20rpx;'></view>
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.zhanjie}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{item.onlineclassroom_chapter_num}}</view>
+          </view>
+
+          <view style='width:20rpx;'></view>
+
+
+
+
+        </view>
+        <view class="hkg ">
+          <view class='flex-row margin-top-10 flex-center'>
+            <view wx:if="{{item.type=='PT'}}" class='pt'>拼团</view>
+            <view class="flex-1"></view>
+          </view>
+        </view>
+        <view class="flex-row flex-center ">
+          <view class="flex-1"></view>
+          <view class="f-22">共1个课程 实付款:</view>
+          <view class="h5 txt-bold" style="color:#FF6600">￥{{item.amount}}</view>
+        </view>
+
+
+      </view>
+
+    </view>
+   
+
+
+  </view>

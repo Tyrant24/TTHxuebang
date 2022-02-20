@@ -1,0 +1,199 @@
+<!--pages/kcdetails/kcdetails.wxml-->
+
+<view>
+
+
+  <view class='' style='background-image:url({{uploadpath}}curriculum/{{courseinfo.xq_bg}}?x-oss-process=style/test_img);background-size:100% 100%;'>
+
+    <view style='height:140rpx;'></view>
+
+    <swiper indicator-dots='{{true}}' autoplay='{{false}}' interval='2000' duration='200' circular='true' style='width:750rpx;height:400rpx;'>
+      <swiper-item wx:for="{{kechenlunbo}}" wx:key="k">
+        <view>
+
+          <!-- mode="aspectFill"  bindtap='viewPhoto' -->
+
+          <image wx:if='{{item.video==""}}' src='{{uploadpath}}kecheng/{{item.img}}' bindtap='viewPhoto' id='{{uploadpath}}kecheng/{{item.img}}' style='width:750rpx;height:400rpx;'></image>
+
+          <video wx:if='{{item.video!=""}}' objectFit='fill'  src='{{uploadpath}}kechenimg/{{item.video}}' poster='{{uploadpath}}kecheng/{{item.img}}' style='width:750rpx;height:400rpx;'></video>
+        </view>
+      </swiper-item>
+    </swiper>
+
+    <view style='height:116rpx;'></view>
+
+  </view>
+
+
+
+  <view style=' ' class=''>
+
+    <view class='flex-row column '>
+      <view class=' bg-white  margin-bottom-10'>
+        <view class='padding-10 '>
+          <view class='flex-row flex-center'>
+            <view class='txt-black txt-bold padding-left-20' style='font-size:52rpx;'>{{courseinfo.name}}</view>
+            <view class='txt-black  flex-1 padding-top-10 padding-left-20' bindtap='todetails'>{{courseinfo.JG_jigou}}</view>
+
+            <view wx:if="{{scoring==5}}" class='flex-row flex-center margin-right-20'>
+              <image wx:for='{{5}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+            </view>
+            <view wx:if="{{scoring==4}}" class='flex-row flex-center margin-right-20'>
+              <image wx:for='{{4}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+              <image src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+            </view>
+            <view wx:if="{{scoring==3}}" class='flex-row flex-center margin-right-20'>
+              <image wx:for='{{3}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+              <image wx:for='{{2}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+            </view>
+            <view wx:if="{{scoring==2}}" class='flex-row flex-center margin-right-20'>
+              <image wx:for='{{2}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+              <image wx:for='{{3}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+            </view>
+            <view wx:if="{{scoring==1}}" class='flex-row flex-center margin-right-20'>
+              <image src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+              <image wx:for='{{4}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:32rpx;width:34rpx;'></image>
+            </view>
+
+
+
+          </view>
+
+          <view class='flex-row margin-top-5 padding-left-20'>
+            <view class='biaoqian  text-center radius-10 txt-green h6 margin-5 ' style='border:1rpx solid {{litem.color}};color:{{litem.color}}' wx:for="{{courseinfo.labels}}" wx:key="k" wx:for-item='litem'>{{litem.name}}</view>
+          </view>
+
+          <!-- <view class='flex-row flex-center margin-top-10'>
+          <view class='flex-1 h5 txt-black'>{{courseinfo.scoring}}</view>
+        </view> -->
+
+          <view class='flex-row  margin-top-5 padding-10'>
+
+            <view class='flex-row flex-column flex-1 '>
+              <view class='h5 ' style='color:#4C4C4C'>适合年龄</view>
+              <view class='h4-5   margin-top-5' style='color:#000000'>{{courseinfo.age_name}}</view>
+            </view>
+
+            <view class='' style='width:40rpx;'>
+            </view>
+
+            <view class='flex-row flex-column flex-1'>
+              <view class='h5 ' style='color:#4C4C4C'>营业时间</view>
+              <view class='h4-5    margin-top-5' style='color:#000000'>{{courseinfo.JG_time}}</view>
+            </view>
+
+            <view class='' style='width:40rpx;'>
+            </view>
+
+            <view class='flex-row flex-column flex-1 '>
+              <view class='h5 ' style='color:#4C4C4C'>预约</view>
+              <view class='h4-5   margin-top-5' style='color:#000000' wx:if='{{courseinfo.appointment_value=="Y"}}'>需要预约</view>
+              <view class='h4-5   margin-top-5' style='color:#000000' wx:if='{{courseinfo.appointment_value=="N"}}'>无需预约</view>
+              <view class='h7 txt-gray ' wx:if='{{courseinfo.appointment_value=="Y"}}'>已预约{{courseinfo.people_num}}人</view>
+            </view>
+
+          </view>
+
+          <view class='flex-row flex-center margin-top-10 margin-bottom-10 padding-left-20'>
+            <image class='icon-15 ' src='{{uploadpath}}resource/{{res.zuobiao}}'></image>
+            <view class='flex-1 h5 margin-left-10 txt-blue dizhi' bindtap='openMap' id="{{courseinfo.JG_address}}">{{courseinfo.JG_showaddress}}</view>
+            <view class='h6 txt-black margin-right-20 ' wx:if="{{miletxt!=undefined}}">距你{{miletxt}}</view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='height-20 bg-gray' style='margin-top:-10rpx'></view>
+
+  <view class='flex-row bg-white {{sco==1?"top":""}}' style=''>
+    <view class='padding-20 text-center flex-1 txt-bold {{show=="kcxq"?"txt":""}} txt-black' bindtap='bindcut' data-type='kcxq'>课程详情</view>
+    <view class='padding-20 text-center flex-1 txt-bold {{show=="gmxz"?"txt":""}} txt-black' bindtap='gotoBottom' data-type='gmxz'>购买须知</view>
+  </view>
+
+
+  <view  class=''>
+    <image src='{{uploadpath}}curriculum/{{courseinfo.kcchimg}}?x-oss-process=style/test_img' class=' ' mode='widthFix' style='width:100vw'></image>
+  </view>
+
+  <!-- <view wx:if='{{show=="gmxz"}}' class='margin-40 padding-20 radius-10 bg-gray txt-black'>
+    {{courseinfo.description}}
+  </view> -->
+
+  <!-- <view class='height-50 '></view>
+
+  <view class='margin-40 flex-row flex-column '>
+    <image src='{{uploadpath}}resource/{{res.details_icon}} ' class='icon-50 '></image>
+  </view> -->
+
+  <!-- <view class='height-80 '></view> -->
+
+  <view class='fixedbottom'>
+
+    <view class='txt-red txt-bold text-center h5' style='color:#FF0000;  background:#FFEDCD;height:60rpx;line-height:60rpx;width:100%' wx:if="{{canbuy.code!='0'}}">{{canbuy.result}}</view>
+    <view style='' class='flex-row flex-1'>
+
+      <view class='flex-1 flex-row flex-column padding-15 bg-white' wx:if="{{isfav=='N'}}" bindtap='fav' id='Y'>
+        <image class='icon-25' src='{{uploadpath}}resource/{{res.unfav}}'></image>
+        <view class='h6'>收藏</view>
+      </view>
+      
+      <view class='flex-1 flex-row flex-column padding-15 bg-white' wx:if="{{isfav=='Y'}}" bindtap='fav' id='N'>
+        <image class='icon-25' src='{{uploadpath}}resource/{{res.fav}}'></image>
+        <view class='h6'>已收藏</view>
+      </view>
+
+      <view class='flex-1  bg-orange padding-15'>
+        <button class=' clear-button' hover-class='bg-primary' open-type='contact' style='border-radius:0;border:0;'>
+          <view class='flex-row flex-column'>
+            <image class='icon-25' src='{{uploadpath}}resource/{{res.customer}}'></image>
+            <view class='h6 txt-white'>客服</view>
+          </view>
+        </button>
+      </view>
+
+      <view class='flex-2 flex-row flex-column buy padding-15' bindtap='bindtopurchase' wx:if="{{canbuy.code=='0'}}">
+        <view class='txt-white txt-bold h5'>￥{{courseinfo.price}}</view>
+        <view class='h6 txt-white' wx:if="{{canbuy.code=='0'}}">立即购买</view>
+      </view>
+
+      <view class='flex-2 flex-row flex-column padding-15' style='background:#BFBFBF' wx:if="{{canbuy.code!='0'}}">
+        <view class='txt-white txt-bold flex-1'>￥{{courseinfo.price}}</view>
+        <view class='h6 txt-white' wx:if="{{canbuy.code!='0'}}">立即购买</view>
+      </view>
+
+
+      <!-- <navigator url='/pages/seek/seek?type=kc' class='flex-2 flex-row flex-column buy padding-15' wx:if="{{canbuy.code!='0'}}">
+        <view class='h6 txt-white'>立即购买</view>
+      </navigator> -->
+
+    </view>
+  </view>
+
+</view>
+
+
+
+
+<!-- <image src='{{uploadpath}}curriculum/{{courseinfo.kcchimg}}' mode='aspectFill' style='width:100%;margin-top:-10rpx;margin-bottom:-10rpx;'></image> -->
+
+
+
+
+<view style='height:105rpx;'></view>
+
+
+<view class=' to_top' hidden='{{!floorstatus}}'>
+  <image src='{{uploadpath}}resource/{{res.totop}}' class='icon-50' bindtap='backtotop'></image>
+</view>
+
+
+<view class='tishi' wx:if='{{tishi==1}}'>
+<image src='{{uploadpath}}resource/{{res.chengong}}' class='ts_icon'></image>
+</view>
+
+<view class='tishi' wx:if='{{tishi==2}}'>
+<image src='{{uploadpath}}resource/{{res.shibai}}' class='ts_icon'></image>
+</view>

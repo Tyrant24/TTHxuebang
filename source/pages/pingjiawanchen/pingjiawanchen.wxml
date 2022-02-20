@@ -1,0 +1,74 @@
+<!--pages/pingjiawanchen/pingjiawanchen.wxml-->
+<view class='bg-top'>
+  <view class='height-50'></view>
+
+  <view class='flex-row flex-center margin-left-46'>
+    <image src='{{uploadpath}}resource/{{res.goumaiwanchen}}' class='icon-80'></image>
+    <view class='flex-row column margin-left-28'>
+      <view class=''>评论成功，获得50积分</view>
+      <view class='h5  margin-top-4'>您的评价是其他用户选购前的重要参考</view>
+    </view>
+  </view>
+
+  
+
+  <view class='height-50'></view>
+
+  <!-- <view class='flex-row flex-center'>
+    <view class='flex-1'></view>
+
+    <view class='flex-row flex-center btn ' bindtap='tohome'>
+      <view class='flex-1'></view>
+      <image src='{{uploadpath}}resource/{{res.wanchen}}' class='icon-34'></image>
+      <view class='txt-white h5 margin-left-18'>返回首页</view>
+      <view class='flex-1'></view>
+    </view>
+
+    <view style='width:24rpx'></view>
+
+    <view  bindtap="pinjiagenduo"  class='flex-row flex-center btn '>
+      <view class='flex-1'></view>
+      <image src='{{uploadpath}}resource/{{res.wanchen}}' class='icon-34'></image>
+      <view class='txt-white h5 margin-left-18'>评价更多订单</view>
+      <view class='flex-1'></view>
+    </view>
+
+    <view class='flex-1'></view>
+
+  </view> -->
+
+ <view class='flex-row flex-center'>
+    <view class='flex-1'></view>
+
+    <view  class='flex-row flex-center btn ' bindtap='tohome'>
+      <view class='flex-1'></view>
+      <image src='{{uploadpath}}resource/{{res.kc_shouyebai}}' class='icon-34'></image>
+      <view class='txt-white h5 margin-left-18'>返回首页</view>
+      <view class='flex-1'></view>
+    </view>
+
+    <view style='width:24rpx'></view>
+
+    <view bindtap="pinjiagenduo" class='flex-row flex-center btn '>
+      <view class='flex-1'></view>
+      <image src='{{uploadpath}}resource/{{res.pinjiagenduo}}' class='icon-34'></image>
+      <view   class='txt-white h5 margin-left-18'>评价更多订单</view>
+      <view class='flex-1'></view>
+    </view>
+
+    <view class='flex-1'></view>
+
+  </view>
+
+  <view class='height-74'></view>
+
+</view>
+
+<view class='height-50'></view>
+
+<view class='flex-row flex-column'>
+  <view class='txt9'>小贴士</view>
+  <view class='txt9 h5 margin-top-4'>坚持写真实、内容丰富的评价，积分会更多哦！</view>
+  <view class='height-78'></view>
+  <image src='{{uploadpath}}resource/{{res.yipinjiaimg}}'  mode='widthFix' class='btmimg'></image>
+</view>

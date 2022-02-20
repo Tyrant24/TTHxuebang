@@ -1,0 +1,30 @@
+/* pages/mine/mine.wxss */
+Page{
+  background: #ffffff;
+}
+.h{
+font-size: 30rpx;
+}
+.bg_img{
+  position: absolute;
+  width: 100%;
+   height: 25%;
+  z-index: -1;
+}
+.waitpay{
+  background: #FD4963;
+  font-size: 32rpx;
+  color:white;
+  border-radius: 50%;
+  min-width: 40rpx;
+
+  min-height: 40rpx;line-height: 40rpx;
+  text-align: center;
+}
+.bg_gray{
+  background: #F5F5F5;
+}
+.pd{
+  padding-bottom: 30rpx;
+  padding-top: 10rpx;
+}

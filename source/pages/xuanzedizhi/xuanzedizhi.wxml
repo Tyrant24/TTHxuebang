@@ -1,0 +1,113 @@
+<!--pages/xuanzedizhi/xuanzedizhi.wxml-->
+
+
+
+
+<view class="{{addresslist.length==0?'page':''}}">
+
+
+  <view class='margin-20'>
+    <view wx:if='{{addresslist.length>0}}' class='margin-left-14 h5' style='color:#999999'>我的地址</view>
+
+
+    <view wx:if='{{addresslist.length==0}}' class="flex-row flex-column">
+      <view style="height:100rpx;"></view>
+      <image src="{{uploadpath}}resource/{{res.addressnull}}" class="icon-170 "></image>
+      <!-- <view class="txt-9 margin-top-10">您还没有添加地址哦</view>
+    <view class="h6 margin-top-8" style="color:#CCCCCC">点击下方添加吧~</view> -->
+    </view>
+
+    <view wx:for='{{addresslist}}' wx:key='k'>
+      <view class='hezi' bindtap="bindcheck" id="{{item.id}}">
+        <view class='flex-row flex-center'>
+
+          <view wx:if='{{type==""||type==undefined}}'>
+            <image src="{{uploadpath}}resource/{{res.weixuan}}" wx:if='{{check!=item.id}}' class="icon-12"></image>
+            <image src="{{uploadpath}}resource/{{res.xuanzhong}}" wx:if='{{check==item.id}}' class="icon-12"></image>
+          </view>
+
+          <view class="margin-left-34">
+
+            <view class='flex-row'>
+              <view class='flex-row flex-center'>
+                <view class='txt-bold f15' style='color:#222222'>{{item.name}}</view>
+                <view class='margin-left-20 f15' style='color:#222222'>{{item.phonenumber}}</view>
+              </view>
+            </view>
+
+            <view class='margin-top-20 f13 chaochu' style='color:#666666;width:400rpx'>{{item.region}}{{item.address}}</view>
+          </view>
+
+          <view class='flex-1'></view>
+
+          <view bindtap='addressmanage' id="{{item.id}}">
+            <image class='icon-32' src='{{uploadpath}}resource/{{res.fghy}}'></image>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="add margin-top-20 flex-row flex-center" wx:if='{{type==""||type==undefined}}'>
+      <view class="flex-1"></view>
+      <image src="{{uploadpath}}resource/{{res.jiadizhi}}" class="icon-15"></image>
+      <view class="h5 margin-left-10" style="color:#999999" bindtap="addnew">添加新地址</view>
+      <view class="flex-1"></view>
+    </view>
+
+    <view style="height:150rpx;"></view>
+
+    <button class='but txt-white' wx:if='{{type==""||type==undefined}}' bindtap="queren">确认</button>
+    <button class='but txt-white' wx:if='{{type=="Y"}}' bindtap="addnew">添加新地址</button>
+
+  </view>
+
+
+  <view wx:if='{{show==true}}'>
+    <view class='block_black'></view>
+
+    <view class="white_black" wx:if="{{kong==false}}">
+      <view class="flex-row flex-column">
+        <view style="height:100rpx;"></view>
+        <image src="{{uploadpath}}resource/{{res.querenduihuan}}" class="icon-120"></image>
+
+        <view class="flex-row flex-center margin-top-34">
+          <view class="f30">使用</view>
+          <image src="{{uploadpath}}resource/{{res.jf_minicon}}" class="icon-15 margin-left-20"></image>
+          <view class="margin-left-10" style="font-size:40rpx;color:#FF6600">{{xiaofei}}</view>
+          <view class="f30 margin-left-20">进行兑换</view>
+        </view>
+
+        <view class="" style="height:60rpx;"></view>
+
+        <view class="flex-row flex-center">
+          <view class="f30 padding-30" style="color:#CCCCCC" bindtap="quxiao">取消</view>
+          <view class="shu"></view>
+          <view class="f30 padding-30" bindtap="quedin" id="{{memberinfo.integral}}" style="color:#FF6600">确认</view>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="white_black" wx:if="{{kong==true}}">
+      <view class="flex-row flex-column">
+        <view style="height:100rpx;"></view>
+        <image src="{{uploadpath}}resource/{{res.jifenbugou}}" class="icon-120"></image>
+
+        <view class="  margin-top-34">
+          <view>您的积分数不足，无法兑换</view>
+        </view>
+
+        <view class="" style="height:60rpx;"></view>
+
+        <view class="flex-row flex-center">
+          <view class="f30 padding-30" style="color:#FF6600" bindtap="quxiao">取消</view>
+        </view>
+
+
+      </view>
+    </view>
+
+  </view>
+
+</view>

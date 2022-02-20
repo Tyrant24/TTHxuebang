@@ -1,0 +1,103 @@
+<view class="flex-row flex-center bg_top">
+
+  <view class="flex-1"></view>
+
+  <view class="flex-row flex-center nr">
+
+    <image src='{{uploadpath}}resource/{{res.goumaiwanchen}}' class='icon-80'></image>
+    <view class='txt-bold margin-left-20'>交易成功</view>
+  </view>
+
+  <view class="flex-1"></view>
+
+</view>
+
+<view class="height-20"></view>
+
+<view bindtap="shipininfo"  class=' padding-left-20 bg-white bor_bot' style=''>
+  <!-- <view class='flex-row flex-center padding-20 bor_bot' style=''>
+    <view class='flex-1 txt-gray'>2019-02-03 12:00</view>
+    <view class='txt-gray'>已完成</view>
+  </view> -->
+
+  <view class='flex-row  padding-20 bor_bot margin-top-10' style=''>
+
+    <image class='icon radius-10' src='{{uploadpath}}onlineclassroom/{{kecheninfo.onlineclassroom_img}}'></image>
+
+    <view class='flex-1 flex-row column margin-left-20'>
+
+      <view class='flex-row flex-center'>
+        <view class='flex-1 h5 txt-black'>{{kecheninfo.onlineclassroom_name}}</view>
+
+      </view>
+
+      <view class='flex-row flex-center margin-top-5'>
+        <view class='flex-1 txt-gray chaochu2 h6'>{{kecheninfo.onlineclassroom_class_introduce}}</view>
+      </view>
+
+      <view class='flex-row flex-center flex-1 ' style=''>
+
+
+        <view class='flex-row flex-center '>
+          <image src='{{uploadpath}}resource/{{res.nianlin}}' class='icon-10'></image>
+          <view class='h6 txt-black margin-left-5'>{{kecheninfo.onlineclassroom_age_name}}</view>
+        </view>
+
+        <view style='width:40rpx;'></view>
+
+        <view class='flex-row flex-center '>
+          <image src='{{uploadpath}}resource/{{res.	zhanjie}}' class='icon-10'></image>
+          <view class='h6 txt-black margin-left-5'>共{{kecheninfo.onlineclassroom_chapter_num}}章</view>
+        </view>
+
+
+
+
+      </view>
+      <view style='color:#FF5252' class="h5">￥{{kecheninfo.amount}}</view>
+
+
+    </view>
+
+  </view>
+  <!-- 
+  <view bindtap='youhuijuan' class='flex-row flex-center padding-20' style=''>
+    <view class='h5'>优惠卷</view>
+    <view class='flex-1 margin-left-10 h4-5' style='color:#FF6600'>0张可用</view>
+
+    <view class='txt-black  margin-left-20 margin-right-10 h5' style='color:#CCCCCC'>课程 满50减20</view>
+    <image src='{{uploadpath}}resource/{{res.duihuan}}' class='icon-15'></image>
+
+  </view> -->
+
+  <view class='flex-row flex-center padding-20 margin-top-20' style=''>
+    <view class='flex-1 h5 txt-bold'>实付款</view>
+
+    <view class='  margin-left-20 ' style="color:#E95235">￥{{kecheninfo.amount}}</view>
+  </view>
+
+</view>
+
+<view class="height-20"></view>
+
+<view class="bg_top padding-left-20 ">
+
+  <view class=" padding-20 xhx flex-row flex-center">
+
+    <view style="width:200rpx;">订单号</view>
+    <view>{{kecheninfo.orderno}}</view>
+  </view>
+
+  <view class=" padding-20 xhx flex-row flex-center">
+
+    <view style="width:200rpx;">支付方式</view>
+    <view>线上支付</view>
+  </view>
+
+  <view class=" padding-20  xhx flex-row flex-center">
+
+    <view style="width:200rpx;">下单时间</view>
+    <view>{{kecheninfo.pay_time_formatting}}</view>
+  </view>
+
+</view>

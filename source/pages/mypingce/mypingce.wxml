@@ -1,0 +1,25 @@
+<!--pages/mypingce/mypingce.wxml-->
+
+<view wx:for='{{mypingcelist}}' wx:key='k' bindtap='toceshi' data-pcid="{{item.id}}" id='{{item.pingce_id}}' data-typea="{{item.typeA}}" data-typeb="{{item.typeB}}" data-typec="{{item.typeC}}" data-typed="{{item.typeD}}" class='ceshi flex-row flex-center' style='background-image:url({{uploadpath}}pingceindex/{{item.pingce_listimg}});background-size:100% 100%;'>
+
+  <view style='margin-left:40rpx;'>
+
+    <!-- <view class='txt-white txt-bold'>{{item.pingce_id_name}}</view> -->
+
+    <view class=' ' style='height:120rpx;'></view>
+   
+    <view class='flex-row flex-center'>
+    <view></view>
+      <view class='txt-white h6'>{{item.pingce_peoplenum}}</view>
+      <view class='h6 margin-left-12 txt-white opa' style=' '>人参与测试</view>
+    </view>
+
+    <view class="flex-row flx-center" style="margin-top:-20rpx ">
+      <view class="flex-1" style="width:550rpx;"></view>
+      <view class=" " style="height:32rpx;" wx:if='{{item.dati_status_value=="N"}}'></view>
+      <view class="txt-bold txt-white h6" wx:if='{{item.dati_status_value=="Y"}}'>已测试</view>
+    </view>
+
+  </view>
+
+</view>

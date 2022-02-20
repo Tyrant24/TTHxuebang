@@ -1,0 +1,34 @@
+<view  class="padding-40 bg-white flex-row flex-center">
+  <image class="icon-60 radius-50" src="{{member.avatarUrl}}"></image>
+  <view class="margin-left-20">
+    <view class="flex-row flex-center">
+      <view class="h6">{{member.nickName}}</view>
+
+    </view>
+    <view class="flex-row flex-center margin-top-20">
+      <view class="h6">绑定时间</view>
+      <view class="h6 margin-left-10">{{member.bandin_date}}</view>
+    </view>
+
+  </view>
+  <view class="flex-1"></view>
+
+</view>
+<view class="height-20"></view>
+<view class="padding-40 bg-white" style="padding-top:0rpx">
+  <view class="flex-row flex-center margin-top xian">
+
+    <view>订单数量</view>
+    <view class="flex-1"></view>
+    <view>{{member.dindan.length}}</view>
+  </view>
+   <view class="flex-row flex-center margin-top">
+
+    <view>成交金额</view>
+    <view class="flex-1"></view>
+    <view>{{member.jiner}}</view>
+  </view>
+  
+
+
+</view>

@@ -1,0 +1,113 @@
+<!--pages/purchase/purchase.wxml-->
+<!--pages/myorder/myorder.wxml-->
+<view class='height-100 text-center h6 bor_bot' style='line-height:100rpx;color:#A1A1A1'>
+  本次购买的课程请认真查看购买须知，合理安排学习时间。
+</view>
+
+
+<view class=' padding-left-20 bg-white bor_bot' style=''>
+  <!-- <view class='flex-row flex-center padding-20 bor_bot' style=''>
+    <view class='flex-1 txt-gray'>2019-02-03 12:00</view>
+    <view class='txt-gray'>已完成</view>
+  </view> -->
+
+  <view class='flex-row  padding-20 bor_bot margin-top-10' style=''>
+
+    <image class='icon radius-10' src='{{uploadpath}}curriculum/{{courseinfo.kc_img}}'></image>
+
+    <view class='flex-1 flex-row column margin-left-20'>
+
+      <view class='flex-row flex-center'>
+        <view class='flex-1 txt-black'>{{courseinfo.name}}</view>
+        <view class='txt-black'>￥{{courseinfo.price}}</view>
+      </view>
+
+      <view class='flex-row flex-center margin-top-5'>
+        <view class='flex-1 txt-gray h5'>{{courseinfo.type_typename}}</view>
+      </view>
+
+      <view class='flex-row flex-center flex-1 ' style=''>
+
+
+        <view class='flex-row flex-center '>
+          <image src='{{uploadpath}}resource/{{res.age_icon}}' class='icon-10'></image>
+          <view class='h6 txt-black margin-left-5'>{{courseinfo.age_name}}</view>
+        </view>
+
+        <view style='width:20rpx;'></view>
+
+        <view class='flex-row flex-center '>
+          <image src='{{uploadpath}}resource/{{res.keshi}}' class='icon-10'></image>
+          <view class='h6 txt-black margin-left-5'>{{courseinfo.class_hours}}节课</view>
+        </view>
+
+        <view style='width:20rpx;'></view>
+
+
+        <view class='flex-row flex-center '>
+          <image src='{{uploadpath}}resource/{{res.time}}' class='icon-10'></image>
+          <view class='h6 txt-black margin-left-5'>{{courseinfo.duration}}/节</view>
+        </view>
+
+
+      </view>
+
+
+    </view>
+
+  </view>
+
+  <view class='flex-row flex-center padding-20' style=''>
+    <view class='flex-1'></view>
+    <!-- <view class='txt-black '>共1个课程</view> -->
+    <view class='txt-black txt-bold margin-left-20'>小计：￥{{courseinfo.price}}</view>
+  </view>
+
+</view>
+
+
+<view class=''>
+  <view class='margin-top-20 padding-left-20 bg-white  bor_top'>
+    <view class='height-40 padding-20 bor_bot h5 txt-black txt-bold' style=''>
+    联系方式  
+    </view>
+
+
+    
+
+      <!-- <textarea class='txt-black h5' maxlength='-1' placeholder='添加备注...' style='width:100%;max-height:160rpx;' value='{{usercomment}}' name='usercomment' bindinput='changeUsercomment'>
+      </textarea> -->
+
+      <view class='flex-row flex-center   padding-20 bor_bot '>
+        <view class='h5 txt-black '>姓名：</view>
+        <input class='radius-10  margin-left-10 txt-black' style='' name='name' bindinput='changename'></input>
+      </view>
+      
+      
+      
+      <view class='flex-row flex-center  padding-20 '>
+        <view class='h5 txt-black '>电话：</view>
+        <input class='radius-10  margin-left-10 txt-black' value='{{mobile}}' style='' name='phone' bindinput='changephone'></input>
+         <button bindgetphonenumber='getPhoneNo' open-type='getPhoneNumber' class='phone_btn h6 txt-white'>获取手机</button>
+      </view>
+
+      <!-- <button bindgetphonenumber='getPhoneNo' open-type='getPhoneNumber'>获取手机</button> -->
+
+
+
+    
+  </view>
+
+
+  <view style='height:120rpx;'></view>
+</view>
+
+<view class='fixedbottom'>
+
+  <view class='flex-row flex-center bg-white ' style='border-top:2rpx solid #e5e5e5'>
+    <view class='flex-2 txt-red txt-bold padding-30'>总计 ￥ {{courseinfo.price}}</view>
+    <!-- <view class='txt-black '>共1个课程</view> -->
+    <view class='flex-1 txt-black txt-bold  bg-red txt-white padding-30 text-center' style='width:276rpx;' bindtap='bindtoorder'>提交订单</view>
+  </view>
+
+</view>

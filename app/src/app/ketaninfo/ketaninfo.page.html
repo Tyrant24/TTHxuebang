@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot="start">
+      <ion-button (click)='back()'>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>交易成功</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="flex-row flex-center bg_top">
+
+    <div class="flex-1"></div>
+
+    <div class="flex-row flex-center nr">
+
+      <img src='{{uploadpath}}resource/{{res.goumaiwanchen}}' class='icon-80' />
+      <div class='txt-bold margin-left-20'>交易成功</div>
+    </div>
+
+    <div class="flex-1"></div>
+
+  </div>
+
+  <div class="height-20"></div>
+
+  <div (click)="shipininfo()" class=' padding-left-20 bg-white bor_bot' style=''>
+    <!-- <div class='flex-row flex-center padding-20 bor_bot' style=''>
+          <div class='flex-1 txt-gray'>2019-02-03 12:00</div>
+          <div class='txt-gray'>已完成</div>
+        </div> -->
+
+    <div class='flex-row  padding-20 bor_bot margin-top-10' style=''>
+
+      <img class='icon radius-10' src='{{uploadpath}}onlineclassroom/{{kecheninfo.onlineclassroom_img}}' />
+
+      <div class='flex-1 flex-row column margin-left-20'>
+
+        <div class='flex-row flex-center'>
+          <div class='flex-1 h5 txt-black'>{{kecheninfo.onlineclassroom_name}}</div>
+
+        </div>
+
+        <div class='flex-row flex-center margin-top-5'>
+          <div class='flex-1 txt-gray chaochu2 h6'>{{kecheninfo.onlineclassroom_class_introduce}}</div>
+        </div>
+
+        <div class='flex-row flex-center flex-1 ' style=''>
+
+
+          <div class='flex-row flex-center '>
+            <img src='{{uploadpath}}resource/{{res.nianlin}}' class='icon-10' />
+            <div class='h6 txt-black margin-left-5'>{{kecheninfo.onlineclassroom_age_name}}</div>
+          </div>
+
+          <div style='width:40rpx;'></div>
+
+          <div class='flex-row flex-center '>
+            <img src='{{uploadpath}}resource/{{res.	zhanjie}}' class='icon-10' />
+            <div class='h6 txt-black margin-left-5'>共{{kecheninfo.onlineclassroom_chapter_num}}章</div>
+          </div>
+
+
+
+
+        </div>
+        <div style='color:#FF5252' class="h5">￥{{kecheninfo.amount}}</div>
+
+
+      </div>
+
+    </div>
+    <!-- 
+        <div bindtap='youhuijuan' class='flex-row flex-center padding-20' style=''>
+          <div class='h5'>优惠卷</div>
+          <div class='flex-1 margin-left-10 h4-5' style='color:#FF6600'>0张可用</div>
+      
+          <div class='txt-black  margin-left-20 margin-right-10 h5' style='color:#CCCCCC'>课程 满50减20</div>
+          <img src='{{uploadpath}}resource/{{res.duihuan}}' class='icon-15' />
+      
+        </div> -->
+
+    <div class='flex-row flex-center padding-20 margin-top-20' style=''>
+      <div class='flex-1 h5 txt-bold'>实付款</div>
+
+      <div class='  margin-left-20 ' style="color:#E95235">￥{{kecheninfo.amount}}</div>
+    </div>
+
+  </div>
+
+  <div class="height-20"></div>
+
+  <div class="bg_top padding-left-20 ">
+
+    <div class=" padding-20 xhx flex-row flex-center">
+
+      <div style="width:200rpx;">订单号</div>
+      <div>{{kecheninfo.orderno}}</div>
+    </div>
+
+    <div class=" padding-20 xhx flex-row flex-center">
+
+      <div style="width:200rpx;">支付方式</div>
+      <div>线上支付</div>
+    </div>
+
+    <div class=" padding-20  xhx flex-row flex-center">
+
+      <div style="width:200rpx;">下单时间</div>
+      <div>{{kecheninfo.pay_time_formatting}}</div>
+    </div>
+
+  </div>
+</ion-content>

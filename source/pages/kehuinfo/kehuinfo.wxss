@@ -1,0 +1,4 @@
+.xian{
+  border-bottom: 1rpx solid #F5F5F5;
+  padding-bottom: 40rpx;
+}

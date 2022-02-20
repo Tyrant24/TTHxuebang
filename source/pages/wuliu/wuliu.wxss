@@ -1,0 +1,26 @@
+/* pages/wuliu/wuliu.wxss */
+
+Page {
+  background: white;
+}
+
+.margin-left-34 {
+  margin-left: 34rpx;
+}
+
+.padding-22 {
+  padding-top: 22rpx;
+  padding-bottom: 22rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+.margin-top-6{
+  margin-top: 6rpx;
+}
+.icon_logo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 2rpx;
+}
+.padding_top{
+  padding: 40rpx 40rpx 40rpx 34rpx;
+}

@@ -1,0 +1,41 @@
+.tz{
+
+color:#FF2734;
+border:1rpx solid #FF2734;
+padding-left:5rpx;
+padding-right: 5rpx;
+padding-top:3rpx;
+padding-bottom:3rpx;
+position: absolute;
+background-color: white;
+border-radius: 10rpx;
+
+left:60rpx;
+top:70rpx;
+}
+.margin-top-30{
+  margin-top: 30rpx;
+}
+.bg{
+ background:  #FFFFFF;
+ border-radius: 10rpx;
+}
+.djs{
+background-color: black;
+color: white;
+padding:20rpx;
+border-radius: 10rpx;
+}
+.tuan_btn{
+width: 85%;
+padding-top:20rpx;
+padding-bottom:20rpx;
+background-color: #FF5252;
+color: white;
+border-radius: 40rpx;
+
+}
+.quan{
+
+  border:1px dashed  #999999;
+}

@@ -1,0 +1,29 @@
+<!--pages/wuliu/wuliu.wxml-->
+
+ <view class="flex-row flex-center padding_top">
+  <image src="{{wuliu.result.logo}}" class="icon_logo"></image>
+  <view class="flex-row column margin-left-20">
+    <view class="flex-row flex-center">
+      <view class="h5">物流状态：</view>
+      <view class="h5" style="color:#FF0000">已发货</view>
+    </view>
+
+    <view class="h6 txt-9 margin-top-6">共1件商品，由【{{wuliu.result.expName}}】承运</view>
+
+    <view class="h6 txt-9 margin-top-6">运单编号：{{wuliu.result.number}}</view>
+
+  </view>
+</view>
+
+<view style="height:16rpx;background:#F5F6F8" ></view>
+
+<view class="h5 txt-bold margin-left-34 padding-22">物流跟踪</view>
+
+<view class=" margin-40 " wx:for='{{wllist}}' wx:key='k'>
+  <view class="h6 txt-9"> {{item.status}}</view>
+  <view class="h6 txt-6 margin-top-6"> {{item.time}}</view>
+</view>
+
+ <!-- <button class="bg-red icon-100"  bindtap="onclick">
+ 
+ </button> -->

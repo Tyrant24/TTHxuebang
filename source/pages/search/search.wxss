@@ -1,0 +1,76 @@
+/* pages/search/search.wxss */
+Page{
+  background: #f5f5f5;
+}
+.search{
+  width:620rpx;
+  border-radius: 50rpx;
+  background-color: rgb(240, 240, 240);
+}
+.search_icon{
+  height:40rpx;
+  width:40rpx;
+}
+.prohibit_icon{
+  height:30rpx;
+  width:30rpx;
+}
+.shadow {
+  box-shadow: 1px 1px 5px #d1d1d1;
+}
+.kc_icon {
+  width: 228rpx;
+  height: 224rpx;
+}
+.kecheng {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  /* margin-bottom: 4rpx; */
+}
+.address{
+
+}
+.img{
+  width: 220rpx;
+  height: 252rpx;
+}
+.mid{
+  position: absolute;
+  width: 85.5%;
+  z-index: 10;
+  height: 190rpx;
+  bottom:0%;
+  /* opacity: 0.8; */
+  box-shadow: 1px 1px 5px #dfdfdf;
+}
+.org_block {
+  padding-left: 5rpx;
+  padding-right: 15rpx;
+  padding-top: 6rpx;
+  padding-bottom: 6rpx;
+}
+
+.dizhi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  position: absolute;
+  width: 50%;
+  top: 24rpx;
+  left: 32rpx;
+  z-index: 10;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.biaoqian {
+  min-width: 56rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}

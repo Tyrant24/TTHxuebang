@@ -1,0 +1,35 @@
+/* pages/purchase/purchase.wxss */
+Page{
+  background: #f5f5f5;
+}
+.txt{
+  color: #FFC200;
+}
+.block{
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.icon{
+  height: 168rpx;
+  width: 168rpx;
+}
+.bor_bot{
+  border-bottom:1px solid #e5e5e5
+}
+.bor_top{
+  border-top:1px solid #e5e5e5
+}
+
+.fixedbottom{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+}
+.phone_btn{
+  width: 160rpx;
+  background: red;
+  height: 50rpx;
+  line-height: 50rpx;
+}

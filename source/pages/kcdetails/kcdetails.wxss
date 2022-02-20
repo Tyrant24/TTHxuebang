@@ -1,0 +1,57 @@
+/* pages/kcdetails/kcdetails.wxss */
+page{
+  background: #132056;
+}
+/* .type {
+  padding-left: 17rpx;
+  padding-right: 17rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+} */
+.txt{
+  color: #FFC200;
+}
+.buy{
+  background: #FE792E;
+}
+
+.fixedbottom{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width:100vw;
+}
+.to_top{
+  position: fixed;
+  top: 60%;
+  right: 0;
+  z-index: 100;
+}
+.biaoqian {
+  min-width: 56rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.top{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+.tishi{
+  position: fixed;
+  z-index: 100;
+  top: 35%;
+  right: 35%; 
+}
+.ts_icon{
+  width: 240rpx;
+  height: 260rpx;
+}
+.dizhi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,23 @@
+<view class="1" style="background-image: url({{bg}}); width:100vw;height:100vh;background-size:100vw 100vh; ">
+
+  <view class="flex-row flex-center margin-top-60">
+    <view class="flex-1"></view>
+    <image mode="scaleToFill" src='{{lujin}}' class='zp'></image>
+    <view class="flex-1"></view>
+  </view>
+
+  <view class="flex-row fd">
+    <view class="flex-1"></view>
+    <view class="anniu  flex-row flex-center" data-id="erweima" bindtap="baocun">
+      <image class="icon-15" mode="widthFix" src="{{uploadpath}}resource/{{res.saoma}}"></image>
+      <view class="zi margin-left-10">保存二维码</view>
+    </view>
+    <view class="flex-1"></view>
+
+    <view class="anniu  flex-row flex-center" data-id="haibao" bindtap="baocun">
+      <image class="icon-15" mode="widthFix" src="{{uploadpath}}resource/{{res.xiazai}}"></image>
+      <view class="zi margin-left-10">保存海报</view>
+    </view>
+    <view class="flex-1"></view>
+  </view>
+</view>

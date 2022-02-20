@@ -1,0 +1,17 @@
+.zp{
+width: 80vw;
+height: 133vw;
+}
+.fd{
+ position: fixed;
+ bottom: 3%;
+width: 100vw;
+}
+.anniu{
+
+padding:20rpx 70rpx 20rpx 70rpx;
+background: rgba(255, 255, 255, 1);
+border-radius: 100rpx;
+
+}
+/* pages/pintuanhaibao/pintuanhaibao.wxss */

@@ -1,0 +1,33 @@
+/* pages/order/order.wxss */
+Page{
+  background: #f5f5f5;
+}
+
+.bor_bot{
+  border-bottom:1px solid #f5f5f5
+}
+.borbot{
+  border-bottom:1px solid #f5f5f5;
+}
+.bor_top{
+  border-top:1px solid #e5e5e5;
+}
+.pd{
+  padding-top: 20rpx;
+  padding-right: 20rxp;
+  padding-bottom: 20rpx;
+  padding-left:10rpx;
+}
+.fbtn {
+  width: 140rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 40rpx;
+}
+.btm{
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+  z-index: 100;
+  border-top: 2rpx solid #e5e5e5;
+}

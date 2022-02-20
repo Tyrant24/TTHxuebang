@@ -1,0 +1,26 @@
+<view class="padding-20">
+  <view class="flex-row flex-center">
+    <view class="h6 " style='color:rgba(102, 102, 102, 1)'>7月</view>
+    <view class="flex-1"></view>
+    <view class="h6" style='color:rgba(102, 102, 102, 1)'> {{shouru>0?'+':''}}￥{{shouru}}</view>
+  </view>
+
+</view>
+<block wx:for="{{tgjilu}}">
+  <view class="padding-20 padding-top cc" style='padding-right: 20'>
+    <view class=" flex-row flex-center" style="margin-top:1rpx">
+      <view class="h5" style='color:rgba(34, 34, 34, 1)'>{{item.caozuo=='TG'?'推广成功':'提现'}}</view>
+      <view class="flex-1"></view>
+      <view class="h6" style='color:rgba(153, 153, 153, 1)'>{{item.add_time_dateformat}}</view>
+
+    </view>
+    <view class=" flex-row flex-center">
+      <view style='color:rgba(34, 34, 34, 1);font-size:22rpx;'>余额:{{item.yuer}}</view>
+      <view class="flex-1"></view>
+      <view style='color:rgba(34, 34, 34, 1);font-size:30rpx;'>{{item.caozuo=='TG'?'+':''}}{{item.jiner}}</view>
+
+    </view>
+
+  </view>
+  <view class="xian"></view>
+</block>

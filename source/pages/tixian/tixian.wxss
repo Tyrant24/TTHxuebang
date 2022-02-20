@@ -1,0 +1,35 @@
+.center{
+
+  text-align: center;
+  margin-top:20rpx;
+}
+.jingao{
+  background: #FFECEC;
+}
+.shuru{
+height: 100rpx;
+
+}
+.btn{
+  margin-top:50rpx;
+  padding:25rpx 260rpx 25rpx 260rpx;
+  background: rgba(34, 171, 57, 1);
+  color:rgba(255, 255, 255, 1);
+  font-size: 30rpx;
+  border-radius: 120rpx;
+}
+.xhx{
+  border-bottom: 1px solid #F5F5F5;
+  margin-bottom: 0rpx;
+  padding-bottom: 20rpx;
+}
+.tsk{
+font-size: 24rpx;
+color:#CCCCCC;
+
+}
+
+.bg{
+
+  background-color: white;
+}

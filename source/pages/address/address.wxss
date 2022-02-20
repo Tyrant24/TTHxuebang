@@ -1,0 +1,24 @@
+/* pages/address/address.wxss */
+
+.margin-left-14 {
+  margin-left: 14rpx;
+}
+
+.hezi {
+  margin-top: 20rpx;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  background-color: white;
+  border-radius: 8rpx;
+}
+
+.but {
+  position: fixed;
+  left: 76rpx;
+  bottom: 54rpx;
+  width: 80vw;
+  border-radius: 42rpx;
+  background-color: #f60;
+}

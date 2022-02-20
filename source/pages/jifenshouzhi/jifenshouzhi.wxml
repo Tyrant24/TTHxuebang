@@ -1,0 +1,67 @@
+<!--pages/jifenshouzhi/jifenshouzhi.wxml-->
+<view class="flex-row flex-center title bg-white" style="">
+
+  <view class="flex-row flex-column flex-1 margin-left-20" bindtap="xuanze" id="shouru">
+    <view class="h5 {{show==1?'txt-bold':''}}">收入</view>
+    <view class="tiao  {{show==1?'bg-orange':'bg-white'}}"></view>
+  </view>
+
+  <view class="flex-row flex-column flex-1 margin-right-20" bindtap="xuanze" id="zhichu">
+    <view class="h5 {{show==2?'txt-bold':''}}">支出</view>
+    <view class="tiao {{show==2?'bg-orange':'bg-white'}}"></view>
+  </view>
+
+</view>
+
+
+
+<view wx:if='{{show==1}}' >
+
+  <view style="height:52rpx" class="flex-row flex-center">
+    <view class="h6 txt9 margin-left-20 flex-1">7月</view>
+    <view class="h6 txt9">增加</view>
+    <image src="{{uploadpath}}resource/{{res.jf_minicon}}" class="icon-10 margin-left-10"></image>
+    <view class=" txt9 h6 margin-right-30">{{shousum}}</view>
+  </view>
+
+  <view class="bg-white flex-row flex-center shouru {{idx>0?'border-top':''}}"   wx:for='{{jilulist}}' wx:key='k' wx:if='{{item.type=="B"}}' wx:for-index='idx'>
+
+    <view class="flex-row column flex-1">
+      <view class="h5">{{item.name}}</view>
+      <view class="txt9" style="font-size:20rpx;">{{item.created_date}}</view>
+    </view>
+
+    <view class="flex-row flex-center">
+      <image src="{{uploadpath}}resource/{{res.jf_minicon}}" class="icon-10 margin-left-10"></image>
+      <view class="txt-bold txt9  margin-right-30 margin-left-10" style="color:#FFC22F">+{{item.jifen}}</view>
+    </view>
+
+  </view>
+
+</view>
+
+
+<view wx:if='{{show==2}}'>
+
+  <view style="height:52rpx" class="flex-row flex-center">
+    <view class="h6 txt9 margin-left-20 flex-1">7月</view>
+    <view class="h6 txt9">支出</view>
+    <image src="{{uploadpath}}resource/{{res.jf_minicon}}" class="icon-10 margin-left-10"></image>
+    <view class=" txt9 h6 margin-right-30">{{zhisum}}</view>
+  </view>
+
+  <view class="bg-white flex-row flex-center shouru {{idx>0?'border-top':''}}" wx:for-index='idx' style="border-top:2rpx solid #E5E5E5"  wx:for='{{jilulist}}' wx:key='l' wx:if='{{item.type=="A"}}'>
+
+    <view class="flex-row column flex-1">
+      <view class="h5">{{item.name}}</view>
+      <view class="txt9" style="font-size:20rpx;">{{item.created_date}}</view>
+    </view>
+
+    <view class="flex-row flex-center">
+      <image src="{{uploadpath}}resource/{{res.jf_minicon}}" class="icon-10 margin-left-10"></image>
+      <view class=" txt-bold   margin-right-30" >{{item.jifen}}</view>
+    </view>
+
+  </view>
+
+</view>

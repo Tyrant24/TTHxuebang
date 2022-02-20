@@ -1,0 +1,66 @@
+<!--pages/pingcedati/pingcedati.wxml-->
+
+
+
+<view hidden="{{gif==true}}">
+<swiper indicator-dots='{{false}}' disable='{{false}}' current='{{qie}}' autoplay='{{false}}' duration='200' circular='{{false}}' style='width:750rpx;height:1150rpx;'>
+  <swiper-item catchtouchmove='stoptouch' wx:for="{{pingcelist}}" wx:key="k" wx:for-index='idx' style='width:750rpx;height:1150rpx;'>
+    <view class=''>
+
+      <view class='top-padding'>
+        <view class='flex-row flex-center'>
+          <view class='h3 txt-bold'>{{idx+1}}</view>
+          <view class='h5 txt-bold padding-top-12'>/{{pingcelist.length}}</view>
+        </view>
+        <view class='margin-top-12'>{{item.title}}</view>
+      </view>
+
+      <view style='height:20rpx' class='bg-gray'></view>
+
+      <view class='flex-row  mid-padding ' style='' bindtap='bindcheck' id='A' data-sx='{{idx}}'>
+        <view wx:if='{{pingcelist[idx].check!="A"}}' class='kon radius-50 margin-top-6'></view>
+        <view wx:if='{{pingcelist[idx].check=="A"}}' class='mang radius-50 margin-top-6'></view>
+        <view class='h5  margin-left-20  width-650'>{{item.optionsA}}</view>
+      </view>
+
+      <view class='flex-row  mid-padding ' style='' bindtap='bindcheck' id='B' data-sx='{{idx}}'>
+        <view wx:if='{{pingcelist[idx].check!="B"}}' class='kon radius-50 margin-top-6'></view>
+        <view wx:if='{{pingcelist[idx].check=="B"}}' class='mang radius-50 margin-top-6'></view>
+        <view class='h5  margin-left-20  width-650'>{{item.optionsB}}</view>
+      </view>
+
+      <view class='flex-row  mid-padding ' style='' bindtap='bindcheck' id='C' data-sx='{{idx}}'>
+        <view wx:if='{{pingcelist[idx].check!="C"}}' class='kon radius-50 margin-top-6'></view>
+        <view wx:if='{{pingcelist[idx].check=="C"}}' class='mang radius-50 margin-top-6'></view>
+        <view class='h5  margin-left-20  width-650'>{{item.optionsC}}</view>
+      </view>
+
+      <view class='flex-row  mid-padding ' wx:if='{{item.optionsD!=""}}' style='' bindtap='bindcheck' id='D' data-sx='{{idx}}'>
+        <view wx:if='{{pingcelist[idx].check!="D"}}' class='kon radius-50 margin-top-6'></view>
+        <view wx:if='{{pingcelist[idx].check=="D"}}' class='mang radius-50 margin-top-6'></view>
+        <view class='h5  margin-left-20  width-650'>{{item.optionsD}}</view>
+      </view>
+
+      <view style='height:180rpx;'></view>
+
+      <view class='flex-row flex-center'>
+        <view class='flex-1'></view>
+        <view wx:if='{{idx>0}}' class='next_one txt-white text-center' bindtap='last' id='{{idx}}'>上一题</view>
+
+        <view class='flex-1' wx:if='{{idx+1==pingcelist.length}}'></view>
+        <!-- <view wx:if='{{idx+1 < pingcelist.length}}' class='next_one txt-white text-center' bindtap='next' id='{{idx}}'>下一题</view> -->
+        <view wx:if='{{idx+1 ==pingcelist.length}}'   bindtap='tijiao' class='next_one txt-white text-center'>提交</view>
+        <view class='flex-1'></view>
+      </view>
+
+    </view>
+  </swiper-item>
+</swiper>
+</view>
+
+
+
+<!-- wx:if='{{gif==true}}' -->
+<view class='gif bg-white text-center' wx:if='{{gif==true}}'>
+  <image src='{{uploadpath}}resource/{{res.shengchen}}' class='gifimg'></image>
+</view>

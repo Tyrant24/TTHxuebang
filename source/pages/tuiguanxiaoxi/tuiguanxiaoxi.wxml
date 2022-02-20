@@ -1,0 +1,29 @@
+<view class=" margin-20 ">
+  <block wx:for="{{myxiaoxi}}" wx:key='k'>
+    <view class="xxq  bg-white padding-20">
+      <view class="flex-row flex-center">
+        <image class="icon-30" mode="widthFix" src="{{uploadpath}}resource/{{res.tuiguangxiaoxi}}"></image>
+        <view class="margin-left-20 h5 txt-bold">推广员系统消息</view>
+
+      </view>
+
+      <view class="margin-top h6" style="color:#999999">
+        {{item.content}}
+
+      </view>
+      <view class="flex-row flex-center margin-top-20 margin-bottom-20">
+
+        <view class="h6" style="color:#999999">{{item.xiaoxi_date}}</view>
+        <view class="flex-1"></view>
+        <view wx:if="{{item.zhuantai=='成功'}}" bindtap="zhuqnaian" class="xq1">去赚钱</view>
+        <view wx:if="{{item.zhuantai!='成功'}}" bindtap="chakanxianqin" class="xq">查看详情</view>
+      </view>
+
+
+    </view>
+    <view class="height-20"></view>
+  </block>
+
+
+
+</view>

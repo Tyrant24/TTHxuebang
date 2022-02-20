@@ -1,0 +1,35 @@
+.noopt{
+  margin-left:20rpx;
+color: rgba(153, 153, 153, 1);
+background: rgba(245, 246, 248, 1);
+padding: 10rpx 30rpx 10rpx 30rpx;
+border-radius: 30rpx;
+font-size: 24rpx;
+
+}
+
+.opt{
+  margin-left:20rpx;
+color: rgba(34, 34, 34, 1);
+background: rgba(255, 186, 18, 1);
+padding: 10rpx 30rpx 10rpx 30rpx;
+border-radius: 30rpx;
+font-size: 24rpx;
+}
+.yz{
+color:rgba(102, 102, 102, 1);
+background-color: rgba(245, 246, 248, 1);
+padding: 5rpx 10rpx 5rpx 10rpx;
+border-radius: 10rpx;
+
+}
+.dd{
+  border-radius: 10rpx;
+}
+.heiht-120{
+  height: 120rpx;
+}
+.bg{
+  border-bottom: 1rpx  solid #f4f4f4;
+  padding-bottom: 20rpx;
+}

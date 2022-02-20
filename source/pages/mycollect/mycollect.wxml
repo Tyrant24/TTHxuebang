@@ -1,0 +1,328 @@
+<!--pages/mycollect/mycollect.wxml-->
+<view class=' flex-row flex-center  bg-white bor_bot'>
+
+  <view class='flex-1 flex-row flex-column' bindtap='bindshow' data-type='t1'>
+    <view class='txt-bold  flex-1 h5 padding-10 margin-bottom-5 margin-top-10 {{show=="t1"?"txt":""}} txt-black'>课程</view>
+    <view wx:if='{{show=="t1"}}' class='bg-primary' style='width:120rpx;height:6rpx;'></view>
+    <view wx:if='{{show!="t1"}}' class='' style='width:80rpx;height:6rpx;'></view>
+  </view>
+
+  <view class='flex-1 flex-row flex-column' bindtap='bindshow' data-type='t2'>
+    <view class='txt-bold  flex-1 h5 padding-10 margin-bottom-5 margin-top-10 {{show=="t2"?"txt":""}} txt-black'>机构</view>
+    <view wx:if='{{show=="t2"}}' class='bg-primary' style='width:120rpx;height:6rpx;'></view>
+    <view wx:if='{{show!="t2"}}' class='' style='width:80rpx;height:6rpx;'></view>
+  </view>
+
+
+  <view class='flex-1 flex-row flex-column' bindtap='bindshow' data-type='t3'>
+    <view class='txt-bold  flex-1 h5 padding-10 margin-bottom-5 margin-top-10 {{show=="t3"?"txt":""}} txt-black'>视频</view>
+    <view wx:if='{{show=="t3"}}' class='bg-primary' style='width:120rpx;height:6rpx;'></view>
+    <view wx:if='{{show!="t3"}}' class='' style='width:80rpx;height:6rpx;'></view>
+  </view>
+
+</view>
+
+<!--课程收藏-->
+<view class='' hidden='{{show!="t1"}}'>
+  <view wx:if="{{kclist.length==0}}">
+    <view class='flex-row text-center'>
+      <view class='flex-1'>
+
+      </view>
+
+      <view>
+
+        <view class='nofound-img'>
+          <image style='width:30vw;margin-top:100rpx;margin-bottom:40rpx;' mode='widthFix' src='{{uploadpath}}resource/{{res.nofound}}'></image>
+        </view>
+        <view class='h5 txt-gray'>
+          你还没有添加课程的收藏
+        </view>
+      </view>
+      <view class='flex-1'>
+
+      </view>
+    </view>
+  </view>
+
+  <navigator url='/pages/kcdetails/kcdetails?id={{item.course_id}}' class='margin-top-20 padding-left-20 bg-white bor_bot' style='' wx:for="{{kclist}}" wx:key='k'>
+
+
+    <view class='flex-row  padding-20 ' style=''>
+
+      <image class='icon2 radius-10' lazy-load='{{true}}' src='{{uploadpath}}curriculum/{{item.course_kc_img}}'></image>
+
+      <view class='flex-1 flex-row column margin-left-20'>
+
+        <view class='flex-row flex-center'>
+          <view class='flex-1 txt-black'>{{item.course_name}}</view>
+          <view class='txt-black'>￥{{item.course_price}}</view>
+        </view>
+          <view class='flex-row flex-center margin-top-5'>
+            <view class='flex-1 txt-gray h5'>{{item.course_jigouname}}</view>
+          </view>
+
+
+        <view class='flex-row flex-center flex-1' style=''>
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.age_icon}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{item.course_age_name}}</view>
+          </view>
+
+          <view style='width:20rpx;'></view>
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.keshi}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{item.course_duration}}节课</view>
+          </view>
+
+          <view style='width:20rpx;'></view>
+
+          <view class='flex-row flex-center '>
+            <image src='{{uploadpath}}resource/{{res.time}}' class='icon-10'></image>
+            <view class='h6 txt-black margin-left-5'>{{item.course_class_hours}}分钟/节</view>
+          </view>
+
+
+        </view>
+
+
+
+
+
+
+
+
+
+
+
+
+      </view>
+
+    </view>
+
+    <!-- <view class='flex-row flex-center padding-20' style=''>
+      <view class='flex-1'></view>
+      <view class='txt-black txt-bold margin-left-20'>实付金额：￥{{item.amount}}</view>
+    </view> -->
+
+  </navigator>
+</view>
+
+
+<!--机构收藏-->
+<view class='' hidden='{{show!="t2"}}'>
+
+  <view wx:if="{{jglist.length==0}}">
+    <view class='flex-row text-center'>
+      <view class='flex-1'>
+      </view>
+      <view>
+        <view class='nofound-img'>
+          <image style='width:30vw;margin-top:100rpx;margin-bottom:40rpx;' mode='widthFix' src='{{uploadpath}}resource/{{res.nofound}}'></image>
+        </view>
+        <view class='h5 txt-gray'>
+          你还没有添加机构的收藏
+        </view>
+      </view>
+      <view class='flex-1'>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- <navigator url='/pages/jgdetails/jgdetails?id={{item.jg_id}}' class='margin-top-20 padding-left-20 bg-white bor_bot' style='' wx:for="{{jglist}}" wx:key='k'>
+
+
+    <view class='flex-row  padding-20 bor_bot' style=''>
+
+      <image class='icon2 radius-10' src='{{uploadpath}}mechanism/{{item.jg_jg_img}}'></image>
+
+      <view class='flex-1 flex-row column margin-left-20'>
+
+        <view class='flex-row flex-center'>
+          <view class='flex-1 txt-black'>{{item.jg_jigou}}</view>
+        </view>
+
+      </view>
+
+    </view>
+
+  </navigator> -->
+
+
+
+  <view hidden='{{jglist.length==0}}' wx:for='{{jglist}}' wx:key='k' id='{{item.jg_id}}' bindtap='tojgdetails' style='position: relative;height:564rpx ' class=''>
+    <view class=' padding-20' style=''>
+      <image src='{{uploadpath}}mechanism/{{item.jg_jg_img}}' lazy-load='{{true}}' class=' radius-10 ' style='width:100%;height:400rpx'></image>
+    </view>
+
+
+    <view class='flex-row flex-column '>
+      <view class='radius-10 bg-white  mid margin-bottom-10'>
+
+        <view class='padding-20 '>
+
+          <view class='flex-row flex-center'>
+            <view class='txt-black txt-bold flex-1'>{{item.jg_id_name}}</view>
+
+            <view class=''>
+              <view wx:if="{{item.jg_scoring==5}}" class='flex-row flex-center margin-right-20'>
+                <image wx:for='{{5}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+              </view>
+              <view wx:if="{{item.jg_scoring==4}}" class='flex-row flex-center margin-right-20'>
+                <image wx:for='{{4}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+                <image src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+              </view>
+              <view wx:if="{{item.jg_scoring==3}}" class='flex-row flex-center margin-right-20'>
+                <image wx:for='{{3}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+                <image wx:for='{{2}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+              </view>
+              <view wx:if="{{item.jg_scoring==2}}" class='flex-row flex-center margin-right-20'>
+                <image wx:for='{{2}}' src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+                <image wx:for='{{3}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+              </view>
+              <view wx:if="{{item.jg_scoring==1}}" class='flex-row flex-center margin-right-20'>
+                <image src='{{uploadpath}}resource/{{res.star}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+                <image wx:for='{{4}}' src='{{uploadpath}}resource/{{res.star_null}}' class='margin-left-5' style='height:20rpx;width:20rpx;'></image>
+              </view>
+            </view>
+
+
+          </view>
+
+          <view class='flex-row flex-center margin-top-5'>
+            <view class='flex-row flex-1'>
+              <view class='flex-row flex-center margin-top-5'>
+                <image class='icon-15 ' src='{{uploadpath}}resource/{{res.zuobiao}}'></image>
+                <view class='flex-1 h6 margin-left-10 txt-black dizhi'>{{item.jg_showaddress}}</view>
+
+              </view>
+            </view>
+            <view class='h6'>已预约{{item.jg_people_num}}人</view>
+          </view>
+
+
+        </view>
+
+      </view>
+    </view>
+
+
+
+  </view>
+
+
+  <view class='height-50'></view>
+
+
+
+</view>
+
+
+<!--视频收藏-->
+<view class='' hidden='{{show!="t3"}}'>
+
+  <view wx:if="{{splist.length==0}}">
+    <view class='flex-row text-center'>
+      <view class='flex-1'>
+
+      </view>
+
+      <view>
+
+        <view class='nofound-img'>
+          <image style='width:30vw;margin-top:100rpx;margin-bottom:40rpx;'  mode='widthFix' src='{{uploadpath}}resource/{{res.nofound}}'></image>
+        </view>
+        <view class='h5 txt-gray'>
+          你还没有添加视频的收藏
+        </view>
+      </view>
+      <view class='flex-1'>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- <navigator url='/pages/order/order?id={{item.id}}' class='margin-top-20 padding-left-20 bg-white bor_bot' wx:for="{{splist}}" wx:key='k'>
+    <view class='flex-row flex-center padding-20 bor_bot' style=''>
+      <view class='flex-1 txt-gray'>
+        {{item.pstatus=='W'?item.submit_time_formatting:''}} {{item.pstatus=='P'?item.pay_time_formatting:''}} {{item.pstatus=='C'?item.cancel_time_formatting:''}} {{item.pstatus=='U'?item.use_time_formatting:''}} {{item.pstatus=='R'?item.refund_time_formatting:''}}
+        {{item.pstatus=='F'?item.finishrefund_time_formatting:''}} {{item.pstatus=='S'?item.success_time_formatting:''}}
+      </view>
+      <view class='txt-gray'>{{item.pstatus_name}}</view>
+    </view>
+
+    <view class='flex-row  padding-20 bor_bot' style=''>
+
+      <image class='icon radius-10' src='{{uploadpath}}curriculum/{{item.course_kc_img}}'></image>
+
+      <view class='flex-1 flex-row column margin-left-20'>
+
+        <view class='flex-row flex-center'>
+          <view class='flex-1 txt-black'>{{item.course_name}}</view>
+          <view class='txt-black'>￥{{item.amount}}</view>
+        </view>
+
+        <view class='flex-row flex-center margin-top-10'>
+          <view class='flex-1 txt-gray h5'>{{item.course_typename}}</view>
+        </view>
+
+
+
+      </view>
+
+
+
+
+    </view>
+
+    <view class='flex-row flex-center padding-20' style=''>
+      <view class='flex-1'></view>
+      <view class='txt-black txt-bold margin-left-20'>实付金额：￥{{item.amount}}</view>
+    </view>
+
+  </navigator> -->
+
+  <view class='bg-white margin-bottom-40 ' style='position:relative;width:100%' wx:for='{{splist}}' wx:key='k'>
+
+    <block wx:if="{{item.play=='Y'}}">
+      <video bindplay='play' class='pos' style='width:100vw; height:400rpx;' poster='{{uploadpath}}famousteacher/{{item.video_fm_bg}}' title='{{item.video_title}}' object-fit="fill" autoplay='{{true}}' id='v_{{item.id}}' loop='{{false}}' src='{{uploadpath}}Teach/{{item.video_video}}'
+        play-btn-position="center">
+        <cover-view class='title txt-white  txt-bold'>{{item.video_title}}</cover-view>
+      </video>
+    </block>
+    <block wx:else>
+      <view bindtap="play" id='c_{{item.id}}'>
+        <image class='pos' style='width:100vw; height:400rpx;background:black;' lazy-load='{{true}}' src='{{uploadpath}}famousteacher/{{item.video_fm_bg}}'>
+        </image>
+        <view style='position:absolute;margin-top:-300rpx;height:200rpx;width:100vw;text-align:center;'>
+          <image style='width:200rpx;height:200rpx;' src='{{uploadpath}}resource/{{res.play}}'></image>
+        </view>
+      </view>
+    </block>
+
+    <view class='flex-row flex-center padding-30'>
+      <view class='bg-primary radius-30 org_block flex-row flex-center'>
+        <image src='{{uploadpath}}resource/{{res.V}}' class='icon'></image>
+        <view class='txt-white h5 margin-left-10 flex-1'>{{item.video_name}}</view>
+      </view>
+      <!-- <view bindtap='tojgdetails' id='{{item.video_mechanism_id}}' class='flex-1 margin-left-20 txt-blue h5'>{{item.video_jigou}}</view> -->
+      <view bindtap='tojgdetails' id='{{item.video_mechanism_id}}' class='flex-1 margin-left-20 txt-blue h5'>点击这里跳转到机构</view>
+      <!-- <image src='{{uploadpath}}resource/{{res.shipin}}' class='icon margin-right-10'></image> -->
+      <view class='h5'>{{item.video_count}}次</view>
+      <view class='margin-left-20 flex-row flex-center'>
+        <!-- <button  >未收藏</button> -->
+
+        <image src='{{uploadpath}}resource/{{res.video_coll}}' class='icon-25' bindtap='fav' id='{{item.video_id}}'></image>
+        <view class='h5 margin-left-10' bindtap='fav' id='{{item.video_id}}'></view>
+        <!-- <button  >已收藏</button> -->
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view>

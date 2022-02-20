@@ -1,0 +1,123 @@
+@function rpx($px) {
+    @return ($px * 100vw) / 750;
+}
+
+
+.ion-content {
+    --background: #f5f5f5;
+}
+
+.top {
+    position: fixed;
+    width: 100vw;
+    z-index: 998;
+}
+
+.txt {
+    color: #ffc200;
+}
+
+.block {
+    padding-left: rpx(20);
+    padding-top: rpx(20);
+    padding-bottom: rpx(20);
+}
+
+.margin-24 {
+    margin: rpx(24);
+}
+
+.order {
+
+    background: #FFFFFF;
+    border-radius: rpx(10);
+
+
+}
+
+.quxiao {
+    color: #FF5733;
+}
+
+.hkg {
+    height: rpx(40);
+
+}
+
+.xian {
+    border-top: 1px solid #F5F5F5;
+}
+
+.pt {
+    font-size: rpx(20);
+    background: #FF5252;
+    color: #FFFFFF;
+    padding: rpx(3) rpx(4) rpx(3) rpx(4);
+    border-radius: rpx(1);
+
+}
+
+.icon {
+    height: rpx(168);
+    width: rpx(168);
+}
+
+.bor_bot {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.fbtn {
+    padding: rpx(10) rpx(30) rpx(10) rpx(30);
+
+    border-radius: rpx(40);
+
+}
+
+.yiwanchen {
+
+
+    position: absolute;
+
+    width: rpx(140);
+    height: rpx(100);
+    right: rpx(20);
+    margin-top: rpx(20);
+}
+
+.cktxq {
+
+    background: #FF5252;
+    color: #FFFFFF;
+}
+
+.ljzf {
+    background: #FF6600;
+    color: #FFFFFF;
+
+}
+
+.waitpay {
+    background: #FD4963;
+    font-size: rpx(32);
+    color: white;
+    border-radius: 50%;
+    min-width: rpx(40);
+
+    min-height: rpx(40);
+    line-height: rpx(40);
+    text-align: center;
+}
+
+.xiaoxi {
+    position: absolute;
+    top: 1.5vh;
+    right: 5.5vw;
+
+}
+
+.w20{
+    width: rpx(20);
+}
+.h100{
+    height:rpx(100);
+}

@@ -1,0 +1,228 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "童天慧",
+	"appid": "wxb76c39adb7275c20",
+	"projectname": "%E7%AB%A5%E5%A4%A9%E6%85%A75",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 25,
+			"list": [
+				{
+					"id": 0,
+					"name": "机构详情",
+					"pathName": "pages/jgdetails/jgdetails",
+					"query": "id=7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "名师",
+					"pathName": "pages/teacher/teacher",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "验证",
+					"pathName": "pages/auth/auth",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "机构、课程",
+					"pathName": "pages/seek/seek",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "课程详情",
+					"pathName": "pages/kcdetails/kcdetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/aboutus/aboutus",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的消息",
+					"pathName": "pages/mymessage/mymessage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "常见问题",
+					"pathName": "pages/problem/problem",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/myorder/myorder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购买",
+					"pathName": "pages/purchase/purchase",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单完成",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "名师",
+					"pathName": "pages/teacher/teacher",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "机构入驻",
+					"pathName": "pages/addmechanism/addmechanism",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "修改资料",
+					"pathName": "pages/personaldata/personaldata",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "流程示例",
+					"pathName": "pages/liucheng/liucheng",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 17,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市选择",
+					"pathName": "pages/city/city",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "宝妈优选",
+					"pathName": "pages/baoma/baoma",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "宝妈优选详情",
+					"pathName": "pages/baomainfo/baomainfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关键字搜索页",
+					"pathName": "pages/searchword/searchword",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的收藏",
+					"pathName": "pages/mycollect/mycollect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息详情",
+					"pathName": "pages/messageinfo/messageinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 24,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "keyword=英语",
+					"scene": "1008"
+				},
+				{
+					"id": 25,
+					"name": "机构",
+					"pathName": "pages/jgdetails/jgdetails",
+					"query": "id=185",
+					"scene": "1008"
+				}
+			]
+		}
+	}
+}

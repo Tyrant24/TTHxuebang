@@ -1,0 +1,54 @@
+<!--pages/teacher/teacher.wxml-->
+<view class='bg-white margin-bottom-20 qqq' style='' wx:for='{{vteach}}' wx:key='k'>
+
+  <block wx:if="{{item.play=='Y'}}">
+    <video bindplay='play'  class='pos' style='width:100vw; height:400rpx;' poster='{{uploadpath}}famousteacher/{{item.fm_bg}}' title='{{item.title}}' object-fit="fill" autoplay='{{true}}' id='v_{{item.id}}' loop='{{false}}' src='{{uploadpath}}Teach/{{item.video}}' play-btn-position="center">
+      <cover-view class='title txt-white  txt-bold'>{{item.title}}</cover-view>
+    </video>
+  </block>
+  <block wx:else>
+    <view bindtap="play"  id='c_{{item.id}}'>
+    <image  class='pos' style='width:100vw; height:400rpx;background:black;' lazy-load='{{true}}'  src='{{uploadpath}}famousteacher/{{item.fm_bg}}'>
+    </image>
+    <view style='position:absolute;margin-top:-300rpx;height:200rpx;width:100vw;text-align:center;'>
+    <image style='width:200rpx;height:200rpx;' src='{{uploadpath}}resource/{{res.play}}'></image>
+    </view>
+    </view>
+  </block>
+
+
+
+  <view class='flex-row flex-center padding-30'>
+    <view class='bg-primary radius-30 org_block flex-row flex-center'>
+      <image src='{{uploadpath}}resource/{{res.V}}' class='icon'></image>
+      <view class='txt-white h5 margin-left-10 flex-1'>{{item.name}}</view>
+    </view>
+    <!-- <view bindtap='tojgdetails' id='{{item.mechanism_id}}' style='color:#589DE9' class='flex-1 txt-bold margin-left-20  h5'>{{item.mechanism_id_name}}</view> -->
+    <view bindtap='tojgdetails' id='{{item.mechanism_id}}' style='color:#589DE9' class='flex-1 txt-bold margin-left-20  h5'>点击这里跳转到机构</view>
+    <!-- <image src='{{uploadpath}}resource/{{res.shipin}}' class='icon margin-right-10'></image> -->
+    <view class='h5'>{{item.count}}次</view>
+    <view class='margin-left-20 flex-row flex-center'>
+
+      <!-- <button  >未收藏</button> -->
+
+      <image src='{{uploadpath}}resource/{{res.video_null}}' class='margin-right-10 icon-25' bindtap='fav' id='{{item.id}}_Y' wx:if="{{item.isfav=='N'}}"></image>
+      <image src='{{uploadpath}}resource/{{res.video_coll}}' class='margin-right-10 icon-25' bindtap='fav' id='{{item.id}}_N' wx:if="{{item.isfav!='N'}}"></image>
+
+      <view wx:if="{{item.isfav=='N'}}" class='h5  ' bindtap='fav' id='{{item.id}}_Y' style='color:#FF9393'></view>
+      <view wx:if="{{item.isfav!='N'}}" class='h5 ' bindtap='fav' id='{{item.id}}_N' style='color:#FF9393'></view>
+      <!-- <button  >已收藏</button> -->
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{nomore!=1}}" class='h1'>
+<image style='width:750rpx' mode="widthFix" src='{{uploadpath}}resource/{{res.null_icon}}'></image>
+</view>
+
+<!-- <view class='tishi' wx:if='{{show==1}}'>
+<image src='{{uploadpath}}resource/{{res.chengong}}' class='ts_icon'></image>
+</view>
+
+<view class='tishi' wx:if='{{show==2}}'>
+<image src='{{uploadpath}}resource/{{res.shibai}}' class='ts_icon'></image>
+</view> -->

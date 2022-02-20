@@ -1,0 +1,133 @@
+<!--pages/huiyuanfuwu/huiyuanfuwu.wxml-->
+<view class='top-block'>
+  <view class='h20 txt-bold margin-left-58 margin-top-86'>尊敬的机构用户</view>
+  <view class='h13 margin-top-4 margin-left-58'>欢迎使用VIP服务</view>
+</view>
+
+<!-- <swiper indicator-dots='{{false}}'  autoplay='{{false}}' previous-margin='12rpx' next-margin='374rpx'   duration='200' circular='{{false}}' style='width:750rpx;height:600rpx;margin-top:-58rpx; '>
+
+    <block wx:for="{{5}}" >
+      <swiper-item>
+        <view class='block' style='margin-left:12rpx;margin-right:12rpx;' wx:for="{{2}}">风光带</view>
+      </swiper-item>
+    </block>
+
+</swiper> -->
+
+
+
+<view style='margin-top:-58rpx; '>
+  <scroll-view scroll-x style=" " class='ss' bindscroll="scroll">
+
+    <view class='flex-row flex-center' style='display: inline-block;'>
+
+      <view class='{{idx==0?"firstblock":"block"}} bg-white' wx:for='{{list}}' wx:key='k' wx:for-index='idx' style=' '>
+
+        <view class='jiage'>
+
+
+          <view class='flex-row flex-center'>
+            <view class='flex-1'> </view>
+            <view class='h15 txt-white'>{{item.title_name}}</view>
+            <view class='h13 margin-left-6 txt-white'>{{item.vip_date}}</view>
+            <view class='flex-1'> </view>
+          </view>
+
+          <view class='flex-row flex-center margin-top-20'>
+            <view class='flex-1'> </view>
+            <view class='txt-white h20 txt-bold'>￥{{item.price}}</view>
+            <view class='flex-1'> </view>
+          </view>
+
+          <image wx:if='{{item.tuijian_value=="Y"}}' src='{{uploadpath}}resource/{{res.tuijian}}' class='tuijian'></image>
+
+        </view>
+
+        <view class='quanyi '>
+
+          <view class='flex-row flex-center {{idx>0?"margin-top-12":""}}' wx:for='{{item.showcase}}' wx:key='e' wx:for-index='idx'>
+            <image src='{{uploadpath}}resource/{{res.quanyi_icon}}' class='icon-20'></image>
+            <view class='h7 txt-6 margin-left-20'>{{item.content}}</view>
+          </view>
+ 
+
+        </view>
+
+        <view class='flex-row flex-center margin-top-20'>
+          <view class='flex-1'></view>
+          <view class='h7 ' style='color:#999999'>查看所有权益</view>
+          <image src='{{uploadpath}}resource/{{res.to}}' class='icon-20 margin-left-6'></image>
+          <view class='flex-1'></view>
+        </view>
+
+
+        <view class='flex-row flex-center margin-top-20' bindtap='tokaitong'>
+          <view class='flex-1'></view>
+          <view class='lianxikefu text-center h6'>
+            联系客服开通
+          </view>
+          <view class='flex-1'></view>
+        </view>
+
+      </view>
+
+      <!-- <view class='block' style=' '>
+        <view class='jiage'></view>
+      </view> -->
+
+    </view>
+
+  </scroll-view>
+</view>
+
+<view class='text-center h5 txt-bold ' style='margin-top:40rpx'>
+  功能服务对比
+</view>
+
+
+
+
+
+
+<view class='duibi'>
+
+  <view class='title flex-row flex-center' style=''>
+    <view class='flex-1 h6 txt-bold text-center' style=''>功能</view>
+    <view class='flex-1 h6 txt-bold text-center'>免费版</view>
+    <view class='flex-1 h6 txt-bold text-center'>正式版</view>
+    <view style='width:56rpx;'></view>
+  </view>
+
+
+  <view class=' '>
+
+    <view class='flex-row flex-center ' style='height:80rpx;'>
+      <view class='flex-1 h6 text-center'>价格</view>
+      <view class='flex-1 h6 txt-bold text-center'>{{info.mianfei_price}}元</view>
+      <view class='flex-1 h6 txt-bold text-center'>{{info.zhengshi_price}}元</view>
+      <view style='width:56rpx' class=''></view>
+    </view>
+
+
+    <view class='flex-row flex-center border-top-bottom' style='height:80rpx;'>
+      <view class='flex-1 h6 text-center'>期限</view>
+      <view class='flex-1 h6 txt-bold text-center'>{{info.mianfeiqixian}}</view>
+      <view class='flex-1 h6 txt-bold text-center'>{{info.zhengshiqixian}}</view>
+      <view style='width:56rpx' class=''></view>
+    </view>
+
+
+    <view class='flex-row flex-center ' style='height:80rpx;'>
+      <view class='flex-1 h6 text-center'>活动</view>
+      <view class='flex-1 h6 txt-bold text-center'>/</view>
+      <view class='flex-1 h6 txt-bold text-center'>/</view>
+      <view style='width:56rpx' class=''></view>
+    </view>
+
+  </view>
+
+
+
+
+
+</view>

@@ -1,0 +1,33 @@
+<view class="padding-20">
+  <view class="margin-left-20 h4-5 txt-bold " style='color:rgba(34, 34, 34, 1)'>推广员等级</view>
+  </view>
+  <view class="margin-20 bg">
+   <view class="margin-40 ">
+    <view class="f15">推广员</view>
+    <view class="margin-top-10 flex-row flex-center">
+      <view class="h6-7 " style='color:rgba(234, 184, 121, 1)'>直接推广佣金比例：{{instinfo.fenxiaobili*100}}%</view>
+      <view class="flex-1"></view>
+      <view bindtap="lijishenqin" class="lijishenqin margin-right-20">立即申请</view>
+    </view>
+  </view>
+  </view>
+ 
+
+<view class="padding-20">
+  <view class="margin-left-20 h4-5 txt-bold " style='color:rgba(34, 34, 34, 1)'>常见问题</view>
+
+</view>
+ <view class="margin-20 bg">
+   <view wx:for="{{problemlist}}" wx:for-index='idx'  wx:key='k' class="padding-40   sbb">
+   <view class=" {{problemlist.length-1!=idx?'xian':'xian1'}}">
+    <view class="f15">{{item.title}}</view>
+    <view class="margin-top-10 flex-row flex-center">
+      <view class="h6-7  " style='color:rgba(153, 153, 153, 1)'>{{item.content}}</view>
+    </view>
+    </view>
+  </view>
+   </view>
+ 
+
+
+

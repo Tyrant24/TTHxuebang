@@ -1,0 +1,87 @@
+<!--pages/pingjialist/pingjialist.wxml-->
+
+<view class='h5 bg-gray height30'>精彩评论</view>
+
+<view wx:if='{{pingjialist.length==0}}' class='flex-row flex-center'>
+<view class='flex-1'></view>
+<view>暂无评论</view>
+<view class='flex-1'></view>
+</view>
+
+<view wx:for='{{pingjialist}}' wx:key='k' wx:for-index='idx'>
+  <view class=' flex-row flex-center {{idx>0?"pinglunqu-1":"pinglunqu"}}'>
+
+    <image src='{{item.member_avatarUrl}}' class='tx radius-50'></image>
+
+    <view class=' flex-1 ' style='margin-left:16rpx;'>
+
+      <view class='h6 txt-black' wx:if='{{item.niming_value!="Y"}}'>{{item.member_id_name}}</view>
+      <view class='h6 txt-black' wx:if='{{item.niming_value=="Y"}}'>匿名用户</view>
+
+      <view class='flex-row flex-center margin-top-4'>
+        <view class='h7 txt9'>{{item.created_date}}</view>
+        <view style='width:39rpx;'></view>
+
+        <view wx:if='{{item.pingfen==1}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon20 margin-5'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon20 margin-5' wx:for='{{4}}'></image>
+        </view>
+
+        <view wx:if='{{item.pingfen==2}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon20 margin-5' wx:for='{{2}}'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon20 margin-5' wx:for='{{3}}'></image>
+        </view>
+
+        <view wx:if='{{item.pingfen==3}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon20 margin-5' wx:for='{{2}}'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon20 margin-5' wx:for='{{3}}'></image>
+        </view>
+
+        <view wx:if='{{item.pingfen==4}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon20 margin-5' wx:for='{{3}}'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon20 margin-5' wx:for='{{2}}'></image>
+        </view>
+
+        <view wx:if='{{item.pingfen==5}}'>
+          <image src='{{uploadpath}}resource/{{res.star}}' class='icon20 margin-5' wx:for='{{4}}'></image>
+          <image src='{{uploadpath}}resource/{{res.star_null}}' class='icon20 margin-5'></image>
+        </view>
+
+
+      </view>
+
+    </view>
+
+    <view class='flex-row flex-center'>
+      <view class='h6'>1187</view>
+      <image src='{{uploadpath}}resource/{{res.jg_icon}}' class=' icon24 margin-left-4'></image>
+    </view>
+
+  </view>
+
+  <view class='pinlun h5 txt-black'>
+    {{item.content}}
+  </view>
+
+  <view class='img flex-row flex-center flex-wrap'>
+
+
+
+    <image wx:if='{{item.img1!=""&&item.img1!="undefined"}}' src='{{uploadpath}}pingjia/{{item.img1}}' class='pinlun-img  ' bindtap='viewPhoto' id='{{uploadpath}}pingjia/{{item.img1}}'></image>
+
+    <image wx:if='{{item.img2!=""&&item.img2!="undefined"}}' src='{{uploadpath}}pingjia/{{item.img2}}' class='pinlun-img  ' bindtap='viewPhoto' id='{{uploadpath}}pingjia/{{item.img2}}'></image>
+
+    <image wx:if='{{item.img3!=""&&item.img3!="undefined"}}' src='{{uploadpath}}pingjia/{{item.img3}}' class='pinlun-img  ' bindtap='viewPhoto' id='{{uploadpath}}pingjia/{{item.img3}}'></image>
+
+    <image wx:if='{{item.img4!=""&&item.img4!="undefined"}}' src='{{uploadpath}}pingjia/{{item.img4}}' class='pinlun-img  ' bindtap='viewPhoto' id='{{uploadpath}}pingjia/{{item.img4}}'></image>
+
+    <image wx:if='{{item.img5!=""&&item.img5!="undefined"}}' src='{{uploadpath}}pingjia/{{item.img5}}' class='pinlun-img  ' bindtap='viewPhoto' id='{{uploadpath}}pingjia/{{item.img5}}'></image>
+
+    <image wx:if='{{item.img6!=""&&item.img6!="undefined"}}' src='{{uploadpath}}pingjia/{{item.img6}}' class='pinlun-img  ' bindtap='viewPhoto' id='{{uploadpath}}pingjia/{{item.img6}}'></image>
+
+
+  </view>
+
+</view>
+
+<view class='height-100'></view>

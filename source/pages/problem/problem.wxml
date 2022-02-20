@@ -1,0 +1,21 @@
+<!--pages/problem/problem.wxml-->
+<view class='flex-row bg-white    shadow ' style='margin-top:18rpx;' wx:for='{{problemlist}}' wx:key='k'>
+
+  <view class='flex-row column flex-1 '>
+
+    <view class='flex-row flex-center padding-30 ' style='' bindtap='bindshow' id='{{item.id}}'>
+      <image wx:if='{{show==item.id}}' class='icon ' src='{{uploadpath}}resource/{{res.xiangxia}}'></image>
+      <image wx:if='{{show!=item.id}}' class='icon2 ' src='{{uploadpath}}resource/{{res.right_icon}}'></image>
+      <view class='txt-black flex-1 margin-left-20' style='font-size:30rpx'>{{item.title}}</view>
+    </view>
+
+    <view class='' wx:if='{{show==item.id}}'>
+      <view class='margin-left-20' style='height:2rpx;width:90%; background:#F5F5F5'></view>
+      <view class='h5  margin-bottom-10 padding-40 flex-row flex-center '>
+        <view class='icon'></view>
+        <view class='flex-1' style='color:#434343'>{{item.content}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>

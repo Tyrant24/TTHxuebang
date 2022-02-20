@@ -1,0 +1,36 @@
+<!--pages/mymessage/mymessage.wxml-->
+<view wx:for='{{wclist}}' wx:key='k' id='{{item.id}}' class='flex-row bg-white  margin-top padding-30 shadow ' bindtap='bindtoinfo'>
+  <image class='icon-75 radius-10' src='{{uploadpath}}curriculum/{{item.course_kc_img}}'></image>
+  <view class='flex-row column flex-1 margin-left-10'>
+
+    <view class='flex-row flex-center'>
+      <view class='txt-black flex-1'>交易消息</view>
+      <view class='h6'>{{item.created_date}}</view>
+    </view>
+
+    <view class='h6 margin-top-5' style='color:#AAAAAA;'>
+      您已成功购买了{{item.course_id_name}}课程，付款金额{{item.amount}}元。
+    </view>
+
+    <view class='' style='height:32rpx;'></view>
+
+    <view class='flex-row flex-center'>
+      <view class='flex-1'></view>
+      <view class='h6' style='color:#AAAAAA;'>查看详情 ></view>
+    </view>
+
+  </view>
+</view>
+
+<!-- <view class='flex-row bg-white  margin-top padding-30 shadow '>
+  <image class='icon-75 radius-10' src='{{uploadpath}}resource/{{res.ceshi}}'></image>
+  <view class='flex-row column flex-1 margin-left-10'>
+    <view class='flex-row flex-center'>
+      <view class='txt-black flex-1'>交易消息</view>
+      <view class='h6'>2019-09-12 08：00</view>
+    </view>
+    <view class='h5 margin-top-5'>
+      施蒂利克骄傲了深刻的房间里肯定手动阀撒地方三房是福利卡机
+    </view>
+  </view>
+</view> -->

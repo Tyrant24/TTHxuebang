@@ -1,0 +1,139 @@
+@function rpx($px) {
+    @return ($px * 100vw) / 750;
+}
+
+ion-content {
+    --background: #F5F6F8;
+}
+
+.h {
+    font-size: rpx(30);
+}
+
+.bg_img {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    z-index: -1;
+}
+
+.waitpay {
+    background: #fd4963;
+    font-size: rpx(32);
+    color: white;
+    border-radius: 50%;
+    min-width: rpx(40);
+    min-height: rpx(40);
+    line-height: rpx(40);
+    text-align: center;
+}
+
+.bg_gray {
+    background: #f5f5f5;
+}
+
+.pd {
+    padding-bottom: rpx(30);
+    padding-top: rpx(10);
+}
+
+.orangeblock {
+    margin-left: rpx(20);
+    margin-right: rpx(20);
+    margin-top: rpx(24);
+    padding-left: rpx(50);
+    padding-top: rpx(58);
+    padding-bottom: rpx(248);
+    padding-right: rpx(50);
+    height: rpx(196);
+    background: linear-gradient(130deg, rgba(255, 190, 49, 1) 0%, rgba(255, 140, 16, 1) 100%);
+    border-radius: rpx(8);
+}
+
+.margin-top-10 {
+    margin-top: rpx(10);
+}
+
+.tx {
+    width: rpx(154);
+    height: rpx(154);
+}
+
+.gengxin {
+    position: absolute;
+    z-index: 10;
+    right: rpx(14);
+    top: rpx(24);
+    width: rpx(110);
+    height: rpx(28);
+    margin-top: rpx(16);
+    padding-left: rpx(12);
+    padding-right: rpx(6);
+    padding-top: rpx(8);
+    padding-bottom: rpx(8);
+    background: linear-gradient(156deg, rgba(255, 190, 49, 1) 0%, rgba(255, 190, 49, 1) 100%);
+    border-radius: rpx(200) rpx(0) rpx(0) rpx(200);
+}
+
+.margin-left-4 {
+    margin-left: rpx(4);
+}
+
+.padding-10 {
+    padding: rpx(10);
+}
+
+.f48 {
+    font-size: rpx(48);
+}
+
+.f26 {
+    font-size: rpx(26);
+}
+
+.bianji {
+    width: rpx(220);
+    height: rpx(56);
+    background: rgba(255, 255, 255, 1);
+    border-radius: rpx(28);
+}
+
+.txt-orange {
+    color: #FFA823
+}
+
+.radius-8 {
+    border-radius: rpx(8);
+}
+
+.icon-24 {
+    width: rpx(30);
+    height: rpx(30);
+}
+
+.f22 {
+    font-size: rpx(22);
+}
+
+.padd-order {
+    padding-left: rpx(30);
+    padding-right: rpx(30);
+    padding-top: rpx(22);
+    padding-bottom: rpx(22);
+}
+
+.padd-order-under {
+    padding-left: rpx(30);
+    padding-right: rpx(24);
+    padding-top: rpx(32);
+    padding-bottom: rpx(38);
+}
+
+.icon-48 {
+    width: rpx(48);
+    height: rpx(48);
+}
+
+.height-60 {
+    height: rpx(60);
+}

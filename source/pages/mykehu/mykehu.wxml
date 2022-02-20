@@ -1,0 +1,62 @@
+<!-- <view class=' flex-row flex-center  bg-white  top'>
+
+  <view class='flex-1 flex-row flex-column' bindtap='bindshow' data-type='all'>
+    <view class='  flex-1 h5 padding-10 margin-bottom-5 margin-top-10 {{show=="all"?"txt":""}} txt-black'>全部</view>
+    <view wx:if='{{show=="all"}}' class='bg-primary' style='width:120rpx;height:6rpx;'></view>
+    <view wx:if='{{show!="all"}}' class='' style='width:80rpx;height:6rpx;'></view>
+  </view>
+
+  <view class='flex-1 flex-row flex-column' bindtap='bindshow' data-type='wc'>
+    <view class='  flex-1 h5 padding-10 margin-bottom-5 margin-top-10 {{show=="wc"?"txt":""}} txt-black'>有效客户</view>
+    <view wx:if='{{show=="wc"}}' class='bg-primary' style='width:120rpx;height:6rpx;'></view>
+    <view wx:if='{{show!="wc"}}' class='' style='width:80rpx;height:6rpx;'></view>
+  </view>
+
+  <view class='flex-1 flex-row flex-column' bindtap='bindshow' data-type='df'>
+    <view class='  flex-1 h5 padding-10 margin-bottom-5 margin-top-10 {{show=="df"?"txt":""}} txt-black'>失效客户</view>
+    <view wx:if='{{show=="df"}}' class='bg-primary' style='width:120rpx;height:6rpx;'></view>
+    <view wx:if='{{show!="df"}}' class='' style='width:80rpx;height:6rpx;'></view>
+  </view>
+
+
+
+</view> -->
+<!-- <view style='height:88rpx;'></view> -->
+
+<view class="padding-20 flex-row  bg-white flex-center">
+  <view data-val="yesterday" bindtap="binddate" class="{{date=='yesterday'?'opt':'noopt'}}">昨天</view>
+  <view data-val="7days" bindtap="binddate" class="{{date=='7days'?'opt':'noopt'}}">近7天</view>
+  <view data-val="all" bindtap="binddate" class="{{date=='all'?'opt':'noopt'}}">全部</view>
+  <view class="flex-1"></view>
+
+  <picker class=" " mode="date" value="{{xssj}}" start="1970-1-1" end="{{jintian}}" bindchange="bindDateChange">
+    <view class="flex-row flex-center">
+      <view class="h6">自定义时间</view>
+      <image class="icon-10 margin-left-10" mode="widthFix" src="{{uploadpath}}resource/{{res.xiangxia}}"></image>
+    </view>
+  </picker>
+
+</view>
+<block wx:if="{{show=='all'}}">
+  <view class="padding-20 h6" style="color:rgba(161, 161, 161, 1)">
+    共{{quanbu.length}}个客户
+  </view>
+  <view wx:for="{{quanbu}}" wx:key='k' data-id="{{item.id}}" bindtap="kehuinfo" class="padding-20 bg-white flex-row flex-center">
+    <image class="icon-60 radius-50" src="{{item.avatarUrl}}"></image>
+    <view class="margin-left-20">
+      <view class="flex-row flex-center">
+        <view class="h6 chaochu taichan">{{item.nickName}}</view>
+        <view class="biaoqian margin-left-10">分销员</view>
+      </view>
+      <view class="flex-row flex-center margin-top-20">
+        <view class="h6">成交额:</view>
+        <view class="h6 margin-left-10">{{item.jiner}}</view>
+      </view>
+
+    </view>
+    <view class="flex-1"></view>
+    <!-- <view class="h6" wx:if="{{item.jieshushijian>0}}">关系{{item.jieshushijian}}天后过期</view>
+    <view class="h6" wx:if="{{item.jieshushijian<0}}">关系已过期{{0-item.jieshushijian}}天</view> -->
+    <image class="icon-10 margin-left-10" mode="widthFix" src="{{uploadpath}}resource/{{res.right_icon}}"></image>
+  </view>
+</block>

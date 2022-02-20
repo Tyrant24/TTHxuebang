@@ -1,0 +1,2 @@
+<!--pages/maintain/maintain.wxml-->
+<image src="{{uploadpath}}resource/{{res.maintain}}" style="width:100vw;" mode='widthFix'></image>

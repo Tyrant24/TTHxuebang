@@ -1,0 +1,36 @@
+.photo{
+width:100%;
+height: 100%;
+
+}
+.anniu{
+
+padding:20rpx 70rpx 20rpx 70rpx;
+background: rgba(255, 255, 255, 1);
+border-radius: 100rpx;
+
+}
+.zi{
+  color:rgba(34, 34, 34, 1);
+font-size:30rpx;
+}
+.sp{
+  margin-top:20rpx;
+width: 70vw;
+height: 20vh;
+
+}
+.fd{
+ position: fixed;
+ bottom: 5%;
+width: 100vw;
+}
+.tx{
+
+margin-top:16vh;
+
+}
+.ewm{
+margin-top:7vh;
+
+}

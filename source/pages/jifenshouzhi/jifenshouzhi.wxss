@@ -1,0 +1,33 @@
+/* pages/jifenshouzhi/jifenshouzhi.wxss */
+
+.tiao {
+  width: 120rpx;
+  height: 6rpx;
+}
+
+.bg-orange {
+  background: #ffba12;
+}
+
+.title {
+  height: 80rpx;
+  line-height: 72rpx;
+}
+.margin-left-20{
+  margin-left: 40rpx;
+}
+.margin-right-20{
+  margin-right: 40rpx;
+}
+.margin-right-30{
+  margin-right: 30rpx;
+}
+.txt9{
+  color: #999999
+}
+.shouru{
+  padding:24rpx 30rpx 28rpx 38rpx;
+}
+.border-top{
+  border-top:2rpx solid #E5E5E5
+}

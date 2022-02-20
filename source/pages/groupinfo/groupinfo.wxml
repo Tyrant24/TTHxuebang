@@ -1,0 +1,151 @@
+<view class="padding-20 flex-row flex-center">
+  <image src='{{pintuaninfo.t_member_avatarUrl}}' class='radius-50 icon-40'></image>
+  <view class="tz h7">
+    团长
+  </view>
+  <view class="margin-left-20">
+    <view class="h4" style='color:#222222'>
+      {{pintuaninfo.t_member_nickName}}
+    </view>
+    <view class="h6" style='color:#999999'>
+      快去邀请小伙伴们一起学习吧
+    </view>
+  </view>
+</view>
+<view style="" class="margin-20 bg">
+  <view class="flex-row flex-center padding-20">
+
+    <image class="icon-150" src='{{uploadpath}}groupcourse/{{pintuaninfo.group_course_group_photo}}'></image>
+    <view class="margin-left-40">
+      <view class="h5 txt-bold" style='color:#222222'>{{pintuaninfo.kcname}}</view>
+      <view class="h6" style='color:#999999'>已预约{{pintuaninfo.yuyuerenshu}}人</view>
+
+      <view wx:if="{{pintuaninfo.status=='A'}}" class="h5 txt-bold margin-top" style='color:#222222'>还差{{ pintuaninfo.group_course_group_number-pintuaninfo.danqianrenshu}}人</view>
+      <view wx:if="{{pintuaninfo.status=='B'&&pintuaninfo.iscantuan=='true'}}" class="h5 txt-bold margin-top" style='color:#FF504D'>拼团成功</view>
+      <view wx:if="{{pintuaninfo.status=='B'&&pintuaninfo.iscantuan=='false'}}" class="h5 txt-bold margin-top" style='color:#FF504D'>此团已满员</view>
+      <view wx:if="{{pintuaninfo.status=='C'&&pintuaninfo.iscantuan=='true'}}" class="h5 txt-bold margin-top" style='color:#FF504D'>拼团失败</view>
+      <view wx:if="{{pintuaninfo.status=='C'&&pintuaninfo.iscantuan=='false'}}" class="h5 txt-bold margin-top" style='color:#FF504D'>拼团活动已结束</view>
+      <view wx:if="{{pintuaninfo.status=='A'}}" class="h5 txt-bold margin-top-20" style='color:#222222'>组队立省￥ {{chajia}}
+      </view>
+      <view wx:if="{{pintuaninfo.status=='B'&&pintuaninfo.iscantuan=='true'}}" class="h5 txt-bold margin-top-20" style='color:#222222'>已省￥{{chajia}}</view>
+      <view wx:if="{{pintuaninfo.status=='B'&&pintuaninfo.iscantuan=='false'}}" class="h5 txt-bold margin-top-20" style='color:#222222'>组团立省￥{{chajia}}</view>
+      <view wx:if="{{pintuaninfo.status=='C'&&pintuaninfo.iscantuan=='true'}}" class="h6" style='color:#999999'>支付退款将在1-15个工作日内 原路退还到您的账户</view>
+    </view>
+  </view>
+  <view wx:if="{{pintuaninfo.status=='A'}}" class="padding-20 flex-row flex-center">
+
+    <view class="flex-1"></view>
+
+    <view class="flex-row flex-center">
+
+      <view class="djs h4">{{sjlist[0][1]
+        <=9? "0"+sjlist[0][1]:sjlist[0][1]}} </view>
+          <view class="margin-left-10 margin-right-10">:</view>
+          <view class="djs h4">{{sjlist[0][2]
+            <=9? "0"+sjlist[0][2]:sjlist[0][2]}}</view>
+              <view class="margin-left-10 margin-right-10">:</view>
+              <view class="djs h4">{{sjlist[0][3]
+                <=9? "0"+sjlist[0][3]:sjlist[0][3]}}</view>
+
+              </view>
+
+              <view class="flex-1"></view>
+
+          </view>
+
+          <view class="height-40">
+          </view>
+
+
+          <button bindtap='laren' open-type="share" wx:if="{{pintuaninfo.status=='A'&&pintuaninfo.iscantuan=='true'}}" class="flex-row clear-button">
+            <view class="flex-1"></view>
+            <view class="tuan_btn  text-center  ">
+              邀请好友参团
+
+            </view>
+
+            <view class="flex-1"></view>
+          </button>
+
+          <view bindtap="fenxian" wx:if="{{pintuaninfo.status=='A'&&pintuaninfo.iscantuan=='true'}}" class="h5 text-center margin-top-20 " style='width:100%;color:#666666'>
+            生成分享海报
+          </view>
+
+          <view bindtap='chakankechen' wx:if="{{pintuaninfo.status=='B'&&pintuaninfo.iscantuan=='true'}}" class="flex-row">
+            <view class="flex-1"></view>
+            <view class="tuan_btn  text-center   ">
+              查看课程
+            </view>
+            <view class="flex-1"></view>
+          </view>
+
+          <view wx:if="{{pintuaninfo.status=='C'&&pintuaninfo.iscantuan=='true'}}" class="flex-row">
+            <view class="flex-1"></view>
+            <view class="tuan_btn  text-center " bindtap='kaigexintuan'>
+              开个新团： ￥{{pintuaninfo.group_course_group_price}}
+            </view>
+            <view class="flex-1"></view>
+          </view>
+
+          <view bindtap='yuanjiagoumai' wx:if="{{pintuaninfo.status=='C'&&pintuaninfo.iscantuan=='true'}}" class=" text-center margin-top-20 " style='width:100%;color:#666666'>
+            原价购买： ￥{{pintuaninfo.price}}
+          </view>
+
+
+          <view bindtap='yuanjiagoumai' wx:if="{{pintuaninfo.status=='C'&&pintuaninfo.iscantuan=='false'}}" class="flex-row">
+            <view class="flex-1"></view>
+            <view class="tuan_btn  text-center  ">
+              原价购买： ￥{{pintuaninfo.price}}
+            </view>
+            <view class="flex-1"></view>
+          </view>
+
+          <view bindtap='chakankechen' wx:if="{{pintuaninfo.status=='C'&&pintuaninfo.iscantuan=='false'}}" class=" text-center margin-top-20 " style='width:100%;color:#666666'>
+            查看课程
+          </view>
+
+          <view wx:if="{{pintuaninfo.status=='B'&&pintuaninfo.iscantuan=='false'}}" class="flex-row">
+            <view class="flex-1"></view>
+            <view class="tuan_btn  text-center" bindtap='kaigexintuan'>
+              开个新团 ￥{{pintuaninfo.group_course_group_price}}
+            </view>
+            <view class="flex-1"></view>
+          </view>
+
+          <view bindtap='chakankechen' wx:if="{{pintuaninfo.status=='B'&&pintuaninfo.iscantuan=='false'}}" class=" text-center margin-top-20 " style='width:100%;color:#666666'>
+            查看课程
+          </view>
+
+          <view wx:if="{{pintuaninfo.status=='A'&&pintuaninfo.iscantuan=='false'}}" class="flex-row">
+            <view class="flex-1"></view>
+            <view bindtap='addgroup' class="tuan_btn  text-center  ">
+              我要参团: ￥{{pintuaninfo.group_course_group_price}}
+            </view>
+            <view class="flex-1"></view>
+          </view>
+
+          <view bindtap='yuanjiagoumai' wx:if="{{pintuaninfo.status=='A'&&pintuaninfo.iscantuan=='false'}}" class=" text-center margin-top-20 " style='width:100%;color:#666666'>
+            原价购买：￥{{pintuaninfo.price}}
+          </view>
+          <view class="height-40"></view>
+      </view>
+
+    
+      <view class="margin-20 bg">
+
+
+        <view class="padding-20 ">
+          <view class="txt-bold h5" style='color:#222222'>参与拼团</view>
+
+          <view class="flex-row flex-center margin-top-30">
+
+            <view wx:for="{{pintuaninfo.group_course_group_number}}" wx:key="k" wx:for-index="idx">
+              <image wx:if="{{pintuaninfo.tuanlist[idx]!=undefide}}" src='{{pintuaninfo.tuanlist[idx].touxian}}' class='radius-50 icon-50 margin-right-10 '></image>
+
+              <view wx:if="{{pintuaninfo.tuanlist[idx]==undefide}}" class="quan radius-50 icon-50 margin-right-10  "></view>
+            </view>
+
+          </view>
+      <view class="height-20"></view>
+        </view>
+      </view>

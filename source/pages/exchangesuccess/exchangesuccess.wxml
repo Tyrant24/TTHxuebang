@@ -1,0 +1,80 @@
+<!--pages/exchangesuccess/exchangesuccess.wxml-->
+<view class="bg-white">
+  <view class="top padding-60 flex-row flex-center">
+    <image src="{{uploadpath}}resource/{{res.exchange_success}}" class="icon-40"></image>
+    <view class="txt-white txt-bold" style="margin-left:28rpx">兑换成功</view>
+  </view>
+
+  <view class="flex-row flex-center padding-mid margin-left-32 border-1 ">
+    <image src="{{uploadpath}}resource/{{res.car_icon}}" class="icon-24"></image>
+    <view class="  margin-left-20 flex-1">
+      <view class="h6 chaochu2" style="width:570rpx">[深圳市]【已签收，签收人是本人】，感谢使用学榜快递，期待再次为您服务</view>
+      <view class="h6 margin-top-10">2019-05-08 00:10:48</view>
+    </view>
+    <image src="{{uploadpath}}resource/{{res.xiangyou}}" class="icon-12 margin-right-26"></image>
+  </view>
+
+  <view class="flex-row flex-center padding-mid margin-left-32">
+    <image src="{{uploadpath}}resource/{{res.car_icon}}" class="icon-24"></image>
+    <view class="  margin-left-20 flex-1">
+      <view class="h6 chaochu2" style="width:570rpx">收货人： 学榜均 1787****823</view>
+      <view class="h6 margin-top-10">深圳市南山区紫光信息港B205..</view>
+    </view>
+    <image src="{{uploadpath}}resource/{{res.xiangyou}}" class="icon-12 margin-right-26"></image>
+  </view>
+
+  <view style="height:20rpx;background:#F5F6F8"></view>
+
+  <view class=" padding-detail border-1 margin-left-28">
+    <view class="flex-row">
+      <image src="{{uploadpath}}resource/{{res.chengong}}" class="icon-160  "> </image>
+      <view class="" style="width:500rpx;margin-left:26rpx;">
+        <view class="flex-row flex-center">
+          <view class="txt-bold flex-1">积分兑换商品1</view>
+          <view class="h6 ">88 积分</view>
+        </view>
+        <view class="flex-row flex-center">
+          <view class="flex-1"></view>
+          <view class="h6" style="color:#B0B0B0">×1</view>
+        </view>
+      </view>
+    </view>
+    <view class="flex-row flex-center margin-top-20 ">
+      <view class="h6 flex-1">运费(快递)</view>
+      <view class="h6 " style="margin-right:10rpx;">￥0.00</view>
+    </view>
+  </view>
+
+  <view class="flex-row flex-center padding-28">
+    <view class="flex-1 h5 txt-bold">使用积分</view>
+    <view class="h5 txt-bold" style="color:#FFBA12">88 积分</view>
+  </view>
+
+  <view style="height:20rpx;background:#F5F6F8"></view>
+
+  <view class="">
+    <view class="flex-row flex-center padding-detail margin-left-28 border-1">
+      <view class="h5 width-112">订单号</view>
+      <view class="h5 margin-left-52">1238 2382 3823 2328 236</view>
+    </view>
+
+    <view class="flex-row flex-center padding-detail margin-left-28 border-1">
+      <view class="h5 width-112">支付方式</view>
+      <view class="h5 margin-left-52">积分</view>
+    </view>
+
+    <view class="flex-row flex-center padding-detail margin-left-28 border-1">
+      <view class="h5 width-112">下单时间</view>
+      <view class="h5 margin-left-52">2019-03-11 10:56</view>
+    </view>
+
+  </view>
+
+</view>
+
+<view class="wuliu text-right bg-white">
+  <view class="flex-row flex-center">
+    <view class="flex-1"></view>
+    <view class="btn text-center txt-6" style="font-size:22rpx;">查看物流</view>
+  </view>
+</view>

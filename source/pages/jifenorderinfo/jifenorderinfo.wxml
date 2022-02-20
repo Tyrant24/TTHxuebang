@@ -1,0 +1,106 @@
+<!--pages/shopinfo/shopinfo.wxml-->
+
+<view class="top_block flex-row flex-center ">
+
+  <image wx:if='{{info.orderstatus=="A"}}' src="{{uploadpath}}resource/{{res.huowu}}" class="icon-huowu" style="margin-left:104rpx"></image>
+<image wx:if='{{info.orderstatus=="B"}}' src="{{uploadpath}}resource/{{res.baiche}}" class="icon-huowu" style="margin-left:104rpx"></image>
+<image wx:if='{{info.orderstatus=="C"}}' src="{{uploadpath}}resource/{{res.wanc}}" class="icon-huowu" style="margin-left:104rpx"></image>
+  <view class="txt-white margin-left-20">
+    {{info.orderstatus_name}}
+  </view>
+</view>
+
+<view class="bg-white">
+
+  <view class="mid_block flex-row flex-center">
+    <image src="{{uploadpath}}resource/{{res.diz}}" class="icon-zuobiao" style="margin-left:40rpx"></image>
+    <view class="flex-row column flex-1" style="margin-left:30rpx">
+      <view class="h5">收货人：{{info.consignee}} {{info.mobile}}</view>
+      <view class="h5 txt-6">{{info.address}}</view>
+    </view>
+  </view>
+
+  <view class="margin-left-28  " style="height:2rpx;background:#F5F5F5" wx:if='{{info.orderstatus=="B"||info.orderstatus=="C"}}'></view>
+
+  <view bindtap="towuliu" class="mid_block flex-row flex-center" wx:if='{{info.orderstatus=="B"||info.orderstatus=="C"}}'>
+    <view class=" ">
+      <image src="{{uploadpath}}resource/{{res.heiche}}" class="icon-zuobiao" style="margin-left:40rpx"></image>
+    </view>
+    <view class="flex-1 " style="margin-left:30rpx">
+      <view class="h6" style="width:580rpx">[深圳市]【已签收，签收人是本人】，感谢使用学榜快递，期待再次为您服务</view>
+      <view class="h6 txt-6">2019-05-08 00:10:48</view>
+    </view>
+
+    <image src="{{uploadpath}}resource/{{res.xiangyou}}" class="icon-right margin-right-28" style=""></image>
+
+  </view>
+
+</view>
+
+
+
+
+<view class="shangpin margin-top-20 ">
+
+  <view class="flex-row margin-left-28">
+    <image src="{{uploadpath}}shop/{{info.img}}" class="icon-img"></image>
+
+    <view class="txt-bold flex-1" style="margin-left:36rpx;"> {{info.name}}</view>
+    <view class="flex-row column">
+      <view class="h6">{{info.danjia}} 积分</view>
+      <view class="h6 text-right" style="color:#B0B0B0">x{{info.shuliang}}</view>
+    </view>
+  </view>
+
+  <view class="flex-row flex-center margin-left-28 margin-top-10">
+    <view class="h6 flex-1">运费（快递）</view>
+    <view class="h6">￥0.00</view>
+  </view>
+
+  <view class="margin-left-28 margin-top-10" style="height:2rpx;background:#F5F5F5"></view>
+
+  <view class="flex-row flex-center margin-left-28 margin-top-10">
+    <view class="txt-bold h5 flex-1">使用积分</view>
+    <view style="color:#FFBA12" class="h5 txt-bold">{{info.jifen}} 积分</view>
+  </view>
+
+
+
+
+
+</view>
+
+
+<view class="bottom_block margin-top-20">
+  <view class="flex-row flex-center margin-left-28 ">
+    <view class="h5 width-56">订单号</view>
+    <view class="h5 margin-left-52">{{info.orderid}}</view>
+  </view>
+
+  <view class="margin-left-28 margin-top-10" style="height:2rpx;background:#F5F5F5"></view>
+
+  <view class="flex-row flex-center margin-left-28 margin-top-10">
+    <view class="h5 width-56">支付方式</view>
+    <view class="h5 margin-left-52">积分</view>
+  </view>
+
+  <view class="margin-left-28 margin-top-10" style="height:2rpx;background:#F5F5F5"></view>
+
+  <view class="flex-row flex-center margin-left-28 margin-top-10">
+    <view class="h5 width-56">下单时间</view>
+    <view class="h5 margin-left-52">{{info.created_date}}</view>
+  </view>
+</view>
+
+
+<view style="height:140rpx"></view>
+
+
+<view class="bottom"  bindtap="towuliu"  wx:if='{{info.orderstatus=="B"||info.orderstatus=="C"}}'>
+  <view class="flex-row flex-center">
+    <view class="flex-1"></view>
+    <view class="btn text-center margin-top-10 margin-right-28">
+      查看物流
+    </view>
+  </view>
+</view>

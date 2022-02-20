@@ -1,0 +1,33 @@
+<!--pages/lianxikefu/lianxikefu.wxml-->
+
+<button class=' clear-button' hover-class='bg_gray' open-type='contact' style='border-radius:0;border:0;'>
+  <view class="weixin flex-row flex-center">
+
+    <image src="{{uploadpath}}resource/{{res.wxkefu}}" class="icon-42" style="margin-left:84rpx"></image>
+
+
+    <view class="flex-row column flex-1" style="margin-left:50rpx;">
+      <view class="txt-bold">微信客服</view>
+      <view class="h6 margin-top-20 txt-9">学榜客服会热情解决您的所有问题</view>
+    </view>
+
+    <image src="{{uploadpath}}resource/{{res.xiangyou}}" class="icon-right " style="margin-right:48rpx;"></image>
+
+  </view>
+</button>
+
+
+
+<view class="weixin flex-row flex-center" style="margin-top:0" bindtap="phoneCall" id="{{instinfo.tel}}">
+
+  <image src="{{uploadpath}}resource/{{res.dhkefu}}" class="icon-50" style="margin-left:84rpx"></image>
+
+
+  <view class="flex-row column flex-1" style="margin-left:50rpx;">
+    <view class="txt-bold">电话客服</view>
+    <view class="h6 margin-top-20 txt-9">工作日 {{instinfo.worktime}}</view>
+  </view>
+
+  <image src="{{uploadpath}}resource/{{res.xiangyou}}" class="icon-right " style="margin-right:48rpx;"></image>
+
+</view>

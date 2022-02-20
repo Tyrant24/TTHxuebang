@@ -1,0 +1,58 @@
+<view class="padding-20 bg-white  flex-row flex-center">
+  <view data-val="yesterday" bindtap="binddate" class="{{date=='yesterday'?'opt':'noopt'}}">昨天</view>
+  <view data-val="7days" bindtap="binddate" class="{{date=='7days'?'opt':'noopt'}}">近7天</view>
+  <view data-val="all" bindtap="binddate" class="{{date=='all'?'opt':'noopt'}}">全部</view>
+  <view class="flex-1"></view>
+  <picker class=" " mode="date" value="{{xssj}}" start="1970-1-1" end="{{jintian}}" bindchange="bindDateChange">
+    <view class="flex-row flex-center">
+      <view class="h6">自定义时间</view>
+      <image class="icon-10 margin-left-10" mode="widthFix" src="{{uploadpath}}resource/{{res.xiangxia}}"></image>
+    </view>
+  </picker>
+</view>
+<view class="padding-20 h6" style="color:rgba(161, 161, 161, 1)">
+  共{{quanbu.length}}笔订单,获得商品佣金0.01元
+</view>
+<block wx:for="{{quanbu}}" wx:key="k">
+  <view class="bg-white margin-top-20">
+    <view class="margin-20 bg flex-row flex-center">
+      <view class="h5">买家：{{item.membername}}</view>
+      <view class="flex-1"></view>
+      <view class="h5">已结算</view>
+    </view>
+    <view class="margin-20 bg">
+      <view class=" h6" style="color:rgba(161, 161, 161, 1)">
+        订单编号：{{item.orderno}}
+      </view>
+      <view class=" h6 margin-top-10" style="color:rgba(161, 161, 161, 1)">
+        下单时间：{{item.submit_time}}
+      </view>
+    </view>
+    <view class="margin-20 flex-row bg">
+      <image wx:if="{{item.course_id!=0}}" class="icon-100 dd" mode="widthFix" src="{{uploadpath}}curriculum/{{item.kcimg}}"></image>
+      <image wx:if="{{item.onlineclassroom_id!=0}}" class="icon-100 dd" mode="widthFix" src="{{uploadpath}}onlineclassroom/{{item.zxkcimg}}"></image>
+      <view class="margin-left-20">
+        <view class="flex-row">
+          <view wx:if="{{item.course_id!=0}}" class="h5" style="width:400rpx">{{item.kcname}}</view>
+          <view wx:if="{{item.onlineclassroom_id!=0}}" class="h5" style="width:400rpx">{{item.zxkcname}}</view>
+          <view class="margin-left-20 h5">x1</view>
+        </view>
+
+        <view class="h5 margin-top-10" style="color:rgba(255, 82, 82, 1)">1%</view>
+
+
+
+      </view>
+
+
+
+
+    </view>
+    <view class=" padding-20 flex-row flex-center">
+    <view class="flex-1"></view>
+      <view class="f-26"> 商品佣金 ：￥{{item.yonjin}}</view>
+      <view class="f-22" style="color:rgba(153, 153, 153, 1)">（订单总价：￥{{item.amount}}）</view>
+
+    </view>
+  </view>
+</block>

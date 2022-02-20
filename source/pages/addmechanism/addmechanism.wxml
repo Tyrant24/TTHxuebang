@@ -1,0 +1,125 @@
+<!--pages/addmechanism/addmechanism.wxml-->
+
+
+<form bindsubmit="confirm" bindreset="formReset" report-submit="{{true}}">
+
+
+
+
+  <view class='height-20 '>
+  </view>
+  <view class='padding-30  bg-white' style=''>
+    <view class='flex-row flex-center '>
+      <view class='font-30 flex-1 txt-black'>机构名称：</view>
+      <input class=' flex-2' placeholder-class='pc' name='jigou' style='' placeholder='请填写机构名称'></input>
+    </view>
+    <!--bor_bak -->
+  </view>
+  <view class='margin-left-20' style='background:#f5f5f5;width:100%;height:2rpx'></view>
+
+
+  <view class='padding-30 bg-white' style=''>
+    <view class='flex-row flex-center '>
+      <view class='font-30  txt-black '>联系人姓名：</view>
+      <view style='width:50rpx;'></view>
+      <input class='flex-2 ' style='' placeholder-class='pc' value='{{contactname}}' name='name' placeholder='请填写联系人姓名'></input>
+      <view bindtap='useaddress' class='bt txt-white  radius-10 text-center'>使用微信地址</view>
+    </view>
+    <!--bor_bak -->
+  </view>
+
+  <view class='margin-left-20' style='background:#f5f5f5;width:100%;height:2rpx'></view>
+
+  <view class='padding-30 bg-white' style=''>
+    <view class='flex-row flex-center '>
+      <view class='font-30 flex-1 txt-black'>联系电话：</view>
+      <input class=' flex-2' style='' placeholder-class='pc' value='{{contacttel}}' name='mobile' placeholder='请填写联系电话'></input>
+    </view>
+    <!--bor_bak -->
+  </view>
+  <view class='margin-left-20' style='background:#f5f5f5;width:100%;height:2rpx'></view>
+
+
+  <view class='padding-30 bg-white' style=''>
+    <view class='flex-row flex-center '>
+    
+      <view class='font-30 flex-1 txt-black'>地址：</view>
+      <picker class='flex-2' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+     
+        <view class="picker" style='color:#C8C8C8' wx:if="{{region.length==0}}" >请填写地址</view>
+
+         <!-- <input  class=' flex-2' placeholder-class='pc' disabled='{{true}}' value='{{region[0]}} {{region[1]}} {{region[2]}}' style='' name='address' placeholder='请填写地址'></input> -->
+        <view class="picker"  wx:if="{{region.length>0}}" >{{region[0]}} {{region[1]}} {{region[2]}}</view>
+      </picker>
+
+
+
+
+    </view>
+    <!--bor_bak -->
+  </view>
+  <view class='margin-left-20 ' style='background:#f5f5f5;width:100%;height:2rpx'></view>
+
+
+  <view class='padding-30 bg-white' style=''>
+    <view class='flex-row flex-center '>
+      <view class='font-30 flex-1 txt-black'>门牌号：</view>
+      <input class=' flex-2' style='' placeholder-class='pc' value='{{detail}}' name='housenum' placeholder='请填写门牌号'></input>
+    </view>
+    <!--bor_bak -->
+  </view>
+  <view>
+
+
+
+
+  </view>
+  <view class='height-20' style=''></view>
+
+  <view class='padding-30 bg-white' style=''>
+    <view class='flex-row flex-center '>
+      <view class='flex-1'></view>
+
+
+      <image wx:if='{{show==1}}' src='{{uploadpath}}resource/{{res.weixuan}}' bindtap='bindcheck' data-sf='N' class='icon-15'></image>
+      <image wx:if='{{show==2}}' src='{{uploadpath}}resource/{{res.xuanzhong}}' bindtap='bindcheck' class='icon-15' data-sf='Y' class='icon-15'></image>
+
+
+      <view class='font-30 txt-black margin-left-10'>我已详细阅读并同意</view>
+      <view class='font-30 txt-blue margin-left-5' bindtap='tocontent'> 学榜用户协议</view>
+      <view class='flex-1'></view>
+    </view>
+    <!--bor_bak  disabled='{{show==1}}' -->
+  </view>
+
+  <button class='dis margin-40 txt-white' wx:if='{{show==1}}' hover-class='dis_hov'>提交</button>
+  <button class='btn_bg margin-40 txt-white' wx:if='{{show==2}}' form-type='submit' hover-class='bg_hov'>提交</button>
+
+</form>
+
+<view class='height-100'></view>
+
+<view class='height-20 '></view>
+
+<view class='flex-row flex-column '>
+  <view class='ft-color h5'>关于对公付款</view>
+
+  <view class='flex-row flex-center'>
+    <view class='ft-color h5'>如果您的企业需要对公付款，请查看</view>
+    <navigator url='/pages/liucheng/liucheng' class='txt-blue h5 margin-left-5 txt-bold'>付款流程</navigator>
+  </view>
+
+
+  <view class='flex-row flex-center'>
+    <view class='ft-color h5 '>如有疑问请咨询</view>
+    <view class='ft-color h5 txt-bold'>学榜客服热线：{{instinfo.kf}}</view>
+  </view>
+
+  <view class='flex-row flex-center'>
+    <view class='ft-color h5'>工作时间</view>
+    <view class='ft-color h5'>工作日9:00-18:30</view>
+  </view>
+
+  <view class='height-50'></view>
+
+</view>

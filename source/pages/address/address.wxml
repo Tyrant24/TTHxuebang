@@ -1,0 +1,27 @@
+<!--pages/address/address.wxml-->
+<view class='margin-20'>
+  <view class='margin-left-14 h5' style='color:#999999'>我的地址</view>
+  <view class='hezi' bindtap='addressmanage'>
+    <view class='flex-row flex-center'>
+      <view>
+        <view class='flex-row'>
+          <view class='flex-row'>
+            <view class='txt-bold f15' style='color:#222222'>学榜均</view>
+            <view class='margin-left-20 f15' style='color:#222222'>17872898823</view>
+          </view>
+        </view>
+
+        <view class='margin-top-20 f13' style='color:#666666'>深圳市南山区紫光信息港B205..</view>
+      </view>
+
+      <view class='flex-1'></view>
+
+      <view>
+        <image class='icon-25' src='{{uploadpath}}resource/{{res.address_right}}'></image>
+      </view>
+    </view>
+
+  </view>
+
+  <button class='but txt-white'>添加新地址</button>
+</view>

@@ -1,0 +1,74 @@
+/* pages/jgdetails/jgdetails.wxss */
+
+/* Page{
+  background: #83403A;
+} */
+
+.img {
+  width: 230rpx;
+  height: 240rpx;
+}
+
+/* .on{
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  top:30%;
+} */
+ .mid {
+  position: absolute;
+  width: 91vw;
+  z-index: 100;
+  left:2.5vw;
+  top:33%;
+  margin-top: -90rpx;
+  box-shadow: 1px 1px 5px #888;
+} 
+
+ .mid2 {
+  position: absolute;
+  width: 91vw;
+  z-index: 100;
+  left:2.5vw;
+  top:33%;
+  margin-top: -60rpx;
+  box-shadow: 1px 1px 5px #888;
+}
+
+.shadow {
+  box-shadow: 1px 1px 10px #888;
+}
+
+.kc_icon {
+  width: 228rpx;
+  height: 224rpx;
+}
+
+.biaoqian {
+  min-width: 56rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.video {
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  padding-top: 15rpx;
+}
+
+.mk {
+  background-color: white;
+}
+
+.tishi{
+  position: fixed;
+  z-index: 100;
+  top: 35%;
+  right: 35%; 
+}
+.ts_icon{
+  width: 240rpx;
+  height: 260rpx;
+}
